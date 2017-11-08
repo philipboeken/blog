@@ -1,0 +1,29 @@
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{ post.title }}</div>
+
+                    <div class="panel-body">
+                        {{ post.text }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+  export default {
+    props: {
+      post: {
+        type: Object,
+        default: () => {
+          return {
+          };
+        }
+      }
+    }
+  };
+</script>

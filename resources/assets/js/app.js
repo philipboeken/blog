@@ -10,7 +10,8 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 Vue.component('datepicker', require('./components/Datepicker.vue'));
-Vue.use(VueFlatpickr);
+Vue.component('post-card', require('./components/PostCard.vue'));
+// Vue.use(VueFlatpickr);
 
 
 /**
