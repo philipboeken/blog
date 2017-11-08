@@ -19,4 +19,34 @@ class Post extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function image()
+    {
+        return $this->hasOne(File::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function labels()
+    {
+        return $this->belongsToMany(Label::class);
+    }
+
+    public function files()
+    {
+        return $this->belongsToMany(File::class);
+    }
+
+    public function contacts()
+    {
+        return $this->belongsToMany(Contact::class);
+    }
+
+    public function events()
+    {
+        return $this->belongsToMany(Event::class);
+    }
 }

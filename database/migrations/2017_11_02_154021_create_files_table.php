@@ -17,6 +17,7 @@ class CreateFilesTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('title');
+            $table->string('extension');
             $table->string('description')->nullable();
             $table->binary('data');
             $table->timestamps();

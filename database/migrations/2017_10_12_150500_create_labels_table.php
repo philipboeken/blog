@@ -15,6 +15,7 @@ class CreateLabelsTable extends Migration
     {
         Schema::create('labels', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
             $table->string('title');
             $table->string('color')->default('#f4c20d');
             $table->boolean('is_mutable')->default(false);
