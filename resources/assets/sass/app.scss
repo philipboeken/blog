@@ -1,5 +1,6 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import "~font-awesome/scss/font-awesome";
 // Variables
 @import "variables";
 // Bootstrap
@@ -37,4 +38,12 @@ footer.footer {
 
 .page-content .container {
   max-width: 960px;
+}
+
+.left-container {
+  border-right: 1px solid #dbdbdb;
+}
+
+.right-container {
+  border-left: 1px solid #dbdbdb;;
 }

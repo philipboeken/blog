@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Post extends Model
 {
@@ -48,5 +49,17 @@ class Post extends Model
     public function events()
     {
         return $this->belongsToMany(Event::class);
+    }
+
+    public function addComment($body)
+    {
+        $user_id = Auth::user()->id;
+        $this->comments()->create(compact('body', 'user_id'));
+    }
+
+//    @TODO: Implement as trait
+    public function isMine()
+    {
+        return Auth::user()->id == $this->user_id;
     }
 }

@@ -12,7 +12,9 @@ class Comment extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'post_id', 'body'
+        'user_id',
+        'post_id',
+        'body'
     ];
 
     public function user()
@@ -23,5 +25,11 @@ class Comment extends Model
     public function post()
     {
         return $this->belongsTo(Post::class);
+    }
+
+//    @TODO: Implement as trait
+    public function isMine()
+    {
+        return Auth::user()->id == $this->user_id;
     }
 }

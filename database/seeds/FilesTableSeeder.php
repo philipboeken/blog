@@ -14,6 +14,7 @@ class FilesTableSeeder extends Seeder
     {
         DB::table('files')->insert([
             'user_id' => '1',
+            'post_id' => '1',
             'title' => 'afbeelding',
             'extension' => 'png',
             'description' => 'Afbeelding voor bij de eerste post',

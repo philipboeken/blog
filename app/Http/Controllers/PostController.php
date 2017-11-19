@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'DESC')->get();
 
         return view('posts.index', compact('posts'));
     }
@@ -26,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -37,7 +38,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user_id = Auth::user()->id;
+
+        Post::create([
+            'text' => request('text'),
+            'title' => request('title'),
+            'user_id' => $user_id]);
+
+        return redirect('/posts');
     }
 
     /**
@@ -48,7 +56,9 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        $user = Auth::user();
+
+        return view('posts.show', compact('post', 'user'));
     }
 
     /**
@@ -59,7 +69,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -71,7 +81,11 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->text = request('text');
+        $post->title = request('title');
+        $post->save();
+
+        return redirect('/posts/' . $post->id);
     }
 
     /**
@@ -82,6 +96,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect('/posts');
     }
 }
