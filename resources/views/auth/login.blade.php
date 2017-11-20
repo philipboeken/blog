@@ -61,20 +61,20 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="field is-grouped is-horizontal">
-                <div class="field-label"></div>
-                <div class="field-body">
-                    <p class="control">
-                        <button type="submit" class="button is-link">
-                            Login
-                        </button>
-                    </p>
-                    <p class="control">
-                        <a class="button is-text" href="{{ route('password.request') }}">
-                            Forgot Your Password?
-                        </a>
-                    </p>
+                <div class="field is-grouped is-horizontal">
+                    <div class="field-label"></div>
+                    <div class="field-body">
+                        <p class="control">
+                            <button type="submit" class="button is-link">
+                                Login
+                            </button>
+                        </p>
+                        <p class="control">
+                            <a class="button is-text" href="{{ route('password.request') }}">
+                                Forgot Your Password?
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </form>
