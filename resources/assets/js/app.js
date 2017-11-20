@@ -6,6 +6,11 @@
 
 require("jspolyfill-array.prototype.find");
 require('es6-object-assign').polyfill();
+require('./bootstrap');
+require('es6-promise').polyfill();
+require('./bulma');
+require('./froala');
+
 let entries = require('object.entries');
 if (!Object.entries) {
   entries.shim();
@@ -14,14 +19,12 @@ let includes = require('array-includes');
 if (!Array.prototype.includes) {
   includes.shim();
 }
-require('./bootstrap');
-require('es6-promise').polyfill();
-
-require('./bootstrap');
-require('./bulma');
-require('./froala');
 
 window.Vue = require('vue');
+
+import VueFlatpickr from 'vue-flatpickr';
+import 'vue-flatpickr/theme/airbnb.css';
+Vue.use(VueFlatpickr);
 
 Vue.component('datepicker', require('./components/Datepicker.vue'));
 

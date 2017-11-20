@@ -1,7 +1,7 @@
 
 <template>
     <div class="datePickerContainer">
-        <Flatpickr :placeholder="placeholder" class="input" :name="name" :options="defaultConfig" @input="onInput" ref="FlatPickr"></Flatpickr>
+        <Flatpickr :placeholder="placeholder" class="input" :name="name" :options="defaultConfig" @input="onInput"></Flatpickr>
         <a v-if="clearbutton" @click="clearDate" class="button is-small is-outlined"><span class="icon is-small"><i class="fa fa-times"></i></span></a>
     </div>
 </template>
@@ -27,7 +27,7 @@
           default: false
         },
         defaultDate: {
-          type: String
+          type: String,
         },
         minDate: {
           type: String
@@ -40,7 +40,6 @@
         },
         placeholder: {
           type: String,
-          default: 'dd-mm-YYYY'
         }
       },
       computed: {
