@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/account', 'AccountController@index');
 Route::get('/agenda', 'EventController@index');
 Route::get('/contacts', 'ContactController@index');
+Route::get('/files', 'FileController@index');
 
 Route::post('/posts/{post}/comment', 'CommentController@store');
 

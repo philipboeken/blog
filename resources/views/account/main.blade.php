@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.hasleft')
 
 @section('title')
     Manage your Account
 @endsection
 
-@section('left-container')
+@section('content-left')
     <aside class="menu">
         <ul class="menu-list">
             <li><a>Personal Information</a></li>
@@ -14,6 +14,6 @@
     </aside>
 @endsection
 
-@section('content')
+@section('content-mid')
 
 @endsection

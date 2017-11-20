@@ -1,7 +1,7 @@
 @extends('layouts.hasleft')
 
 @section('title')
-    Agenda
+    Contacts
 @endsection
 
 @section('content-mid')

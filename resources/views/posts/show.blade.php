@@ -18,30 +18,20 @@
     </div>
     @foreach($post->comments as $comment)
         <div class="card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    {{ $comment->user->first_name }}
-                </p>
-            </header>
             <div class="card-content">
                 <div class="content">
-                    {!! $comment->body !!}
+                    {{ $comment->user->first_name }}: {!! $comment->body !!}
                 </div>
             </div>
         </div>
     @endforeach
 
     <div class="card">
-        <header class="card-header">
-            <p class="card-header-title">
-                {{ $user->first_name }}
-            </p>
-        </header>
         <div class="card-content">
             <div class="content">
                 <form method="POST" action="/posts/{{ $post->id }}/comment">
                     {{ csrf_field() }}
-                    <textarea class="comment" title="comment" name="comment" id="comment"></textarea>
+                    {{ $user->first_name }}: <textarea class="comment" title="comment" name="comment" id="comment"></textarea>
                     <button class="button">Send</button>
                 </form>
             </div>
