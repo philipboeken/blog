@@ -16747,6 +16747,8 @@ module.exports = __webpack_require__(160);
  */
 
 __webpack_require__(130);
+__webpack_require__(175);
+__webpack_require__(176);
 
 window.Vue = __webpack_require__(154);
 
@@ -58372,6 +58374,60 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */
+/***/ (function(module, exports) {
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get all "navbar-burger" elements
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+        // Get the target from the "data-target" attribute
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+
+/***/ }),
+/* 176 */
+/***/ (function(module, exports) {
+
+$(function () {
+  $('textarea.post').froalaEditor({
+    charCounterCount: false,
+    toolbarButtons: ['bold', 'italic', 'underline', '|', 'fontFamily', 'fontSize', 'color', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', '|', 'emoticons', '|', 'undo', 'redo']
+  });
+  $('textarea.comment').froalaEditor({
+    charCounterMax: 140,
+    toolbarButtons: ['bold', 'italic', 'underline', 'color', '|', 'emoticons']
+  });
+  $('div[style="position: absolute; bottom: 0px; left: 0px; z-index: 9999;"]').remove();
+});
 
 /***/ })
 /******/ ]);

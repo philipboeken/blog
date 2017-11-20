@@ -54,18 +54,5 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js"></script>
-<script>
-  $(function () {
-    $('textarea.post').froalaEditor({
-      charCounterCount: false,
-      toolbarButtons: ['bold', 'italic', 'underline', '|', 'fontFamily', 'fontSize', 'color', '|', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable', '|', 'emoticons', '|', 'undo', 'redo']
-    });
-    $('textarea.comment').froalaEditor({
-      charCounterMax: 140,
-      toolbarButtons: ['bold', 'italic', 'underline', 'color', '|', 'emoticons']
-    });
-    $('div[style="position: absolute; bottom: 0px; left: 0px; z-index: 9999;"]').remove();
-  });
-</script>
 </body>
 </html>

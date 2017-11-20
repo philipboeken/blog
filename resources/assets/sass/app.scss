@@ -3,10 +3,9 @@
 @import "~font-awesome/scss/font-awesome";
 // Variables
 @import "variables";
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
 // Bulma
 @import "~bulma/bulma";
+// Custom
 @import './navigation';
 @import 'components/datepicker';
 
