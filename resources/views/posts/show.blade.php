@@ -76,50 +76,42 @@
     </h3>
     @foreach($post->contacts as $contact)
         <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">Naam</label>
-            </div>
+            <div class="field-label">Naam</div>
             <div class="field-body">
                 <div class="field">
-                    <p class="control">
+                    <div class="control">
                         {{ $contact->surname . ', ' . $contact->first_name }}
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">Email</label>
-            </div>
+            <div class="field-label is-normal">Email</div>
             <div class="field-body">
                 <div class="field">
-                    <p class="control is-expanded has-icons-left">
+                    <div class="control is-expanded has-icons-left">
                         {{ $contact->email }}
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">{{ $contact->phonenumber1_description }}</label>
-            </div>
+            <div class="field-label is-normal">{{ $contact->phonenumber1_description }}</div>
             <div class="field-body">
                 <div class="field">
-                    <p class="control is-expanded has-icons-left">
+                    <div class="control is-expanded has-icons-left">
                         {{ $contact->phonenumber1 }}
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">{{ $contact->phonenumber2_description }}</label>
-            </div>
+            <div class="field-label is-normal">{{ $contact->phonenumber2_description }}</div>
             <div class="field-body">
                 <div class="field">
-                    <p class="control is-expanded has-icons-left">
+                    <div class="control is-expanded has-icons-left">
                         {{ $contact->phonenumber2 }}
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
