@@ -22910,27 +22910,11 @@ body {
   margin: 0;
 }
 
-hr {
-  margin: 0;
-}
-
-.hero {
-  background-color: white;
-}
-
 footer.footer {
   background-color: white;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.columns {
-  margin: 0;
-}
-
-.page-content .container {
-  max-width: 960px;
 }
 
 .left-container {
