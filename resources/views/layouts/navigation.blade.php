@@ -1,69 +1,56 @@
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
-            <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed is-pulled-right" data-toggle="collapse"
-                    data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- Branding Image -->
-            @guest
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+<nav class="navbar is-transparent">
+    <div class="navbar-brand">
+        @guest
+            <a class="navbar-item" href="{{ url('/') }}">
+                {{ config('app.name', 'Laravel') }}
+            </a>
             @else
-                <a class="navbar-brand" href="{{ url('/home') }}">
+                <a class="navbar-item" href="{{ url('/home') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-            @endguest
+                @endguest
+                <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/posts">Posts</a>
+            <a class="navbar-item" href="/agenda">Agenda</a>
+            <a class="navbar-item" href="/contacts">Contacts</a>
+            <a class="navbar-item" href="/files">Files</a>
         </div>
 
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
-                <li><a href="/posts">Posts</a></li>
-                <li><a href="/agenda">Agenda</a></li>
-                <li><a href="/contacts">Contacts</a></li>
-                <li><a href="/files">Files</a></li>
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right is-pulled-right">
-                <!-- Authentication Links -->
-                @guest
-                    <li><a href="{{ route('login') }}">Login</a></li>
-                    <li><a href="{{ route('register') }}">Register</a></li>
-                @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-expanded="false">
-                            {{ Auth::user()->first_name }} <span class="caret"></span>
+        <div class="navbar-end">
+            @guest
+                <a class="navbar-item" href="{{ route('login') }}">Login</a>
+                <a class="navbar-item" href="{{ route('register') }}">Register</a>
+            @else
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link dropdown-toggle" href="#">
+                        {{ Auth::user()->first_name }}
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="{{ route('home') }}">
+                            Home
                         </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{ route('home') }}">
-                                    Home
-                                </a>
-                                <a href="/account">
-                                    Account
-                                </a>
-                                <a href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                      style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-                @endguest
-            </ul>
+                        <a class="navbar-item" href="/account">
+                            Account
+                        </a>
+                        <a class="navbar-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                              style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </div>
+                </div>
+            @endguest
         </div>
     </div>
 </nav>
