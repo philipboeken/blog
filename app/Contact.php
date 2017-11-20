@@ -24,4 +24,9 @@ class Contact extends Model
     {
         return $this->belongsToMany(Post::class);
     }
+
+    public function name()
+    {
+        return $this->first_name . ' ' . $this->surname;
+    }
 }

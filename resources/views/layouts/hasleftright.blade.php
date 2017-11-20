@@ -3,10 +3,10 @@
 @section('content')
     <section class="hero">
         <div class="columns">
-            <div class="column is-2 left-container">
+            <div class="column is-3 left-container">
                 @yield('title-left')
             </div>
-            <div class="column is-7">
+            <div class="column">
                 <div class="hero-body">
                     <h1 class="title">
                         @yield('title')
@@ -24,7 +24,7 @@
     <hr>
     <div class="page-content">
         <div class="columns">
-            <div class="column is-2 left-container">
+            <div class="column is-3 left-container">
                 @yield('content-left')
             </div>
             <div class="column">

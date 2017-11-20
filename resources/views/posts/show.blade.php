@@ -7,6 +7,9 @@
 @section('subtitle')
     Geschreven door:
     {{ $post->user->first_name }}
+    <div class="is-pulled-right">
+        {{ $post->created_at }}
+    </div>
 @endsection
 
 @section('content-mid')
@@ -23,7 +26,6 @@
             <div class="card-content">
                 <div class="content">
                     {!! $comment->body !!}
-                    <time datetime="{{ $comment->created_at }}"></time>
                 </div>
             </div>
         </div>
@@ -50,74 +52,69 @@
 
 @section('content-right')
     @if($post->isMine())
-        <h3 class="title is-4">
+        <h3 class="subtitle">
             Actions
         </h3>
-        <span>
-            <a :href="/posts/ + {{ $post->id }} + '/edit'">
-                Bewerk
-                <i class="fa fa-pencil"></i>
-            </a>
-        </span>
-        <span>
-            <a href="{{ '/posts/' . $post->id }}"
-               onclick="event.preventDefault(); document.getElementById('destroy-form').submit();">
-                Verwijder
-                <i class="fa fa-times"></i>
-            </a>
-            <form id="destroy-form" action="{{ '/posts/' . $post->id }}" method="DELETE" style="display: none;">
-                {{ csrf_field() }}
-            </form>
-        </span>
+        <a :href="/posts/ + {{ $post->id }} + '/edit'">
+            Bewerk
+            <i class="fa fa-pencil"></i>
+        </a>
+        <a href="{{ '/posts/' . $post->id }}"
+           onclick="event.preventDefault(); document.getElementById('destroy-form').submit();">
+            Verwijder
+            <i class="fa fa-times"></i>
+        </a>
+        <form id="destroy-form" action="{{ '/posts/' . $post->id }}" method="DELETE" style="display: none;">
+            {{ csrf_field() }}
+        </form>
         <hr>
     @endif
-    <h3 class="title is-4">
+    <h3 class="subtitle">
+        Labels
+    </h3>
+    @foreach($post->labels as $label)
+        @include('components.label', compact('label'))
+    @endforeach
+    <hr>
+    <h3 class="subtitle">
         Contacts
     </h3>
     @foreach($post->contacts as $contact)
         <div class="field is-horizontal">
-            <div class="field-label">Naam</div>
+            <div class="field-label is-normal">Naam</div>
             <div class="field-body">
-                <div class="field">
-                    <div class="control">
-                        {{ $contact->surname . ', ' . $contact->first_name }}
-                    </div>
+                <div class="control">
+                    {{ $contact->name() }}
                 </div>
             </div>
         </div>
         <div class="field is-horizontal">
             <div class="field-label is-normal">Email</div>
             <div class="field-body">
-                <div class="field">
-                    <div class="control is-expanded has-icons-left">
-                        {{ $contact->email }}
-                    </div>
+                <div class="control">
+                    {{ $contact->email }}
                 </div>
             </div>
         </div>
         <div class="field is-horizontal">
             <div class="field-label is-normal">{{ $contact->phonenumber1_description }}</div>
             <div class="field-body">
-                <div class="field">
-                    <div class="control is-expanded has-icons-left">
-                        {{ $contact->phonenumber1 }}
-                    </div>
+                <div class="control">
+                    {{ $contact->phonenumber1 }}
                 </div>
             </div>
         </div>
         <div class="field is-horizontal">
             <div class="field-label is-normal">{{ $contact->phonenumber2_description }}</div>
             <div class="field-body">
-                <div class="field">
-                    <div class="control is-expanded has-icons-left">
-                        {{ $contact->phonenumber2 }}
-                    </div>
+                <div class="control">
+                    {{ $contact->phonenumber2 }}
                 </div>
             </div>
         </div>
     @endforeach
     <hr>
-    <h3 class="title is-4">
+    <h2 class="subtitle">
         Files
-    </h3>
+    </h2>
 @endsection

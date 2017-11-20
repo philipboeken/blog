@@ -10,8 +10,7 @@
             </a>
         @endguest
 
-                {{--onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"--}}
-        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
             <span></span>
             <span></span>
             <span></span>

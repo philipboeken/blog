@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function name()
+    {
+        return $this->first_name . ' ' . $this->surname;
+    }
 }

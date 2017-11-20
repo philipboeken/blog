@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
+use App\File;
+use App\Label;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
 use Illuminate\Http\Request;
@@ -15,9 +19,38 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'DESC')->get();
 
-        return view('posts.index', compact('posts'));
+        $posts = Post::latest();
+
+        if (request('search')) {
+            $search = request('search');
+            $posts = $posts->where('title', 'LIKE', '%' . $search . '%')
+                ->orWhere('text', 'LIKE', '%' . $search . '%');
+        }
+
+        if (request('userId')) {
+            $userId = request('userId');
+            $posts = $posts->where('user_id', $userId);
+        }
+
+        if (request('date_min')) {
+            $date_min = request('date_min');
+            $posts = $posts->where('created_at', '>', $date_min);
+        }
+
+        if (request('date_max')) {
+            $date_max = request('date_max');
+            $posts = $posts->where('created_at', '<', $date_max);
+        }
+
+        $posts = $posts->get();
+
+        $users = User::all();
+        $labels = Label::all();
+        $date_min = $posts->min('created_at');
+        $date_max = $posts->max('created_at');
+
+        return view('posts.index', compact('posts', 'users', 'labels', 'date_min', 'date_max'));
     }
 
     /**
@@ -27,31 +60,46 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $labels = Label::all();
+        $contacts = Contact::all();
+        $files = File::all();
+
+        return view('posts.create', compact('labels', 'contacts', 'files'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         $user_id = Auth::user()->id;
 
-        Post::create([
+        $post = Post::create([
             'text' => request('text'),
             'title' => request('title'),
-            'user_id' => $user_id]);
+            'user_id' => $user_id
+        ]);
 
-        return redirect('/posts');
+        if (request('labelId')) {
+            $post->labels()->attach(request('labelId'));
+        }
+        if (request('contactId')) {
+            $post->labels()->attach(request('contactId'));
+        }
+        if (request('fileId')){
+            $post->labels()->attach(request('fileId'));
+        }
+
+        return redirect('/posts/' . $post->id);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Post $post
      * @return \Illuminate\Http\Response
      */
     public function show(Post $post)
@@ -64,7 +112,7 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Post $post
      * @return \Illuminate\Http\Response
      */
     public function edit(Post $post)
@@ -75,8 +123,8 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Post $post
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Post $post)
@@ -91,7 +139,7 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Post $post
      * @return \Illuminate\Http\Response
      */
     public function destroy(Post $post)

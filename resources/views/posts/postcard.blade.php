@@ -10,9 +10,17 @@
                 </span>
             @endif
         </p>
-        <p class="subtitle">
+        <h2 class="subtitle">
             Door: {{ $user->first_name }}
-        </p>
+            <div class="is-pulled-right">
+                {{ $post->created_at }}
+            </div>
+        </h2>
+        <div>
+            @foreach($post->labels as $label)
+                @include('components.label', compact('label'))
+            @endforeach
+        </div>
     </div>
     <div class="card-content">
         {!! $post->text !!}
