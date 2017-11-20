@@ -11,7 +11,7 @@
             {{ csrf_field() }}
             <div class="card-content">
                 <div class="field is-horizontal">
-                    <div class="field-label">E-Mail Address</div>
+                    <div class="field-label is-normal">E-Mail Address</div>
                     <div class="field-body">
                         <div class="field">
                             <p class="control">
@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="field is-horizontal">
-                    <div class="field-label">Password</div>
+                    <div class="field-label is-normal">Password</div>
                     <div class="field-body">
                         <div class="field">
                             <p class="control">
