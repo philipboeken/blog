@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.hasleftright')
 
 @section('title')
     Schrijf je eigen bericht!
@@ -7,7 +7,7 @@
 @section('subtitle')
 @endsection
 
-@section('content')
+@section('content-mid')
     <form method="POST" action="/posts/create">
         {{ csrf_field() }}
             <div class="field">

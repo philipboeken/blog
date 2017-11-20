@@ -19,33 +19,7 @@
 <body>
 <div id="app">
     @include('layouts.navigation')
-    <section class="hero">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    @yield('title')
-                </h1>
-                <h2 class="subtitle">
-                    @yield('subtitle')
-                </h2>
-            </div>
-        </div>
-    </section>
-    <hr>
-    <div class="page-content">
-        <div class="columns">
-            <div class="column is-2 left-container">
-                @yield('left-container')
-            </div>
-            <div class="column is-7">
-                @yield('content')
-            </div>
-            <div class="column is-3 right-container">
-                @yield('right-container')
-            </div>
-        </div>
-    </div>
-    <hr>
+    @yield('content')
     @include('layouts.footer')
 </div>
 

@@ -1,16 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.hasleft')
 
 @section('title')
     All Posts
 @endsection
 
-@section('left-container')
+@section('content-left')
     <h1>
         Filters
     </h1>
 @endsection
 
-@section('content')
+@section('content-mid')
     <div class="columns is-centered">
         <div class="column is-narrow">
             <a class="is-centered" href="/posts/create">Schrijf je eigen bericht!</a>

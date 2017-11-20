@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.hasleftright')
 
 @section('title')
     {{ $post->title }}
@@ -9,7 +9,7 @@
     {{ $post->user->first_name }}
 @endsection
 
-@section('content')
+@section('content-mid')
     <div>
         {!! $post->text !!}
     </div>
@@ -48,7 +48,7 @@
 
 @endsection
 
-@section('right-container')
+@section('content-right')
     @if($post->isMine())
         <h3 class="title is-4">
             Actions

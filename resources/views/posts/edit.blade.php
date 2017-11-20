@@ -1,13 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.hasleftright')
 
 @section('title')
     Verander een post!
 @endsection
 
-@section('subtitle')
-@endsection
-
-@section('content')
+@section('content-mid')
     <form method="POST">
         {{ csrf_field() }}
         <div class="field">

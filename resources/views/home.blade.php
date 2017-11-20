@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.hasleftright')
 
 @section('title')
     Home
 @endsection
 
-@section('content')
+@section('content-mid')
 
 @endsection

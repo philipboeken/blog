@@ -1,12 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.hasleftright')
 
-@section('content')
+@section('title')
+    Register
+@endsection
+
+@section('content-mid')
     <div class="card">
-        <div class="card-title">
-            <p class="title">
-                Register
-            </p>
-        </div>
         <form method="POST" action="{{ route('register') }}">
             {{ csrf_field() }}
             <div class="card-content">

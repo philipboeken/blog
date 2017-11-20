@@ -19,13 +19,14 @@
     </div>
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="/posts">Posts</a>
-            <a class="navbar-item" href="/agenda">Agenda</a>
-            <a class="navbar-item" href="/contacts">Contacts</a>
-            <a class="navbar-item" href="/files">Files</a>
-        </div>
-
+        @auth
+            <div class="navbar-start">
+                <a class="navbar-item" href="/posts">Posts</a>
+                <a class="navbar-item" href="/agenda">Agenda</a>
+                <a class="navbar-item" href="/contacts">Contacts</a>
+                <a class="navbar-item" href="/files">Files</a>
+            </div>
+        @endauth
         <div class="navbar-end">
             @guest
                 <a class="navbar-item" href="{{ route('login') }}">Login</a>
