@@ -4,6 +4,19 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+require("jspolyfill-array.prototype.find");
+require('es6-object-assign').polyfill();
+let entries = require('object.entries');
+if (!Object.entries) {
+  entries.shim();
+}
+let includes = require('array-includes');
+if (!Array.prototype.includes) {
+  includes.shim();
+}
+require('./bootstrap');
+require('es6-promise').polyfill();
+
 require('./bootstrap');
 require('./bulma');
 require('./froala');
