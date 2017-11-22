@@ -1,4 +1,4 @@
-@extends('layouts.hasleft')
+@extends('layouts.left')
 
 @section('title')
     Files

@@ -1,20 +1,20 @@
-<nav class="navbar is-info">
+<nav class="navbar is-info is-fixed-top">
     <div class="navbar-brand">
         @guest
             <a class="navbar-item" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
-        @else
-            <a class="navbar-item" href="{{ url('/home') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-        @endguest
+            @else
+                <a class="navbar-item" href="{{ url('/home') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                @endguest
 
-        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+                <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
     </div>
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
@@ -31,6 +31,24 @@
                 <a class="navbar-item" href="{{ route('login') }}">Login</a>
                 <a class="navbar-item" href="{{ route('register') }}">Register</a>
             @else
+                <div class="navbar-item">
+                    <form method="GET" action="/search">
+                        <div class="field has-addons">
+                            <p class="control has-icons-right">
+                                <input class="input" name="search" type="text"
+                                       placeholder="Zoeken">
+                                <span class="icon is-small is-right">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                            </p>
+                            <p class="control">
+                                <button class="button is-static">
+                                    Zoek
+                                </button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">
                         {{ Auth::user()->first_name }}

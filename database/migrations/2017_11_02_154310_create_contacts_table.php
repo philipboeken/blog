@@ -24,6 +24,7 @@ class CreateContactsTable extends Migration
             $table->string('phonenumber2')->nullable();
             $table->string('phonenumber2_description')->nullable();
             $table->timestamps();
+//            @TODO: bedrfijsnaam, label, adres, notities
         });
     }
 

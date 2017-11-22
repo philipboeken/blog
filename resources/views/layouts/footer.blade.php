@@ -1,5 +1,5 @@
+<hr>
 <footer class="footer">
-    <hr>
     <div class="columns is-centered">
         <div class="column is-narrow">
             <a class="nav-item" href="/about">About this Blog</a>

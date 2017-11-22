@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}" class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
 <div id="app">
     @include('layouts.navigation')
     @yield('content')
-    @include('layouts.footer')
+{{--    @include('layouts.footer')--}}
 </div>
 
 <!-- Scripts -->

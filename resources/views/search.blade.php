@@ -1,9 +1,8 @@
-@extends('layouts.left')
+@extends('layouts.center')
 
 @section('title')
-    Agenda
+    Zoeken
 @endsection
 
 @section('content-mid')
-
 @endsection

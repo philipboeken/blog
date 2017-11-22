@@ -1,4 +1,4 @@
-@extends('layouts.hasleftright')
+@extends('layouts.right')
 
 @section('title')
     Schrijf je eigen bericht!
@@ -37,9 +37,9 @@
     <h3 class="subtitle">
         Labels
     </h3>
-    <div class="field has-addons">
+    <div class="field">
         <div class="control">
-            <div class="select">
+            <div class="select is-fullwidth">
                 <select name="labelId">
                     <option disabled selected class="hidden"> ----</option>
                     @foreach($labels as $label)
@@ -48,19 +48,14 @@
                 </select>
             </div>
         </div>
-        <p class="control">
-            <a class="button is-static">
-                <i class="fa fa-plus"></i>
-            </a>
-        </p>
     </div>
     <hr>
     <h3 class="subtitle">
         Contacts
     </h3>
-    <div class="field has-addons">
+    <div class="field">
         <div class="control">
-            <div class="select">
+            <div class="select is-fullwidth">
                 <select name="contactId">
                     <option disabled selected class="hidden"> ----</option>
                     @foreach($contacts as $contact)
@@ -69,38 +64,20 @@
                 </select>
             </div>
         </div>
-        <p class="control">
-            <a class="button is-static">
-                <i class="fa fa-plus"></i>
-            </a>
-        </p>
     </div>
     <hr>
     <h2 class="subtitle">
         Files
     </h2>
-    <div class="field has-addons">
+    <div class="field">
         <div class="control">
-            <div class="select">
+            <div class="select is-fullwidth">
                 <select name="fileId">
                     <option disabled selected class="hidden"> ----</option>
                     @foreach($files as $file)
                         <option value="{{ $file->id }}">{{ $file->title }}</option>
                     @endforeach
                 </select>
-            </div>
-        </div>
-        <div class="control">
-            <div class="file">
-                <label class="file-label">
-                    <input class="file-input" type="file" name="resume">
-                    <span class="file-cta">
-                        <span class="file-icon">
-                            <i class="fa fa-upload"></i>
-                        </span>
-                        <span class="file-label"></span>
-                    </span>
-                </label>
             </div>
         </div>
     </div>

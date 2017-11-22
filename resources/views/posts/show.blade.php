@@ -1,4 +1,4 @@
-@extends('layouts.hasleftright')
+@extends('layouts.right')
 
 @section('title')
     {{ $post->title }}

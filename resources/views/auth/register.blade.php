@@ -1,4 +1,4 @@
-@extends('layouts.hasleftright')
+@extends('layouts.center')
 
 @section('title')
     Register

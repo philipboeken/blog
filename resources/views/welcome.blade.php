@@ -1,7 +1,7 @@
-@extends('layouts.hasleftright')
+@extends('layouts.center')
 
 @section('title')
-    Onze coole blog!
+    Onze blog!
 @endsection
 
 @section('content-mid')

@@ -14552,19 +14552,8 @@ div.flatpickr-calendar.open {
 
 html,
 body {
-  background-color: #fff;
   color: #636b6f;
   font-family: 'Raleway', sans-serif;
-  font-weight: 100;
-  height: 100vh;
-  margin: 0;
-}
-
-footer.footer {
-  background-color: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .left-container {
@@ -14575,5 +14564,28 @@ footer.footer {
 .right-container {
   margin-right: 1em;
   border-left: 1px solid #dbdbdb;
+}
+
+.columns.is-fullheight {
+  min-height: calc(100vh - (3.25rem - .75rem));
+  max-height: calc(100vh - (3.25rem - .75rem));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.columns.is-fullheight .column {
+  overflow-y: auto;
+}
+
+.column.is-main-content {
+  margin: 0 2em 0 2em;
 }
 
