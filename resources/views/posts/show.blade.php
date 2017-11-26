@@ -5,39 +5,62 @@
 @endsection
 
 @section('subtitle')
-    Geschreven door:
-    {{ $post->user->first_name }}
     <div class="is-pulled-right">
-        {{ $post->created_at }}
+        <strong>
+            Door {{ $post->user->first_name }} op
+            {{ $post->created_at->format('d-m-Y') }}
+        </strong>
     </div>
 @endsection
 
 @section('content-mid')
-    <div>
-        {!! $post->text !!}
-    </div>
+    {!! $post->text !!}
+    <hr>
     @foreach($post->comments as $comment)
-        <div class="card">
-            <div class="card-content">
+        <article class="media">
+            <figure class="media-left">
+                <p class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/128x128.png">
+                </p>
+            </figure>
+            <div class="media-content">
                 <div class="content">
-                    {{ $comment->user->first_name }}: {!! $comment->body !!}
+                    <p>
+                        <strong>{{ $comment->user->first_name }}</strong>
+                        <br>
+                        {!! $comment->body !!}
+                        <br>
+                        <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+                    </p>
                 </div>
             </div>
-        </div>
+        </article>
     @endforeach
 
-    <div class="card">
-        <div class="card-content">
-            <div class="content">
-                <form method="POST" action="/posts/{{ $post->id }}/comment">
-                    {{ csrf_field() }}
-                    {{ $user->first_name }}: <textarea class="comment" title="comment" name="comment" id="comment"></textarea>
-                    <button class="button">Send</button>
-                </form>
-            </div>
+    <article class="media">
+        <figure class="media-left">
+            <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/128x128.png">
+            </p>
+        </figure>
+        <div class="media-content">
+            <form method="POST" action="/posts/{{ $post->id }}/comment">
+                {{ csrf_field() }}
+                <div class="field">
+                    <p class="control">
+                        <textarea name="comment" class="textarea" placeholder="Add a comment..."></textarea>
+                    </p>
+                </div>
+                <nav class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <button class="button is-info">Submit</button>
+                        </div>
+                    </div>
+                </nav>
+            </form>
         </div>
-    </div>
-
+    </article>
 @endsection
 
 @section('content-right')
@@ -71,7 +94,7 @@
     </h3>
     @foreach($post->contacts as $contact)
         <div class="field is-horizontal">
-            <div class="field-label is-normal">Naam</div>
+            <div class="field-label">Naam</div>
             <div class="field-body">
                 <div class="control">
                     {{ $contact->name() }}
@@ -79,7 +102,7 @@
             </div>
         </div>
         <div class="field is-horizontal">
-            <div class="field-label is-normal">Email</div>
+            <div class="field-label">Email</div>
             <div class="field-body">
                 <div class="control">
                     {{ $contact->email }}
@@ -87,7 +110,7 @@
             </div>
         </div>
         <div class="field is-horizontal">
-            <div class="field-label is-normal">{{ $contact->phonenumber1_description }}</div>
+            <div class="field-label">{{ $contact->phonenumber1_description }}</div>
             <div class="field-body">
                 <div class="control">
                     {{ $contact->phonenumber1 }}
@@ -95,7 +118,7 @@
             </div>
         </div>
         <div class="field is-horizontal">
-            <div class="field-label is-normal">{{ $contact->phonenumber2_description }}</div>
+            <div class="field-label">{{ $contact->phonenumber2_description }}</div>
             <div class="field-body">
                 <div class="control">
                     {{ $contact->phonenumber2 }}
@@ -107,4 +130,14 @@
     <h2 class="subtitle">
         Files
     </h2>
+    @foreach($post->files as $file)
+        <div class="field is-horizontal">
+            <div class="field-label">Naam</div>
+            <div class="field-body">
+                <div class="control">
+                    {{ $file->title }}
+                </div>
+            </div>
+        </div>
+    @endforeach
 @endsection

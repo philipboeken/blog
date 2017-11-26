@@ -7,30 +7,32 @@
 @section('subtitle')
 @endsection
 
-@section('content-mid')
+@section('form_start')
     <form method="POST" action="/posts/create">
-        {{ csrf_field() }}
-        <div class="field">
-            <label class="label">Title</label>
-            <div class="control">
-                <input class="input" id="title" name="title" type="text" placeholder="Title input">
-            </div>
+    {{ csrf_field() }}
+@endsection
+
+@section('content-mid')
+    <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+            <input class="input" id="title" name="title" type="text" placeholder="Title input" required>
         </div>
-        <div class="field">
-            <label class="label">Text</label>
-            <div class="control">
-                <textarea class="textarea post" id="title" name="text" placeholder="Textarea"></textarea>
-            </div>
+    </div>
+    <div class="field">
+        <label class="label">Text</label>
+        <div class="control">
+            <textarea class="textarea post" id="title" name="text" placeholder="Textarea" required></textarea>
         </div>
-        <div class="field is-grouped">
-            <div class="control">
-                <button class="button is-link">Submit</button>
-            </div>
-            <div class="control">
-                <a class="button is-text" href="/posts">Cancel</a>
-            </div>
+    </div>
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-link">Submit</button>
         </div>
-    </form>
+        <div class="control">
+            <a class="button is-text" href="/posts">Cancel</a>
+        </div>
+    </div>
 @endsection
 
 @section('content-right')
@@ -39,14 +41,10 @@
     </h3>
     <div class="field">
         <div class="control">
-            <div class="select is-fullwidth">
-                <select name="labelId">
-                    <option disabled selected class="hidden"> ----</option>
-                    @foreach($labels as $label)
-                        <option value="{{ $label->id }}">@include('components.label', compact('label'))</option>
-                    @endforeach
-                </select>
-            </div>
+            <multi-select :options="{{ $labels }}"
+                          placeholder="Labels"
+                          form-name="labelIDs"
+                          label="title"></multi-select>
         </div>
     </div>
     <hr>
@@ -55,14 +53,10 @@
     </h3>
     <div class="field">
         <div class="control">
-            <div class="select is-fullwidth">
-                <select name="contactId">
-                    <option disabled selected class="hidden"> ----</option>
-                    @foreach($contacts as $contact)
-                        <option value="{{ $contact->id }}">{{ $contact->name() }}</option>
-                    @endforeach
-                </select>
-            </div>
+            <multi-select :options="{{ $contacts }}"
+                          placeholder="Contacts"
+                          form-name="contactIDs"
+                          :custom-label="function(contact) { return contact.first_name + ' ' + contact.surname}"></multi-select>
         </div>
     </div>
     <hr>
@@ -71,14 +65,14 @@
     </h2>
     <div class="field">
         <div class="control">
-            <div class="select is-fullwidth">
-                <select name="fileId">
-                    <option disabled selected class="hidden"> ----</option>
-                    @foreach($files as $file)
-                        <option value="{{ $file->id }}">{{ $file->title }}</option>
-                    @endforeach
-                </select>
-            </div>
+            <multi-select :options="{{ $files }}"
+                          placeholder="Files"
+                          form-name="fileIDs"
+                          label="title"></multi-select>
         </div>
     </div>
+@endsection
+
+@section('form_end')
+    </form>
 @endsection

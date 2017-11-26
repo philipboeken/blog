@@ -26,7 +26,11 @@ import VueFlatpickr from 'vue-flatpickr';
 import 'vue-flatpickr/theme/airbnb.css';
 Vue.use(VueFlatpickr);
 
+Vue.component('contact-modal', require('./components/ContactModal.vue'));
 Vue.component('datepicker', require('./components/Datepicker.vue'));
+Vue.component('file-modal', require('./components/FileModal.vue'));
+Vue.component('label-modal', require('./components/LabelModal.vue'));
+Vue.component('multi-select', require('./components/MultiSelect.vue'));
 
 
 /**
@@ -36,5 +40,6 @@ Vue.component('datepicker', require('./components/Datepicker.vue'));
  */
 
 const app = new Vue({
+  components: {},
   el: '#app'
 });

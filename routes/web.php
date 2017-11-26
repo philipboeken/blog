@@ -12,6 +12,9 @@
 */
 
 Route::get('/', function () {
+    if(Auth::user()){
+        return redirect(route('home'));
+    }
     return view('welcome');
 });
 
@@ -21,10 +24,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/account', 'AccountController@index');
 Route::get('/agenda', 'EventController@index');
-Route::get('/contacts', 'ContactController@index');
-Route::get('/files', 'FileController@index');
-Route::get('/search', 'SearchController@index');
 
+Route::get('/contacts', 'ContactController@index');
+Route::post('/contacts/create', 'ContactController@store');
+
+Route::get('/files', 'FileController@index');
+
+Route::post('/labels/create', 'LabelController@store');
 
 Route::post('/posts/{post}/comment', 'CommentController@store');
 
@@ -33,7 +39,10 @@ Route::get('/posts/create', 'PostController@create');
 Route::post('/posts/create', 'PostController@store');
 Route::get('/posts/{post}', 'PostController@show');
 Route::get('/posts/{post}/edit', 'PostController@edit');
-Route::post('/posts/{post}/edit', 'PostController@update');
+Route::post('/posts/{post}/edit', 'PostController@update')->name('');
 Route::delete('/posts/{post}', 'PostController@destroy');
+
+Route::get('/search', 'SearchController@index');
+
 
 // Put, patch, delete {{ method_field('PATCH/DELETE') }}

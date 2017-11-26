@@ -1,13 +1,6 @@
 <div class="box">
     <h1 class="title">
         <a :href="'/posts/' + {{ $post->id }}">{{ $post->title }}</a>
-        @if($post->isMine())
-            <span class="is-pulled-right">
-                <a :href="'/posts/'+ {{ $post->id }}+'/edit'">
-                    <i class="fa fa-pencil"></i>
-                </a>
-            </span>
-        @endif
     </h1>
 
     <div class="media-content">
@@ -16,18 +9,17 @@
         @endforeach
         <div class="is-pulled-right">
             <strong>
-            Door: {{ $user->first_name }} //
-            {{ $post->created_at }}
+            Door {{ $user->first_name }} op
+            {{ $post->created_at->format('d-m-Y') }}
             </strong>
         </div>
         <br>
-        <div class="content">
+        <hr>
+        <div class="content is-ellipsis-4">
             {!! $post->text !!}
         </div>
     </div>
     <p class="card-footer-item">
-      <span>
         <a :href="'/posts/' + {{ $post->id }}">Bekijk bericht</a>
-      </span>
     </p>
 </div>

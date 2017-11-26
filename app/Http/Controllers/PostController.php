@@ -19,38 +19,49 @@ class PostController extends Controller
      */
     public function index()
     {
+        $filter_users = collect([]);
+        $filter_labels = collect([]);
+        $filter_min_date = '';
+        $filter_max_date = '';
 
         $posts = Post::latest();
+        $users = User::all();
+        $labels = Label::all();
 
-        if (request('search')) {
-            $search = request('search');
-            $posts = $posts->where('title', 'LIKE', '%' . $search . '%')
-                ->orWhere('text', 'LIKE', '%' . $search . '%');
+        if (request('filter_users')) {
+            $filter_users = $users->whereIn('id', explode(',', request('filter_users')));
+            $posts = $posts->whereIn('user_id', $filter_users->map(function ($user) {
+                return $user->id;
+            }));
         }
 
-        if (request('userId')) {
-            $userId = request('userId');
-            $posts = $posts->where('user_id', $userId);
+        if (request('filter_labels')) {
+            $filter_labels = $labels->whereIn('id', explode(',', request('filter_labels')));
+            $posts = $posts->whereHas('labels', function ($label) use ($filter_labels) {
+                $label->whereIn('label_id', $filter_labels->map(function ($label) {
+                    return $label->id;
+                }));
+            });
         }
 
-        if (request('date_min')) {
-            $date_min = request('date_min');
-            $posts = $posts->where('created_at', '>', $date_min);
+        if (request('filter_min_date')) {
+            $filter_min_date = request('filter_min_date');
+            $posts = $posts->where('created_at', '>', $filter_min_date);
         }
 
-        if (request('date_max')) {
-            $date_max = request('date_max');
-            $posts = $posts->where('created_at', '<', $date_max);
+        if (request('date_max_filter')) {
+            $filter_max_date = request('date_max_filter');
+            $posts = $posts->where('created_at', '<', $filter_max_date);
         }
 
         $posts = $posts->get();
 
-        $users = User::all();
-        $labels = Label::all();
         $date_min = $posts->min('created_at');
         $date_max = $posts->max('created_at');
 
-        return view('posts.index', compact('posts', 'users', 'labels', 'date_min', 'date_max'));
+        return view('posts.index',
+            compact('posts', 'users', 'labels', 'date_min', 'date_max', 'filter_users', 'filter_labels',
+                'filter_min_date', 'filter_max_date'));
     }
 
     /**
@@ -83,15 +94,9 @@ class PostController extends Controller
             'user_id' => $user_id
         ]);
 
-        if (request('labelId')) {
-            $post->labels()->attach(request('labelId'));
-        }
-        if (request('contactId')) {
-            $post->labels()->attach(request('contactId'));
-        }
-        if (request('fileId')){
-            $post->labels()->attach(request('fileId'));
-        }
+        $post->labels()->sync(array_filter(explode(',', request('labelIDs'))));
+        $post->contacts()->sync(array_filter(explode(',', request('contactIDs'))));
+        $post->files()->sync(array_filter(explode(',', request('fileIDs'))));
 
         return redirect('/posts/' . $post->id);
     }
@@ -117,7 +122,11 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('posts.edit', compact('post'));
+        $labels = Label::all();
+        $contacts = Contact::all();
+        $files = File::all();
+
+        return view('posts.edit', compact('post', 'labels', 'contacts', 'files'));
     }
 
     /**
@@ -129,8 +138,11 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        $post->text = request('text');
         $post->title = request('title');
+        $post->text = request('text');
+        $post->labels()->sync(array_filter(explode(',', request('labelIDs'))));
+        $post->contacts()->sync(array_filter(explode(',', request('contactIDs'))));
+        $post->files()->sync(array_filter(explode(',', request('fileIDs'))));
         $post->save();
 
         return redirect('/posts/' . $post->id);

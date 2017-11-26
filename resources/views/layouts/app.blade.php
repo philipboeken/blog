@@ -19,8 +19,9 @@
 <body>
 <div id="app">
     @include('layouts.navigation')
+    @yield('form_start')
     @yield('content')
-{{--    @include('layouts.footer')--}}
+    @yield('form_end')
 </div>
 
 <!-- Scripts -->

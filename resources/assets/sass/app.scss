@@ -8,6 +8,7 @@
 // Custom
 @import './navigation';
 @import 'components/datepicker';
+@import "~vue-multiselect/dist/vue-multiselect.min.css";
 
 html, body {
   color: #636b6f;
@@ -24,17 +25,45 @@ html, body {
   border-left: 1px solid #dbdbdb;
 }
 
-.columns.is-fullheight {
-  min-height: calc(100vh - (#{$navbar-height} - .75rem));
-  max-height: calc(100vh - (#{$navbar-height} - .75rem));
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  .column {
-    overflow-y: auto;
+.columns.is-fullheight_ {
+  @include tablet {
+    min-height: calc(100vh - (#{$navbar-height} - .75rem));
+    max-height: calc(100vh - (#{$navbar-height} - .75rem));
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    .column {
+      overflow-y: auto;
+    }
   }
 }
 
 .column.is-main-content {
-  margin: 0 2em 0 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.column.is-sidebar-menu {
+  margin-top: 2em;
+}
+
+.box > .title {
+  margin-bottom: 0;
+}
+
+@mixin ellipsis {
+
+}
+
+.is-ellipsis-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+
+  display: block;
+  margin: 0 auto;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 4*1.5em;
 }

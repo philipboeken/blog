@@ -31,7 +31,7 @@
                 <a class="navbar-item" href="{{ route('login') }}">Login</a>
                 <a class="navbar-item" href="{{ route('register') }}">Register</a>
             @else
-                <div class="navbar-item">
+                <div class="navbar-item is-hidden-mobile">
                     <form method="GET" action="/search">
                         <div class="field has-addons">
                             <p class="control has-icons-right">
