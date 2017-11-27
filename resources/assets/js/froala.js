@@ -1,3 +1,5 @@
+require('froala-editor/js/froala_editor.pkgd.min.js');
+
 $(function () {
   $('textarea.post').froalaEditor({
     charCounterCount: false,

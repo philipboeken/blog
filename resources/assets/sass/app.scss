@@ -1,5 +1,5 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import 'raleway_300_400_600.css';
 @import "~font-awesome/scss/font-awesome";
 // Variables
 @import "variables";
@@ -7,6 +7,8 @@
 @import "~bulma/bulma";
 // Custom
 @import './navigation';
+@import "~froala-editor/css/froala_editor.pkgd.css";
+@import "~froala-editor/css/froala_style.min.css";
 @import 'components/datepicker';
 @import "~vue-multiselect/dist/vue-multiselect.min.css";
 
@@ -49,10 +51,6 @@ html, body {
 
 .box > .title {
   margin-bottom: 0;
-}
-
-@mixin ellipsis {
-
 }
 
 .is-ellipsis-4 {
