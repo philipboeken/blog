@@ -24,10 +24,20 @@ window.Vue = require('vue');
 
 import VueFlatpickr from 'vue-flatpickr';
 import 'vue-flatpickr/theme/airbnb.css';
+
 Vue.use(VueFlatpickr);
+
+import Vue from 'vue'
+import Buefy from 'buefy'
+import 'buefy/lib/buefy.css'
+
+Vue.use(Buefy, {
+  defaultIconPack: 'fa'
+});
 
 Vue.component('contact-modal', require('./components/ContactModal.vue'));
 Vue.component('datepicker', require('./components/Datepicker.vue'));
+Vue.component('drag-and-drop', require('./components/DragAndDrop.vue'));
 Vue.component('file-modal', require('./components/FileModal.vue'));
 Vue.component('label-modal', require('./components/LabelModal.vue'));
 Vue.component('multi-select', require('./components/MultiSelect.vue'));

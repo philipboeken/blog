@@ -13,25 +13,10 @@
                     <a class="delete" @click="active=false"></a>
                 </header>
                 <section class="modal-card-body">
-                    <div class="file has-name is-boxed">
-                        <label class="file-label">
-                            <input class="file-input" type="file" name="resume" @change="processFile($event)">
-                            <span class="file-cta">
-                                <span class="file-icon">
-                                    <i class="fa fa-upload"></i>
-                                </span>
-                                <span class="file-label">
-                                    Choose a file…
-                                </span>
-                            </span>
-                            <span class="file-name">
-
-                            </span>
-                        </label>
-                    </div>
+                    <drag-and-drop v-model="files"></drag-and-drop>
                 </section>
                 <footer class="modal-card-foot">
-                    <a class="button is-success" @click="send()">Save changes</a>
+                    <a class="button is-success" @click="send">Save changes</a>
                     <a class="button" @click="active=false">Cancel</a>
                 </footer>
             </div>
@@ -45,17 +30,13 @@
     data() {
       return {
         active: false,
-        file: function () {
-          return {};
+        files: function () {
+          return [];
         }
       }
     },
     props: {},
     methods: {
-      processFile(event) {
-        console.log(event.target.files[0]);
-        this.file = event.target.files
-      },
       send() {
         axios.post('/files/create', {
           first_name: this.first_name
