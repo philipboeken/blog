@@ -20,6 +20,9 @@
     <div id="navbarExampleTransparentExample" class="navbar-menu">
         @auth
             <div class="navbar-start">
+                <div class="navbar-item is-hidden-desktop">
+                    @include('components.searchbar')
+                </div>
                 <a class="navbar-item" href="/posts">Posts</a>
                 <a class="navbar-item" href="/agenda">Agenda</a>
                 <a class="navbar-item" href="/contacts">Contacts</a>
@@ -31,23 +34,8 @@
                 <a class="navbar-item" href="{{ route('login') }}">Login</a>
                 <a class="navbar-item" href="{{ route('register') }}">Register</a>
             @else
-                <div class="navbar-item is-hidden-mobile">
-                    <form method="GET" action="/search">
-                        <div class="field has-addons">
-                            <p class="control has-icons-right">
-                                <input class="input" name="search" type="text"
-                                       placeholder="Zoeken">
-                                <span class="icon is-small is-right">
-                                    <i class="fa fa-search"></i>
-                                </span>
-                            </p>
-                            <p class="control">
-                                <button class="button is-static">
-                                    Zoek
-                                </button>
-                            </p>
-                        </div>
-                    </form>
+                <div class="navbar-item is-hidden-touch">
+                    @include('components.searchbar')
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">
