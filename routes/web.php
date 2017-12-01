@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/account', 'AccountController@index');
+Route::get('/account', 'AccountController@index')->name('account.personal');
 Route::get('/agenda', 'EventController@index');
 
 Route::get('/contacts', 'ContactController@index');

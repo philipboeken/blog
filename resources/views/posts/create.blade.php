@@ -47,6 +47,11 @@
                           label="title"></multi-select>
         </div>
     </div>
+    <div class="field">
+        <div class="control is-expanded">
+            <label-modal></label-modal>
+        </div>
+    </div>
     <hr>
     <h3 class="subtitle">
         Contacts
@@ -59,6 +64,11 @@
                           :custom-label="function(contact) { return contact.first_name + ' ' + contact.surname}"></multi-select>
         </div>
     </div>
+    <div class="field">
+        <div class="control is-expanded">
+            <contact-modal></contact-modal>
+        </div>
+    </div>
     <hr>
     <h2 class="subtitle">
         Files
@@ -69,6 +79,11 @@
                           placeholder="Files"
                           form-name="fileIDs"
                           label="title"></multi-select>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control is-expanded">
+            <file-modal></file-modal>
         </div>
     </div>
 @endsection
