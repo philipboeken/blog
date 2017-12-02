@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="columns is-fullheight_">
-        <aside class="column is-2 is-sidebar-menu left-container">
+        <aside class="column is-3 is-sidebar-menu left-container">
             @yield('content-left')
         </aside>
         <div class="column is-main-content">

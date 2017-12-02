@@ -9,7 +9,7 @@ require('es6-object-assign').polyfill();
 require('./bootstrap');
 require('es6-promise').polyfill();
 require('./bulma');
-require('./froala');
+require('trix');
 
 let entries = require('object.entries');
 if (!Object.entries) {
@@ -34,6 +34,7 @@ Vue.use(Buefy, {
   defaultIconPack: 'fa'
 });
 
+Vue.component('account-menu', require('./components/AccountMenu.vue'));
 Vue.component('contact-modal', require('./components/ContactModal.vue'));
 Vue.component('datepicker', require('./components/Datepicker.vue'));
 Vue.component('drag-and-drop', require('./components/DragAndDrop.vue'));

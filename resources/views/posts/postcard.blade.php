@@ -16,7 +16,7 @@
         <br>
         <hr>
         <div class="content is-ellipsis-4">
-            {!! $post->text !!}
+            {!! $post->body !!}
         </div>
     </div>
     <p class="card-footer-item">

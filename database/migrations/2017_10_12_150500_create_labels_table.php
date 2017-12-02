@@ -18,7 +18,6 @@ class CreateLabelsTable extends Migration
             $table->integer('user_id');
             $table->string('title');
             $table->string('color')->default('#f4c20d');
-            $table->boolean('is_mutable')->default(false);
             $table->timestamps();
         });
     }

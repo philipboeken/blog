@@ -14,7 +14,7 @@
 @endsection
 
 @section('content-mid')
-    {!! $post->text !!}
+    {!! $post->body !!}
     <hr>
     @foreach($post->comments as $comment)
         <article class="media">

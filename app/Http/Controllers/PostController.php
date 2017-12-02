@@ -89,7 +89,7 @@ class PostController extends Controller
         $user_id = Auth::user()->id;
 
         $post = Post::create([
-            'text' => request('text'),
+            'body' => request('body'),
             'title' => request('title'),
             'user_id' => $user_id
         ]);
@@ -139,7 +139,7 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $post->title = request('title');
-        $post->text = request('text');
+        $post->body = request('body');
         $post->labels()->sync(array_filter(explode(',', request('labelIDs'))));
         $post->contacts()->sync(array_filter(explode(',', request('contactIDs'))));
         $post->files()->sync(array_filter(explode(',', request('fileIDs'))));

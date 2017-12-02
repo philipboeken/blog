@@ -22,7 +22,8 @@
     <div class="field">
         <label class="label">Text</label>
         <div class="control">
-            <textarea class="textarea post" id="title" name="text" placeholder="Textarea" required></textarea>
+            <input id="body" type="hidden" name="body">
+            <trix-editor input="body"></trix-editor>
         </div>
     </div>
     <div class="field is-grouped">

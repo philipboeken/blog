@@ -16,7 +16,6 @@ class LabelsTableSeeder extends Seeder
             'user_id' => '1',
             'title' => 'Installatie',
             'color' => '#4286f4',
-            'is_mutable' => true
         ]);
     }
 }

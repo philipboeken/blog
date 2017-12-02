@@ -19,8 +19,8 @@
     <div class="field">
         <label class="label">Text</label>
         <div class="control">
-        <textarea class="textarea post" id="text" name="text"
-                  placeholder="Textarea">{{ $post->text }}</textarea>
+            <input id="body" type="hidden" name="content" value="{{ $post->body }}">
+            <trix-editor input="body"></trix-editor>
         </div>
     </div>
     <div class="field is-grouped">

@@ -7,11 +7,9 @@
 @import "~bulma/bulma";
 // Custom
 @import './navigation';
-@import "~froala-editor/css/froala_editor.pkgd.css";
-@import "~froala-editor/css/froala_style.min.css";
-@import 'components/datepicker';
 @import "~vue-multiselect/dist/vue-multiselect.min.css";
 @import '~buefy/lib/buefy.css';
+@import '~trix/dist/trix.css';
 
 html, body {
   color: #636b6f;

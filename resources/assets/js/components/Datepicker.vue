@@ -1,32 +1,26 @@
 <template>
-    <div class="datePickerContainer">
-        <Flatpickr :placeholder="placeholder" class="input" :name="name" :options="defaultConfig" @input="onInput"
-                   ref="FlatPickr"></Flatpickr>
-        <a v-if="clearbutton" @click="clearDate" class="button is-small is-outlined"><span class="icon is-small"><i
-                class="fa fa-times"></i></span></a>
+    <div>
+        <b-datepicker
+                v-model="date"
+                :first-day-of-week="1"
+                :placeholder="placeholder">
+            <!--:min-date="toDate(minDate)"-->
+            <!--:max-date="toDate(maxDate)">-->
+        </b-datepicker>
+        <input :name="name" hidden v-model="date">
     </div>
 </template>
 
 <script>
-  import moment from 'moment';
-
   export default {
+    data() {
+      return {
+        date: new Date()
+      }
+    },
     props: {
-      datePickerConfig: {
-        type: Object,
-        default: () => {
-          return {
-            dateFormat: 'Y-m-d',
-            altInput: true,
-            altFormat: 'd-m-Y'
-          };
-        }
-      },
       value: {
-        default: ''
-      },
-      clearbutton: {
-        default: false
+        default: null
       },
       defaultDate: {
         type: String
@@ -45,31 +39,11 @@
         default: 'dd-mm-YYYY'
       }
     },
-    computed: {
-      defaultConfig() {
-        const config = Object.assign({}, this.datePickerConfig);
-        config.defaultDate = moment(this.defaultDate, 'YYYY-MM-DD').toDate();
-        config.minDate = this.minDate;
-        config.maxDate = this.maxDate;
-        return config;
-      }
-    },
     methods: {
-      onInput(value) {
-        this.$emit('input', value);
-      },
-      clearDate() {
-        this.$refs.FlatPickr.fp.clear();
-      },
-      setDate(value) {
-        this.$refs.FlatPickr.fp.setDate(value);
+      toDate(date) {
+        return Date(Date.format(date))
       }
     },
-    mounted() {
-      if (this.value != '') {
-        this.setDate(this.value);
-      }
-    }
   };
 </script>
 <style>
