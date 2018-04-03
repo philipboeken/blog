@@ -1,7 +1,7 @@
 @extends('layouts.right')
 
 @section('title')
-    Schrijf je eigen bericht!
+    Schrijf een nieuw bericht
 @endsection
 
 @section('subtitle')
@@ -14,24 +14,24 @@
 
 @section('content-mid')
     <div class="field">
-        <label class="label">Title</label>
+        <label class="label">Titel</label>
         <div class="control">
-            <input class="input" id="title" name="title" type="text" placeholder="Title input" required>
+            <input class="input" id="title" name="title" type="text" placeholder="Titel input" required>
         </div>
     </div>
     <div class="field">
-        <label class="label">Text</label>
+        <label class="label">Tekst</label>
         <div class="control">
-            <input id="body" type="hidden" name="body">
+            <input id="body" type="hidden" name="body" required>
             <trix-editor input="body"></trix-editor>
         </div>
     </div>
     <div class="field is-grouped">
         <div class="control">
-            <button class="button is-link">Submit</button>
+            <button class="button">Verstuur</button>
         </div>
         <div class="control">
-            <a class="button is-text" href="/posts">Cancel</a>
+            <a class="button is-text" href="/posts">Annuleer</a>
         </div>
     </div>
 @endsection
@@ -43,7 +43,7 @@
     <div class="field">
         <div class="control">
             <multi-select :options="{{ $labels }}"
-                          placeholder="Labels"
+                          placeholder="Kies labels"
                           form-name="labelIDs"
                           label="title"></multi-select>
         </div>
@@ -55,12 +55,12 @@
     </div>
     <hr>
     <h3 class="subtitle">
-        Contacts
+        Contacten
     </h3>
     <div class="field">
         <div class="control">
             <multi-select :options="{{ $contacts }}"
-                          placeholder="Contacts"
+                          placeholder="Kies contacten"
                           form-name="contactIDs"
                           :custom-label="function(contact) { return contact.first_name + ' ' + contact.surname}"></multi-select>
         </div>
@@ -72,7 +72,7 @@
     </div>
     <hr>
     <h2 class="subtitle">
-        Files
+        Bestanden
     </h2>
     <div class="field">
         <div class="control">

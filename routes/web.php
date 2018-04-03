@@ -32,6 +32,8 @@ Route::get('/agenda', 'EventController@index');
 
 Route::get('/contacts', 'ContactController@index');
 Route::post('/contacts/create', 'ContactController@store');
+Route::post('/contacts/update/{id}', 'ContactController@update');
+Route::post('/contacts/delete/{id}', 'ContactController@destroy');
 
 Route::get('/files', 'FileController@index');
 

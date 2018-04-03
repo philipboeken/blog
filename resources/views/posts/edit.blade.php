@@ -19,7 +19,7 @@
     <div class="field">
         <label class="label">Text</label>
         <div class="control">
-            <input id="body" type="hidden" name="content" value="{{ $post->body }}">
+            <input id="body" type="hidden" name="body" value="{{ $post->body }}">
             <trix-editor input="body"></trix-editor>
         </div>
     </div>

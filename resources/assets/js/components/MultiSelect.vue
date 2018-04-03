@@ -76,7 +76,6 @@
     },
     computed: {
       values() {
-//        return false;
         return this.selectedValues.map((val) => val[this.trackBy]);
       }
     }

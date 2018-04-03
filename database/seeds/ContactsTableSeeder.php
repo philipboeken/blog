@@ -23,5 +23,17 @@ class ContactsTableSeeder extends Seeder
             'phonenumber2_description' => 'Vast',
 
         ]);
+
+        DB::table('contacts')->insert([
+            'user_id' => '2',
+            'first_name' => 'Pieter',
+            'surname' => 'van de Hoogenband',
+            'email' => 'email@hoogenband.com',
+            'phonenumber1' => '0698798791',
+            'phonenumber1_description' => 'Mobiel',
+            'phonenumber2' => '0207654321',
+            'phonenumber2_description' => 'Vast',
+
+        ]);
     }
 }

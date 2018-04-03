@@ -1,8 +1,8 @@
 <template>
     <div>
         <a class="button is-centered" @click="active=true">
-            Create a new File
-            <i class="fa fa-plus"></i>
+            <span>Create a new File</span>
+            <b-icon icon="plus"></b-icon>
         </a>
 
         <div class="modal" :class="{'is-active': active}">

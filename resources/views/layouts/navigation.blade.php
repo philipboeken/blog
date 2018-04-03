@@ -1,20 +1,19 @@
-<nav class="navbar is-info is-fixed-top">
+<nav class="navbar is-fixed-top">
     <div class="navbar-brand">
         @guest
             <a class="navbar-item" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
-            @else
-                <a class="navbar-item" href="{{ url('/home') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                @endguest
-
-                <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+        @else
+            <a class="navbar-item" href="{{ url('/home') }}">
+                {{ config('app.name', 'Laravel') }}
+            </a>
+        @endguest
+        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
@@ -23,7 +22,7 @@
                 <div class="navbar-item is-hidden-desktop">
                     @include('components.searchbar')
                 </div>
-                <a class="navbar-item" href="/posts">Posts</a>
+            <a class="navbar-item" href="/posts">Posts</a>
                 <a class="navbar-item" href="/agenda">Agenda</a>
                 <a class="navbar-item" href="/contacts">Contacts</a>
                 <a class="navbar-item" href="/files">Files</a>
@@ -31,7 +30,7 @@
         @endauth
         <div class="navbar-end">
             @guest
-                <a class="navbar-item" href="{{ route('login') }}">Login</a>
+                @include('components.login-dropdown')
                 <a class="navbar-item" href="{{ route('register') }}">Register</a>
             @else
                 <div class="navbar-item is-hidden-touch">

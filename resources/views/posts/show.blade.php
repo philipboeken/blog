@@ -70,7 +70,7 @@
         </h3>
         <a :href="/posts/ + {{ $post->id }} + '/edit'">
             Bewerk
-            <i class="fa fa-pencil"></i>
+            <i class="fas fa-pencil-alt"></i>
         </a>
         <a href="{{ '/posts/' . $post->id }}"
            onclick="event.preventDefault(); document.getElementById('destroy-form').submit();">
@@ -93,38 +93,7 @@
         Contacts
     </h3>
     @foreach($post->contacts as $contact)
-        <div class="field is-horizontal">
-            <div class="field-label">Naam</div>
-            <div class="field-body">
-                <div class="control">
-                    {{ $contact->name() }}
-                </div>
-            </div>
-        </div>
-        <div class="field is-horizontal">
-            <div class="field-label">Email</div>
-            <div class="field-body">
-                <div class="control">
-                    {{ $contact->email }}
-                </div>
-            </div>
-        </div>
-        <div class="field is-horizontal">
-            <div class="field-label">{{ $contact->phonenumber1_description }}</div>
-            <div class="field-body">
-                <div class="control">
-                    {{ $contact->phonenumber1 }}
-                </div>
-            </div>
-        </div>
-        <div class="field is-horizontal">
-            <div class="field-label">{{ $contact->phonenumber2_description }}</div>
-            <div class="field-body">
-                <div class="control">
-                    {{ $contact->phonenumber2 }}
-                </div>
-            </div>
-        </div>
+        <contact-button :contact="{{ $contact }}"></contact-button>
     @endforeach
     <hr>
     <h2 class="subtitle">

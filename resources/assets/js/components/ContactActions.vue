@@ -1,16 +1,16 @@
 <template>
     <div>
-        <a class="button is-centered" @click="active=true">
-            <span>Voeg een contactpersoon toe</span>
-            <b-icon icon="plus"></b-icon>
-        </a>
+        <a class="button" @click="viewActive=true">Bekijk</a>
+        <a class="button is-info" @click="editActive= true">Bewerk</a>
+        <a class="button is-danger" @click="confirmCustomDelete">Verwijder</a>
+        <contact-show-modal :contact="contact" :active="viewActive" @close="viewActive=false"></contact-show-modal>
 
-        <div class="modal" :class="{'is-active': active}">
+        <div class="modal" :class="{'is-active': editActive}">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
-                    <p class="modal-card-title">Voeg een contactpersoon toe</p>
-                    <a class="delete" @click="active=false"></a>
+                    <p class="modal-card-title">Bewerk contactpersoon</p>
+                    <a class="delete" @click="editActive=false"></a>
                 </header>
                 <section class="modal-card-body">
                     <div class="field">
@@ -25,7 +25,7 @@
                             <input class="input" type="text" v-model="surname">
                         </div>
                     </div>
-                     <div class="field">
+                    <div class="field">
                         <label class="label">Email</label>
                         <div class="control">
                             <input class="input" type="text" v-model="email">
@@ -45,7 +45,7 @@
                     </div>
                 </section>
                 <footer class="modal-card-foot">
-                    <a class="button is-success" @click="send()">Voeg toe</a>
+                    <a class="button is-success" @click="send()">Opslaan</a>
                     <a class="button" @click="active=false">Annuleer</a>
                 </footer>
             </div>
@@ -58,18 +58,37 @@ export default {
     components: {},
     data() {
         return {
-            active: false,
-            first_name: '',
-            surname: '',
-            email: '',
-            tel1: '',
-            tel2: ''
+            editActive: false,
+            viewActive: false,
+            id: this.contact.id,
+            first_name: this.contact.first_name,
+            surname: this.contact.surname,
+            email: this.contact.email,
+            tel1: this.contact.phonenumber1,
+            tel2: this.contact.phonenumber2
         }
     },
-    props: {},
+    props: {
+        contact: {
+            type: Object,
+            default() {
+                return {
+                    user_id: '',
+                    first_name: '',
+                    surname: '',
+                    email: '',
+                    phonenumber1: '',
+                    phonenumber1_description: '',
+                    phonenumber2: '',
+                    phonenumber2_description: '',
+                }
+            }
+        }
+    },
     methods: {
         send() {
-            axios.post('/contacts/create', {
+            axios.post('/contacts/update/' + this.id, {
+                id: this.id,
                 first_name: this.first_name,
                 surname: this.surname,
                 email: this.email,
@@ -80,6 +99,21 @@ export default {
             }).catch(function (error) {
                 console.log(error);
             });
+        },
+        confirmCustomDelete() {
+            this.$dialog.confirm({
+                title: 'Verwijder contact: ' + this.first_name + ' ' + this.surname,
+                message: 'Weet u zeker dat u dit contact wilt verwijderen?',
+                cancelText: 'Annuleer',
+                confirmText: 'Verwijder',
+                type: 'is-danger',
+                hasIcon: true,
+                onConfirm: () => {
+                    axios.post('/contacts/delete/' + this.id).then(
+                        this.$toast.open('Contact verwijderd!')
+                    );
+                }
+            })
         }
     }
 }

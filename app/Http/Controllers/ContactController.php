@@ -36,6 +36,7 @@ class ContactController extends Controller
             'user_id' => Auth::user()->id,
             'first_name' => request('first_name'),
             'surname' => request('surname'),
+            'email' => request('email'),
             'phonenumber1' => request('tel1'),
             'phonenumber1_description' => $contact->phonenumber1_description,
             'phonenumber2' => request('tel2'),
@@ -75,7 +76,7 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Contact::find($id)->update($request->all());
     }
 
     /**
@@ -86,6 +87,7 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd($id);
+        User::find($id)->delete();
     }
 }

@@ -49,19 +49,30 @@ class PostController extends Controller
             $posts = $posts->where('created_at', '>', $filter_min_date);
         }
 
-        if (request('date_max_filter')) {
-            $filter_max_date = request('date_max_filter');
+        if (request('filter_max_date')) {
+            $filter_max_date = request('filter_max_date');
             $posts = $posts->where('created_at', '<', $filter_max_date);
         }
 
         $posts = $posts->get();
 
-        $date_min = $posts->min('created_at');
-        $date_max = $posts->max('created_at');
+        $date_min = date('d-m-Y', strtotime($posts->min('created_at')));
+        $date_max = date('d-m-Y', strtotime($posts->max('created_at')));
 
-        return view('posts.index',
-            compact('posts', 'users', 'labels', 'date_min', 'date_max', 'filter_users', 'filter_labels',
-                'filter_min_date', 'filter_max_date'));
+        return view(
+            'posts.index',
+            compact(
+                'posts',
+                'users',
+                'labels',
+                'date_min',
+                'date_max',
+                'filter_users',
+                'filter_labels',
+                'filter_min_date',
+                'filter_max_date'
+            )
+        );
     }
 
     /**

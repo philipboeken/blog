@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
     <section class="hero is-small">
         <div class="hero-body">
             <h1 class="title">
@@ -11,12 +12,11 @@
             </h2>
         </div>
     </section>
-    <hr>
-    <div class="page-content">
-        <div class="columns">
-            <div class="column">
-                @yield('content-mid')
-            </div>
+    <hr class="title-ruler">
+    <div class="columns">
+        <div class="column">
+            @yield('content-mid')
         </div>
     </div>
+</div>
 @endsection

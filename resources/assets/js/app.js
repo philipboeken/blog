@@ -35,7 +35,11 @@ Vue.use(Buefy, {
 });
 
 Vue.component('account-menu', require('./components/AccountMenu.vue'));
+Vue.component('contact-actions', require('./components/ContactActions.vue'));
+Vue.component('contact-button', require('./components/ContactButton.vue'));
+Vue.component('contact-show-modal', require('./components/ContactShowModal.vue'));
 Vue.component('contact-modal', require('./components/ContactModal.vue'));
+Vue.component('contacts-table', require('./components/ContactsTable.vue'));
 Vue.component('datepicker', require('./components/Datepicker.vue'));
 Vue.component('drag-and-drop', require('./components/DragAndDrop.vue'));
 Vue.component('file-modal', require('./components/FileModal.vue'));

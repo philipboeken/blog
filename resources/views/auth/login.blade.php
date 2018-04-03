@@ -2,6 +2,7 @@
 
 @section('title')
     Login
+    {{ route('login') }}
 @endsection
 
 @section('content-mid')

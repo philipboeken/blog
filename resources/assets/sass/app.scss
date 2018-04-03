@@ -1,19 +1,16 @@
 // Fonts
 @import 'raleway_300_400_600.css';
-@import "~font-awesome/scss/font-awesome";
-// Variables
 @import "variables";
-// Bulma
 @import "~bulma/bulma";
-// Custom
+@import '~buefy/src/scss/buefy';
 @import './navigation';
 @import "~vue-multiselect/dist/vue-multiselect.min.css";
-@import '~buefy/lib/buefy.css';
 @import '~trix/dist/trix.css';
 
-html, body {
-  color: #636b6f;
-  font-family: 'Raleway', sans-serif;
+.container {
+  @include desktop {
+    max-width: 70%;
+  }
 }
 
 .left-container {
@@ -26,6 +23,10 @@ html, body {
   border-left: 1px solid #dbdbdb;
 }
 
+.has-text-textcolor {
+  color: $text-color;
+}
+
 .columns.is-fullheight_ {
   @include tablet {
     min-height: calc(100vh - (#{$navbar-height} - .75rem));
@@ -33,6 +34,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: stretch;
+
     .column {
       overflow-y: auto;
     }
@@ -44,23 +46,42 @@ html, body {
   padding-right: 2em;
 }
 
-.column.is-sidebar-menu {
-  margin-top: 2em;
-}
+.box {
+  &:not(:last-child) {
+    margin-bottom: .5rem !important;
+  }
 
-.box > .title {
-  margin-bottom: 0;
+  .subtitle {
+    margin-bottom: 0;
+  }
 }
 
 .is-ellipsis-4 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
-
   display: block;
   margin: 0 auto;
   line-height: 1.5;
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: 4*1.5em;
+}
+
+.postcard-hr {
+  margin-top: .6em;
+  margin-bottom: .6em;
+}
+
+hr.title-ruler{
+  margin-top: 0;
+}
+
+.multiselect__option--highlight,
+.multiselect__option--selected.multiselect__option--highlight,
+.multiselect__tag,
+.multiselect__tag-icon::after,
+.multiselect__tag-icon:hover {
+  color: white;
+  background-color: $primary;
 }

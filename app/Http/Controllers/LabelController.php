@@ -37,12 +37,12 @@ class LabelController extends Controller
      */
     public function store(Request $request)
     {
-        Label::create([
+        $lab = Label::create([
             'title' => request('title'),
             'color' => request('color'),
             'user_id' => Auth::user()->id
-        ])->save();
-        return back();
+        ]);
+        $lab->save();
     }
 
     /**

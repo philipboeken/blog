@@ -1,59 +1,25 @@
 @extends('layouts.left')
 
 @section('title')
-    All Posts
+    Alle berichten
 @endsection
 
 @section('content-left')
-    <form method="GET" action="/posts">
-        <h3 class="subtitle">
-            Filter
-        </h3>
-        <div class="field">
-            <label class="label">Author</label>
-            <div class="control">
-                <multi-select :options="{{ $users }}"
-                              placeholder="Authors"
-                              form-name="filter_users"
-                              label="first_name"
-                              :value="{{ $filter_users }}"></multi-select>
-            </div>
-        </div>
-        <div class="field">
-            <label class="label">Label</label>
-            <div class="control">
-                <multi-select :options="{{ $labels }}"
-                              placeholder="Labels"
-                              form-name="filter_labels"
-                              label="title"
-                              :value="{{ $filter_labels }}"></multi-select>
-            </div>
-        </div>
-        <div class="field">
-            <label class="label">From</label>
-            <div class="control">
-                <datepicker name="filter_min_date" min-date="{{ $date_min }}" max-date="{{ $date_max }}"
-                            placeholder="Pick a date"></datepicker>
-            </div>
-        </div>
-        <div class="field">
-            <label class="label">Till</label>
-            <div class="control">
-                <datepicker name="filter_max_date" min-date="{{ $date_min }}" max-date="{{ $date_max }}"
-                            placeholder="Pick a date"></datepicker>
-            </div>
-        </div>
-        <button class="button is-info" type="send">Filter</button>
-    </form>
+    @include('components.filter')
 @endsection
 
 @section('content-mid')
     <div class="box is-info">
-        <div class="columns is-centered">
-            <div class="column is-narrow">
-                <a class="is-centered" href="/posts/create">Schrijf je eigen bericht!</a>
+        <a class="is-centered" href="/posts/create">
+            <div class="columns is-centered">
+                <div class="column is-narrow">
+                    <div class="button is-white">
+                        <span>Voeg een bericht toe</span>
+                        <b-icon icon="plus"></b-icon>
+                    </div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     @foreach($posts as $post)
         @include('posts.postcard', ['user' => $post->user, 'post' => $post])
