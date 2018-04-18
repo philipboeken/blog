@@ -52,16 +52,6 @@
 <script>
 export default {
     components: {},
-    data() {
-        return {
-            id: this.contact.id,
-            first_name: this.contact.first_name,
-            surname: this.contact.surname,
-            email: this.contact.email,
-            tel1: this.contact.phonenumber1,
-            tel2: this.contact.phonenumber2
-        }
-    },
     props: {
         active: {
             type: Boolean,

@@ -13,8 +13,8 @@
             </div>
         </section>
         <hr class="title-ruler">
-        <div class="columns is-fullheight_">
-                <aside class="column is-3 is-sidebar-menu left-container">
+        <div class="columns">
+                <aside class="column is-3 left-container">
                     @yield('content-left')
                 </aside>
                 <div class="column is-main-content">

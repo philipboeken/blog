@@ -12,21 +12,11 @@ class File extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'post_id', 'title', 'description', 'data'
+        'user_id', 'post_id', 'name', 'extension', 'type', 'description', 'data'
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function post()
-    {
-        return $this->belongsTo(Post::class);
-    }
-
-    public function posts()
-    {
-        return $this->belongsToMany(Post::class);
     }
 }

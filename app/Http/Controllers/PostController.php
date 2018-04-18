@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Contact;
 use App\File;
-use App\Label;
 use App\User;
-use Illuminate\Support\Facades\Auth;
 use App\Post;
+use App\Label;
+use App\Contact;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -28,6 +29,9 @@ class PostController extends Controller
         $users = User::all();
         $labels = Label::all();
 
+        $date_min = Carbon::parse($posts->min('created_at'))->toW3cString();;
+        $date_max = Carbon::parse($posts->max('created_at'))->toW3cString();;
+
         if (request('filter_users')) {
             $filter_users = $users->whereIn('id', explode(',', request('filter_users')));
             $posts = $posts->whereIn('user_id', $filter_users->map(function ($user) {
@@ -46,19 +50,16 @@ class PostController extends Controller
 
         if (request('filter_min_date')) {
             $filter_min_date = request('filter_min_date');
-            $posts = $posts->where('created_at', '>', $filter_min_date);
+            $posts = $posts->where('created_at', '>', Carbon::parse($filter_min_date));
         }
 
         if (request('filter_max_date')) {
             $filter_max_date = request('filter_max_date');
-            $posts = $posts->where('created_at', '<', $filter_max_date);
+            $posts = $posts->where('created_at', '<',  Carbon::parse($filter_max_date));
         }
 
         $posts = $posts->get();
-
-        $date_min = date('d-m-Y', strtotime($posts->min('created_at')));
-        $date_max = date('d-m-Y', strtotime($posts->max('created_at')));
-
+        
         return view(
             'posts.index',
             compact(

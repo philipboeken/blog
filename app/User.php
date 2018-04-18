@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -45,5 +46,17 @@ class User extends Authenticatable
     public function name()
     {
         return $this->first_name . ' ' . $this->surname;
+    }
+
+    public function getCreatedAtAttribute()
+    {
+        $date = new Carbon($this->attributes['created_at']);
+        return $date->toW3cString();
+    }
+
+    public function getUpdatedAtAttribute()
+    {
+        $date = new Carbon($this->attributes['updated_at']);
+        return $date->toW3cString();
     }
 }

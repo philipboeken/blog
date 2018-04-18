@@ -16,7 +16,7 @@
                     {{ props.row.surname }}
                 </b-table-column>
                 <b-table-column field="date" label="Datum toegevoegd" sortable>
-                    {{ new Date(props.row.created_at).toLocaleDateString() }}
+                    {{ props.row.created_at }}
                 </b-table-column>
                 <b-table-column field="actions" label="Acties">
                     <contact-actions :contact="props.row"></contact-actions>
@@ -30,7 +30,7 @@
 export default {
     data() {
         return {
-            isPaginated: true,
+            isPaginated: false,
             isPaginationSimple: false,
             defaultSortDirection: 'asc',
             currentPage: 1,

@@ -1,12 +1,12 @@
 @extends('layouts.center')
 
 @section('title')
-    Onze blog!
+    Jan Luyken Blog startpagina
 @endsection
 
 @section('content-mid')
     <div class="section">
-        Als je hier niks te zoeken hebt, ga dan weg. Anders: <a href="/login">Login</a>!
+        <a class="button" href="/login">Ga naar de login pagina</a>
     </div>
 
 @endsection

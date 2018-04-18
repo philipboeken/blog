@@ -3,9 +3,9 @@
 @import "variables";
 @import "~bulma/bulma";
 @import '~buefy/src/scss/buefy';
-@import './navigation';
 @import "~vue-multiselect/dist/vue-multiselect.min.css";
 @import '~trix/dist/trix.css';
+@import '~fullcalendar/dist/fullcalendar.css';
 
 .container {
   @include desktop {
@@ -16,6 +16,7 @@
 .left-container {
   margin-left: 1em;
   border-right: 1px solid #dbdbdb;
+  overflow: visible !important;
 }
 
 .right-container {
@@ -27,31 +28,26 @@
   color: $text-color;
 }
 
-.columns.is-fullheight_ {
-  @include tablet {
-    min-height: calc(100vh - (#{$navbar-height} - .75rem));
-    max-height: calc(100vh - (#{$navbar-height} - .75rem));
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-
-    .column {
-      overflow-y: auto;
-    }
-  }
-}
-
 .column.is-main-content {
   padding-left: 2em;
   padding-right: 2em;
 }
 
 .box {
+  &.add-button {
+    padding: .5rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: .5rem !important;
   }
 
+  .content {
+    margin-bottom: .2rem;
+  }
+
   .subtitle {
+    color: black;
     margin-bottom: 0;
   }
 }
@@ -62,10 +58,10 @@
   -webkit-line-clamp: 4;
   display: block;
   margin: 0 auto;
-  line-height: 1.5;
+  line-height: 1.2em;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 4*1.5em;
+  max-height: 4*1.2em;
 }
 
 .postcard-hr {
@@ -73,8 +69,18 @@
   margin-bottom: .6em;
 }
 
-hr.title-ruler{
+hr.title-ruler {
   margin-top: 0;
+}
+
+.navbar-dropdown > .navbar-item {
+  @include desktop {
+    color: $text-color;
+  }
+}
+
+.navbar-burger {
+  color: white;
 }
 
 .multiselect__option--highlight,
@@ -84,4 +90,12 @@ hr.title-ruler{
 .multiselect__tag-icon:hover {
   color: white;
   background-color: $primary;
+}
+
+.multiselect__tags-wrap > .tag {
+  margin: .1em;
+}
+
+.event-modal.modal-background {
+  background-color: rgba(10, 10, 10, 0.15);
 }

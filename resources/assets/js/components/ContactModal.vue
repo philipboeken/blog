@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a class="button is-centered" @click="active=true">
+        <a class="button is-white" @click="active=true">
             <span>Voeg een contactpersoon toe</span>
             <b-icon icon="plus"></b-icon>
         </a>

@@ -17,10 +17,11 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('title');
-            $table->string('description')->nullable();
+            $table->string('note')->nullable();
             $table->string('location')->nullable();
-            $table->timestamp('start_date')->nullable();
-            $table->timestamp('stop_date')->nullable();
+            $table->timestamp('start')->default(DB::raw('CURRENT_TIMESTAMP'));;
+            $table->timestamp('end')->default(DB::raw('CURRENT_TIMESTAMP'));;
+            $table->boolean('allDay');
             $table->timestamps();
         });
     }

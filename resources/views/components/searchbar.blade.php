@@ -4,7 +4,7 @@
             <input class="input" name="search" type="text"
                    placeholder="Zoeken" disabled>
             <span class="icon is-small is-right">
-                                    <i class="fa fa-search"></i>
+                                    <i class="fas fa-search"></i>
                                 </span>
         </p>
         <p class="control">

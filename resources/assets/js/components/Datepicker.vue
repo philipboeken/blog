@@ -4,10 +4,10 @@
                 v-model="date"
                 :first-day-of-week="1"
                 :placeholder="placeholder"
-                :min-date="toDate(minDate)"
-                :max-date="toDate(maxDate)">
+                :min-date="new Date(minDate)"
+                :max-date="new Date(maxDate)">
         </b-datepicker>
-        <input :name="name" hidden v-model="dateFormatted">
+        <input :name="name" hidden v-model="date">
     </div>
 </template>
 
@@ -15,7 +15,7 @@
 export default {
   data() {
     return {
-      date: this.toDate(this.value)
+      date: this.value ? new Date(this.value) : null
     }
   },
   props: {
@@ -37,16 +37,6 @@ export default {
     placeholder: {
       type: String,
       default: 'dd-mm-YYYY'
-    }
-  },
-  computed: {
-    dateFormatted() {
-      return !this.date ? this.date : [this.date.getDate(), this.date.getMonth() + 1, this.date.getFullYear()].join('-');
-    }
-  },
-  methods: {
-    toDate(str) {
-      return str ? new Date([str.split('-')[2], str.split('-')[1], str.split('-')[0]].join('-')) : null
     }
   }
 };

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <contact-show-modal :active="active" @close="active=false"></contact-show-modal>
+        <contact-show-modal :contact="contact" :active="active" @close="active=false"></contact-show-modal>
         <div class="button is-fullwidth has-text-left" @click="active=true">
             <b-icon icon="user" size="is-small"></b-icon>
             <span>{{ fullName }}</span>

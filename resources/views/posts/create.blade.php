@@ -45,7 +45,8 @@
             <multi-select :options="{{ $labels }}"
                           placeholder="Kies labels"
                           form-name="labelIDs"
-                          label="title"></multi-select>
+                          label="title"
+                          type="labels"></multi-select>
         </div>
     </div>
     <div class="field">
@@ -62,7 +63,9 @@
             <multi-select :options="{{ $contacts }}"
                           placeholder="Kies contacten"
                           form-name="contactIDs"
-                          :custom-label="function(contact) { return contact.first_name + ' ' + contact.surname}"></multi-select>
+                          :custom-label="function(contact) { return contact.first_name + ' ' + contact.surname}"
+                          type="contacts">
+            </multi-select>
         </div>
     </div>
     <div class="field">
@@ -79,7 +82,8 @@
             <multi-select :options="{{ $files }}"
                           placeholder="Files"
                           form-name="fileIDs"
-                          label="title"></multi-select>
+                          label="name"
+                          type="labels"></multi-select>
         </div>
     </div>
     <div class="field">

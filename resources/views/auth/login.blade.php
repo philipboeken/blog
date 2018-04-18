@@ -2,14 +2,12 @@
 
 @section('title')
     Login
-    {{ route('login') }}
 @endsection
 
 @section('content-mid')
     <section class="section">
         <form method="POST" action="{{ route('login') }}">
             {{ csrf_field() }}
-            <div class="container">
                 <div class="field is-horizontal">
                     <div class="field-label is-normal">E-Mail Address</div>
                     <div class="field-body">
@@ -21,7 +19,7 @@
                                        required autofocus>
                                 @if ($errors->has('email'))
                                     <span class="icon is-small is-right">
-                                        <i class="fa fa-warning"></i>
+                                        <i class="fas fa-warning"></i>
                                     </span>
                                 @endif
                             </div>
@@ -42,7 +40,7 @@
                                        required>
                                 @if ($errors->has('password'))
                                     <span class="icon is-small is-right">
-                                        <i class="fa fa-warning"></i>
+                                        <i class="fas fa-warning"></i>
                                     </span>
                                 @endif
                             </div>
@@ -76,7 +74,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </form>
     </section>
 @endsection

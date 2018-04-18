@@ -5,7 +5,7 @@
 @endsection
 
 @section('content-mid')
-  <div class="box is-info">
+  <div class="box add-button">
     <div class="columns is-centered">
         <div class="column is-narrow">
           <contact-modal></contact-modal>

@@ -3,7 +3,7 @@
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
             <span>Click me</span>
             <span class="icon is-small">
-        <i class="fa fa-angle-down" aria-hidden="true"></i>
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
       </span>
         </button>
     </div>
@@ -43,7 +43,7 @@
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
             <span>Hover me</span>
             <span class="icon is-small">
-        <i class="fa fa-angle-down" aria-hidden="true"></i>
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
       </span>
         </button>
     </div>

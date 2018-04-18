@@ -9,7 +9,7 @@
 @endsection
 
 @section('content-mid')
-    <div class="box is-info">
+    <div class="box add-button">
         <a class="is-centered" href="/posts/create">
             <div class="columns is-centered">
                 <div class="column is-narrow">

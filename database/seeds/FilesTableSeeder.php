@@ -12,13 +12,13 @@ class FilesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('files')->insert([
-            'user_id' => '1',
-            'post_id' => '1',
-            'title' => 'afbeelding',
-            'extension' => 'png',
-            'description' => 'Afbeelding voor bij de eerste post',
-            'data' => Lipsum::short()->text(1),
-        ]);
+        // DB::table('files')->insert([
+        //     'user_id' => '1',
+        //     'post_id' => '1',
+        //     'name' => 'afbeelding',
+        //     'extension' => 'png',
+        //     'type' => 'image',
+        //     'description' => 'Afbeelding voor bij de eerste post'
+        // ]);
     }
 }

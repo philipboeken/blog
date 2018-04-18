@@ -25,25 +25,23 @@
 </template>
 
 <script>
+  import axios from 'axios';
   export default {
-    components: {},
     data() {
       return {
         active: false,
-        files: function () {
-          return [];
+        files () {
+          return {};
         }
       }
     },
-    props: {},
     methods: {
       send() {
-        axios.post('/files/create', {
-          first_name: this.first_name
-        })
-          .then(
-            location.reload()
-          );
+        console.log(this.files);
+        axios.post('/files', { files: this.files[0] }
+        ).then((response) => {
+            console.log(response);
+        });
       }
     }
   }

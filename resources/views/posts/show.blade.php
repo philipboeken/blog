@@ -7,8 +7,7 @@
 @section('subtitle')
     <div class="is-pulled-right">
         <strong>
-            Door {{ $post->user->first_name }} op
-            {{ $post->created_at->format('d-m-Y') }}
+            {{ $post->user->first_name }} | {{ $post->created_at->format('d-m-Y') }}
         </strong>
     </div>
 @endsection
@@ -75,7 +74,7 @@
         <a href="{{ '/posts/' . $post->id }}"
            onclick="event.preventDefault(); document.getElementById('destroy-form').submit();">
             Verwijder
-            <i class="fa fa-times"></i>
+            <i class="fas fa-times"></i>
         </a>
         <form id="destroy-form" action="{{ '/posts/' . $post->id }}" method="DELETE" style="display: none;">
             {{ csrf_field() }}
@@ -86,7 +85,9 @@
         Labels
     </h3>
     @foreach($post->labels as $label)
-        @include('components.label', compact('label'))
+        <b-tag style="background-color: {{ $label->color }}">
+            {{ $label->title }}
+        </b-tag>
     @endforeach
     <hr>
     <h3 class="subtitle">

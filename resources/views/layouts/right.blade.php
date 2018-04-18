@@ -12,12 +12,12 @@
                 </h2>
             </div>
         </section>
-        <hr>
+        <hr class="title-ruler">
         <div class="columns is-fullheight_">
             <div class="column is-main-content">
                 @yield('content-mid')
             </div>
-            <aside class="column is-3 is-sidebar-menu right-container">
+            <aside class="column is-3 right-container">
                 @yield('content-right')
             </aside>
         </div>

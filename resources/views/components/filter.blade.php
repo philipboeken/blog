@@ -9,7 +9,8 @@
                           placeholder="Kies auteurs"
                           form-name="filter_users"
                           label="first_name"
-                          :value="{{ $filter_users }}"></multi-select>
+                          :value="{{ $filter_users }}"
+                          type="authors"></multi-select>
         </div>
     </div>
     <div class="field">
@@ -19,7 +20,8 @@
                           placeholder="Kies labels"
                           form-name="filter_labels"
                           label="title"
-                          :value="{{ $filter_labels }}"></multi-select>
+                          :value="{{ $filter_labels }}"
+                          type="labels"></multi-select>
         </div>
     </div>
     <div class="field">

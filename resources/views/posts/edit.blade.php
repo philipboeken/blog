@@ -40,10 +40,12 @@
     <div class="field">
         <div class="control">
             <multi-select :options="{{ $labels }}"
+                          :custom-tags="true"
                           placeholder="Labels"
                           form-name="labelIDs"
                           label="title"
-                          :value="{{ $post->labels()->get() }}"></multi-select>
+                          :value="{{ $post->labels()->get() }}"
+                          type="labels"></multi-select>
         </div>
     </div>
     <div class="field">
@@ -61,8 +63,9 @@
             <multi-select :options="{{ $contacts }}"
                           placeholder="Contacts"
                           form-name="contactIDs"
-                          :custom-label="function(contact) { return contact.first_name + ' ' + contact.surname}"
-                          :value="{{ $post->contacts()->get() }}"></multi-select>
+                          :value="{{ $post->contacts()->get() }}"
+                          type="contacts">
+            </multi-select>
         </div>
     </div>
     <div class="field">
@@ -80,7 +83,8 @@
                           placeholder="Files"
                           form-name="fileIDs"
                           label="title"
-                          :value="{{ $post->files()->get() }}"></multi-select>
+                          :value="{{ $post->files()->get() }}"
+                          type="labels"></multi-select>
         </div>
     </div>
     <file-modal></file-modal>

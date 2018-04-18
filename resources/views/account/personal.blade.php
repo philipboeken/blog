@@ -23,7 +23,7 @@
                                    required autofocus>
                             @if ($errors->has('first_name'))
                                 <span class="icon is-small is-right">
-                                        <i class="fa fa-warning"></i>
+                                        <i class="fas fa-warning"></i>
                                     </span>
                             @endif
                         </div>
@@ -45,7 +45,7 @@
                                    required autofocus>
                             @if ($errors->has('surname'))
                                 <span class="icon is-small is-right">
-                                        <i class="fa fa-warning"></i>
+                                        <i class="fas fa-warning"></i>
                                     </span>
                             @endif
                         </div>

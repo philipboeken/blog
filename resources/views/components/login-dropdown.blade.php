@@ -21,7 +21,6 @@
                     </b-field>
                     <b-field label="Password">
                         <b-input
-                        type="{{ $errors->has('password') ? ' is-danger' : '' }}" 
                             name="password"
                             type="password"
                             password-reveal

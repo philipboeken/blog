@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
@@ -57,9 +58,26 @@ class Post extends Model
         $this->comments()->create(compact('body', 'user_id'));
     }
 
-//    @TODO: Implement as trait
     public function isMine()
     {
         return Auth::user()->id == $this->user_id;
+    }
+
+    public function getCreatedAtFormattedAttribute()
+    {
+        $date = new Carbon($this->attributes['created_at']);
+        return $date->format('d-m-Y');
+    }
+
+    public function getCreatedAtAttribute()
+    {
+        $date = new Carbon($this->attributes['created_at']);
+        return $date->toW3cString();
+    }
+
+    public function getUpdatedAtAttribute()
+    {
+        $date = new Carbon($this->attributes['updated_at']);
+        return $date->toW3cString();
     }
 }

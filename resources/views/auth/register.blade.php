@@ -18,7 +18,7 @@
                                        value="{{ old('first_name') }}" required autofocus>
                                 @if ($errors->has('first_name'))
                                     <span class="icon is-small is-right">
-                                        <i class="fa fa-warning"></i>
+                                        <i class="fas fa-warning"></i>
                                     </span>
                                 @endif
                             </div>
@@ -38,7 +38,7 @@
                                        value="{{ old('surname') }}" required autofocus>
                                 @if ($errors->has('surname'))
                                     <span class="icon is-small is-right">
-                                        <i class="fa fa-warning"></i>
+                                        <i class="fas fa-warning"></i>
                                     </span>
                                 @endif
                             </div>
@@ -59,7 +59,7 @@
                                        value="{{ old('email') }}" required>
                                 @if ($errors->has('email'))
                                     <span class="icon is-small is-right">
-                                        <i class="fa fa-warning"></i>
+                                        <i class="fas fa-warning"></i>
                                     </span>
                                 @endif
                             </div>
@@ -78,7 +78,7 @@
                                 <input id="password" type="password" class="input" name="password" required>
                                 @if ($errors->has('password'))
                                     <span class="icon is-small is-right">
-                                        <i class="fa fa-warning"></i>
+                                        <i class="fas fa-warning"></i>
                                     </span>
                                 @endif
                             </div>
