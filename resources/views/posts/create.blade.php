@@ -70,7 +70,7 @@
     </div>
     <div class="field">
         <div class="control is-expanded">
-            <contact-modal></contact-modal>
+            <contact-add-modal></contact-add-modal>
         </div>
     </div>
     <hr>

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
@@ -13,6 +14,10 @@ class Contact extends Model
      */
     protected $fillable = [
         'user_id', 'first_name', 'surname', 'email', 'phonenumber1', 'phonenumber1_description', 'phonenumber2', 'phonenumber2_description'
+    ];
+
+    protected $appends = [
+        'created_at_formatted'
     ];
 
     protected $dateFormat = 'Y-m-d H:i:s';
@@ -30,5 +35,11 @@ class Contact extends Model
     public function name()
     {
         return $this->first_name . ' ' . $this->surname;
+    }
+
+    public function getCreatedAtFormattedAttribute()
+    {
+        $date = new Carbon($this->attributes['created_at']);
+        return $date->timezone(2)->format('H:i d-m-Y');
     }
 }

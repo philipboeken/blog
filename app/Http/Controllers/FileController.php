@@ -16,14 +16,6 @@ class FileController extends Controller
     private $document_ext = ['doc', 'docx', 'pdf', 'odt'];
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
      * Fetch files by Type or Id
      * @param  string $type  File type
      * @param  integer $id   File Id

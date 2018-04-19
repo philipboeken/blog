@@ -21,6 +21,12 @@
                     <b-field horizontal label="Lokatie">
                         <b-input v-model="location"></b-input>
                     </b-field>
+                    <b-field horizontal label="Notitie">
+                        <b-input type="textarea"
+                                 v-model="note"
+                                 maxlength="100">
+                        </b-input>
+                    </b-field>
                     <b-field horizontal grouped>
                         <p class="control">
                             <a v-if="add" class="button is-success" @click="store()">Voeg toe</a>

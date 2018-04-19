@@ -58,4 +58,14 @@ class Event extends Model
         $date = new Carbon($this->attributes['updated_at']);
         return $date->toW3cString();
     }
+
+    public function setStartAttribute($w3cDate)
+    {
+        $this->attributes['start'] = Carbon::parse($w3cDate)->toDateTimeString();
+    }
+
+    public function setEndAttribute($w3cDate)
+    {
+        $this->attributes['end'] = Carbon::parse($w3cDate)->toDateTimeString();
+    }
 }

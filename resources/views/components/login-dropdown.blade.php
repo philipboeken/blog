@@ -32,6 +32,7 @@
                         </b-input>
                     </b-field>
                     <b-checkbox>Remember me</b-checkbox>
+                    <input type="hidden" name="timezone" id="timezone">
                 </section>
                 <footer class="modal-card-foot">
                     <button class="button is-primary">Login</button>

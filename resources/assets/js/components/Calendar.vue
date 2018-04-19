@@ -85,6 +85,7 @@ export default {
         },
         editEvent(event) {
             this.selected = event;
+            const loadingComponent = this.$loading.open();
             axios.post('/agenda/' + event.id + '/edit', {
                 id: event.id,
                 title: event.title,
@@ -94,8 +95,10 @@ export default {
                 location: event.location,
                 note: event.note
             }).then(function (response) {
+                loadingComponent.close();
                 console.log(response);
             }).catch(function (error) {
+                loadingComponent.close();
                 console.log(error);
             });
         }

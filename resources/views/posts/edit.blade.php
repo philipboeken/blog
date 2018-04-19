@@ -5,7 +5,7 @@
 @endsection
 
 @section('form_start')
-    <form method="POST">
+    <form method="PUT">
     {{ csrf_field() }}
 @endsection
 
@@ -70,7 +70,7 @@
     </div>
     <div class="field">
         <div class="control is-expanded">
-            <contact-modal></contact-modal>
+            <contact-add-modal></contact-add-modal>
         </div>
     </div>
     <hr>

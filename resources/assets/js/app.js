@@ -14,15 +14,17 @@ require('fullcalendar/dist/locale/nl.js');
 
 let entries = require('object.entries');
 if (!Object.entries) {
-  entries.shim();
+    entries.shim();
 }
 let includes = require('array-includes');
 if (!Array.prototype.includes) {
-  includes.shim();
+    includes.shim();
 }
 
 window.Vue = require('vue');
 window.axios = require('axios');
+
+axios.defaults.baseURL = '/api/v1/';
 
 let token = document.head.querySelector('meta[name="csrf-token"]');
 
@@ -41,16 +43,15 @@ import Buefy from 'buefy'
 Vue.use(VueFlatpickr);
 Vue.use(FullCalendar)
 Vue.use(Buefy, {
-  defaultIconPack: 'fa'
+    defaultIconPack: 'fas'
 });
 
 Vue.component('account-menu', require('./components/AccountMenu.vue'));
 Vue.component('calendar', require('./components/Calendar.vue'));
-Vue.component('contact-actions', require('./components/ContactActions.vue'));
-Vue.component('contact-button', require('./components/ContactButton.vue'));
-Vue.component('contact-show-modal', require('./components/ContactShowModal.vue'));
-Vue.component('contact-modal', require('./components/ContactModal.vue'));
-Vue.component('contacts-table', require('./components/ContactsTable.vue'));
+Vue.component('contact-button', require('./components/contacts/ContactButton.vue'));
+Vue.component('contact-show-modal', require('./components/contacts/ContactShowModal.vue'));
+Vue.component('contact-add-modal', require('./components/contacts/ContactAddModal.vue'));
+Vue.component('contacts-page', require('./components/contacts/ContactsPage.vue'));
 Vue.component('datepicker', require('./components/Datepicker.vue'));
 Vue.component('drag-and-drop', require('./components/DragAndDrop.vue'));
 Vue.component('file-modal', require('./components/FileModal.vue'));
@@ -69,11 +70,11 @@ const app = new Vue({
     el: '#app',
 
     directives: {
-            'autofocus': {
-                inserted(el) {
-                    el.focus();
-                }
+        'autofocus': {
+            inserted(el) {
+                el.focus();
             }
+        }
     },
 
     data: {
@@ -140,7 +141,7 @@ const app = new Vue({
             this.formData.append('name', this.fileName);
             this.formData.append('file', this.attachment[0]);
             const loadingComponent = this.$loading.open();
-            axios.post('files/add', this.formData, {headers: {'Content-Type': 'multipart/form-data'}})
+            axios.post('files/add', this.formData, { headers: { 'Content-Type': 'multipart/form-data' } })
                 .then(response => {
                     this.resetForm();
                     loadingComponent.close();
@@ -219,8 +220,8 @@ const app = new Vue({
                                 type: 'is-success'
                             })
 
-                            var src = document.querySelector('[alt="' + file.name +'"]').getAttribute("src");
-                            document.querySelector('[alt="' + file.name +'"]').setAttribute('src', src);
+                            var src = document.querySelector('[alt="' + file.name + '"]').getAttribute("src");
+                            document.querySelector('[alt="' + file.name + '"]').setAttribute('src', src);
                         }
                     })
                     .catch(error => {

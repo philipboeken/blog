@@ -5,12 +5,5 @@
 @endsection
 
 @section('content-mid')
-  <div class="box add-button">
-    <div class="columns is-centered">
-        <div class="column is-narrow">
-          <contact-modal></contact-modal>
-        </div>
-    </div>
-  </div>
-  <contacts-table :contacts="{{ $contacts }}"></contacts-table>
+  <contacts-page :contacts="{{ $contacts }}"></contacts-table>
 @endsection

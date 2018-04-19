@@ -7,7 +7,7 @@
 @section('subtitle')
     <div class="is-pulled-right">
         <strong>
-            {{ $post->user->first_name }} | {{ $post->created_at->format('d-m-Y') }}
+            {{ $post->user->first_name }} | {{ $post->created_at_formatted }}
         </strong>
     </div>
 @endsection

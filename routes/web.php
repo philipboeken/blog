@@ -35,9 +35,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/agenda/{event}/edit', 'EventController@update');
 
     Route::get('/contacts', 'ContactController@index');
-    Route::post('/contacts/create', 'ContactController@store');
-    Route::post('/contacts/update/{id}', 'ContactController@update');
-    Route::post('/contacts/delete/{id}', 'ContactController@destroy');
+    Route::post('api/v1/contacts', '\App\Api\V1\ContactController@store');
+    Route::put('api/v1/contacts/{contact}', '\App\Api\V1\ContactController@update');
+    Route::delete('api/v1/contacts/{contact}', '\App\Api\V1\ContactController@destroy');
 
     Route::get('/files', function () {
         return view('files.index');
@@ -52,11 +52,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/posts/{post}/comment', 'CommentController@store');
 
     Route::get('/posts', 'PostController@index');
+    Route::get('/api/v1/posts', '\App\Api\V1\PostController@index');
+
     Route::get('/posts/create', 'PostController@create');
     Route::post('/posts/create', 'PostController@store');
     Route::get('/posts/{post}', 'PostController@show');
     Route::get('/posts/{post}/edit', 'PostController@edit');
-    Route::post('/posts/{post}/edit', 'PostController@update')->name('');
+    Route::put('/posts/{post}/edit', 'PostController@update');
     Route::delete('/posts/{post}', 'PostController@destroy');
 
     Route::get('/search', 'SearchController@index');

@@ -66,20 +66,25 @@ export default {
             tel2: ''
         }
     },
-    props: {},
     methods: {
         send() {
-            axios.post('/contacts/create', {
+            const loadingComponent = this.$loading.open();
+            const contact = {
                 first_name: this.first_name,
                 surname: this.surname,
                 email: this.email,
                 tel1: this.tel1,
                 tel2: this.tel2
-            }).then(function (response) {
-                location.reload();
-            }).catch(function (error) {
-                console.log(error);
-            });
+            };
+            axios.post('/contacts', contact)
+                .then(response => {
+                    this.$emit('created', response.data);
+                    loadingComponent.close();
+                    this.active = false;
+                }).catch(error => {
+                    loadingComponent.close();
+                    console.log(error);
+                });
         }
     }
 }

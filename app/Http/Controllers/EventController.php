@@ -25,8 +25,8 @@ class EventController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|string',
-        ]); 
-        
+        ]);
+
         $event = Event::create([
             'title' => request('title'),
             'allDay' => request('allDay'),
@@ -47,7 +47,7 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-       $event->save();
+        $event->update($request->all());
     }
 
     /**

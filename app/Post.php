@@ -66,18 +66,18 @@ class Post extends Model
     public function getCreatedAtFormattedAttribute()
     {
         $date = new Carbon($this->attributes['created_at']);
-        return $date->format('d-m-Y');
+        return $date->timezone(2)->format('H:i d-m-Y');
     }
 
     public function getCreatedAtAttribute()
     {
         $date = new Carbon($this->attributes['created_at']);
-        return $date->toW3cString();
+        return $date->timezone(2)->toW3cString();
     }
 
     public function getUpdatedAtAttribute()
     {
         $date = new Carbon($this->attributes['updated_at']);
-        return $date->toW3cString();
+        return $date->timezone(2)->toW3cString();
     }
 }

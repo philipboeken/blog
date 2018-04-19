@@ -16,10 +16,10 @@
                     {{ props.row.surname }}
                 </b-table-column>
                 <b-table-column field="date" label="Datum toegevoegd" sortable>
-                    {{ props.row.created_at }}
+                    {{ props.row.created_at_formatted }}
                 </b-table-column>
                 <b-table-column field="actions" label="Acties">
-                    <contact-actions :contact="props.row"></contact-actions>
+                    <contact-actions :contact="props.row" @updated="editContact" @deleted="removeContact"></contact-actions>
                 </b-table-column>
             </template>
         </b-table>
@@ -27,7 +27,11 @@
 </template>
 
 <script>
+import ContactActions from './ContactActions';
 export default {
+    components: {
+        'contact-actions': ContactActions
+    },
     data() {
         return {
             isPaginated: false,
@@ -43,6 +47,14 @@ export default {
             default() {
                 return [];
             }
+        }
+    },
+    methods: {
+        editContact(contact) {
+            this.$emit('updated', contact);
+        },
+        removeContact(contact) {
+            this.$emit('deleted', contact);
         }
     }
 }
