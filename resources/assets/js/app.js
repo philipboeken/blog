@@ -85,17 +85,14 @@ const app = new Vue({
 
         activeTab: 'image',
         isVideo: false,
-        loading: false,
 
         formData: {},
         fileName: '',
-        attachment: '',
+        attachment: [],
 
         editingFile: {},
         deletingFile: {},
 
-        notification: false,
-        showConfirm: false,
         modalActive: false,
         message: '',
         errors: {}
@@ -115,14 +112,14 @@ const app = new Vue({
         },
 
         fetchFile(type, page) {
-            this.loading = true;
+            const loadingComponent = this.$loading.open();
             axios.get('files/' + type + '?page=' + page).then(result => {
-                this.loading = false;
+                loadingComponent.close();
                 this.files = result.data.data.data;
                 this.pagination = result.data.pagination;
             }).catch(error => {
                 console.log(error);
-                this.loading = false;
+                loadingComponent.close();
             });
 
         },
@@ -141,44 +138,56 @@ const app = new Vue({
         submitForm() {
             this.formData = new FormData();
             this.formData.append('name', this.fileName);
-            this.formData.append('file', this.attachment);
-
+            this.formData.append('file', this.attachment[0]);
+            const loadingComponent = this.$loading.open();
             axios.post('files/add', this.formData, {headers: {'Content-Type': 'multipart/form-data'}})
                 .then(response => {
                     this.resetForm();
-                    this.showNotification('File successfully upload!', true);
+                    loadingComponent.close();
+                    this.$toast.open({
+                        message: 'File successfully upload!',
+                        type: 'is-success'
+                    })
+                    this.setActive(this.attachment)
                     this.fetchFile(this.activeTab);
                 })
                 .catch(error => {
+                    loadingComponent.close();
                     this.errors = error.response.data.errors;
-                    this.showNotification(error.response.data.message, false);
+                    this.$toast.open({
+                        message: error.response.data.message,
+                        type: 'is-danger'
+                    });
                     this.fetchFile(this.activeTab);
                 });
         },
 
-        addFile() {
-            this.attachment = this.$refs.file.files[0];
-        },
-
         prepareToDelete(file) {
             this.deletingFile = file;
-            this.showConfirm = true;
-        },
-
-        cancelDeleting() {
-            this.deletingFile = {};
-            this.showConfirm = false;
+            this.$dialog.confirm({
+                message: 'Bestand verwijderen?',
+                onConfirm: () => this.deleteFile()
+            })
         },
 
         deleteFile() {
+            const loadingComponent = this.$loading.open();
             axios.post('files/delete/' + this.deletingFile.id)
                 .then(response => {
-                    this.showNotification('File successfully deleted!', true);
+                    loadingComponent.close();
+                    this.$toast.open({
+                        message: 'File successfully deleted!',
+                        type: 'is-success'
+                    });
                     this.fetchFile(this.activeTab, this.pagination.current_page);
                 })
                 .catch(error => {
+                    loadingComponent.close();
                     this.errors = error.response.data.errors();
-                    this.showNotification('Something went wrong! Please try again later.', false);
+                    this.$toast.open({
+                        message: 'Something went wrong! Please try again later.',
+                        type: 'is-danger'
+                    });
                     this.fetchFile(this.activeTab, this.pagination.current_page);
                 });
 
@@ -200,36 +209,31 @@ const app = new Vue({
                 formData.append('name', file.name);
                 formData.append('type', file.type);
                 formData.append('extension', file.extension);
-
+                const loadingComponent = this.$loading.open();
                 axios.post('files/edit/' + file.id, formData)
                     .then(response => {
+                        loadingComponent.close();
                         if (response.data === true) {
-                            this.showNotification('Filename successfully changed!', true);
+                            this.$toast.open({
+                                message: 'Filename succesfully changed!',
+                                type: 'is-success'
+                            })
 
                             var src = document.querySelector('[alt="' + file.name +'"]').getAttribute("src");
                             document.querySelector('[alt="' + file.name +'"]').setAttribute('src', src);
                         }
                     })
                     .catch(error => {
+                        loadingComponent.close();
                         this.errors = error.response.data.errors;
-                        this.showNotification(error.response.data.message, false);
+                        this.$toast.open({
+                            message: error.response.data.message,
+                            type: 'is-danger'
+                        });
                     });
 
                 this.fetchFile(this.activeTab, this.pagination.current_page);
             }
-        },
-
-        showNotification(text, success) {
-            if (success === true) {
-                this.clearErrors();
-            }
-
-            var application = this;
-            application.message = text;
-            application.notification = true;
-            setTimeout(function() {
-                application.notification = false;
-            }, 15000);
         },
 
         showModal(file) {
@@ -243,54 +247,17 @@ const app = new Vue({
         },
 
         changePage(page) {
-            if (page > this.pagination.last_page) {
-                page = this.pagination.last_page;
-            }
-            this.pagination.current_page = page;
             this.fetchFile(this.activeTab, page);
         },
 
         resetForm() {
             this.formData = {};
             this.fileName = '';
-            this.attachment = '';
-        },
-
-        anyError() {
-            return Object.keys(this.errors).length > 0;
-        },
-
-        clearErrors() {
-            this.errors = {};
+            this.attachment = [];
         }
     },
 
     mounted() {
         this.fetchFile(this.activeTab, this.pagination.current_page);
-    },
-
-    computed: {
-        pages() {
-            let pages = [];
-
-            let from = this.pagination.current_page - Math.floor(this.offset / 2);
-
-            if (from < 1) {
-                from = 1;
-            }
-
-            let to = from + this.offset - 1;
-
-            if (to > this.pagination.last_page) {
-                to = this.pagination.last_page;
-            }
-
-            while (from <= to) {
-                pages.push(from);
-                from++;
-            }
-
-            return pages;
-        }
     }
 });

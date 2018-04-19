@@ -55202,17 +55202,14 @@ var app = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
 
         activeTab: 'image',
         isVideo: false,
-        loading: false,
 
         formData: {},
         fileName: '',
-        attachment: '',
+        attachment: [],
 
         editingFile: {},
         deletingFile: {},
 
-        notification: false,
-        showConfirm: false,
         modalActive: false,
         message: '',
         errors: {}
@@ -55231,14 +55228,14 @@ var app = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
         fetchFile: function fetchFile(type, page) {
             var _this = this;
 
-            this.loading = true;
+            var loadingComponent = this.$loading.open();
             axios.get('files/' + type + '?page=' + page).then(function (result) {
-                _this.loading = false;
+                loadingComponent.close();
                 _this.files = result.data.data.data;
                 _this.pagination = result.data.pagination;
             }).catch(function (error) {
                 console.log(error);
-                _this.loading = false;
+                loadingComponent.close();
             });
         },
         getFiles: function getFiles(type) {
@@ -55256,39 +55253,57 @@ var app = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
 
             this.formData = new FormData();
             this.formData.append('name', this.fileName);
-            this.formData.append('file', this.attachment);
-
+            this.formData.append('file', this.attachment[0]);
+            var loadingComponent = this.$loading.open();
             axios.post('files/add', this.formData, { headers: { 'Content-Type': 'multipart/form-data' } }).then(function (response) {
                 _this2.resetForm();
-                _this2.showNotification('File successfully upload!', true);
+                loadingComponent.close();
+                _this2.$toast.open({
+                    message: 'File successfully upload!',
+                    type: 'is-success'
+                });
+                _this2.setActive(_this2.attachment);
                 _this2.fetchFile(_this2.activeTab);
             }).catch(function (error) {
+                loadingComponent.close();
                 _this2.errors = error.response.data.errors;
-                _this2.showNotification(error.response.data.message, false);
+                _this2.$toast.open({
+                    message: error.response.data.message,
+                    type: 'is-danger'
+                });
                 _this2.fetchFile(_this2.activeTab);
             });
         },
-        addFile: function addFile() {
-            this.attachment = this.$refs.file.files[0];
-        },
         prepareToDelete: function prepareToDelete(file) {
-            this.deletingFile = file;
-            this.showConfirm = true;
-        },
-        cancelDeleting: function cancelDeleting() {
-            this.deletingFile = {};
-            this.showConfirm = false;
-        },
-        deleteFile: function deleteFile() {
             var _this3 = this;
 
+            this.deletingFile = file;
+            this.$dialog.confirm({
+                message: 'Bestand verwijderen?',
+                onConfirm: function onConfirm() {
+                    return _this3.deleteFile();
+                }
+            });
+        },
+        deleteFile: function deleteFile() {
+            var _this4 = this;
+
+            var loadingComponent = this.$loading.open();
             axios.post('files/delete/' + this.deletingFile.id).then(function (response) {
-                _this3.showNotification('File successfully deleted!', true);
-                _this3.fetchFile(_this3.activeTab, _this3.pagination.current_page);
+                loadingComponent.close();
+                _this4.$toast.open({
+                    message: 'File successfully deleted!',
+                    type: 'is-success'
+                });
+                _this4.fetchFile(_this4.activeTab, _this4.pagination.current_page);
             }).catch(function (error) {
-                _this3.errors = error.response.data.errors();
-                _this3.showNotification('Something went wrong! Please try again later.', false);
-                _this3.fetchFile(_this3.activeTab, _this3.pagination.current_page);
+                loadingComponent.close();
+                _this4.errors = error.response.data.errors();
+                _this4.$toast.open({
+                    message: 'Something went wrong! Please try again later.',
+                    type: 'is-danger'
+                });
+                _this4.fetchFile(_this4.activeTab, _this4.pagination.current_page);
             });
 
             this.cancelDeleting();
@@ -55297,7 +55312,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
             this.editingFile = file;
         },
         endEditing: function endEditing(file) {
-            var _this4 = this;
+            var _this5 = this;
 
             this.editingFile = {};
 
@@ -55309,33 +55324,29 @@ var app = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
                 formData.append('name', file.name);
                 formData.append('type', file.type);
                 formData.append('extension', file.extension);
-
+                var loadingComponent = this.$loading.open();
                 axios.post('files/edit/' + file.id, formData).then(function (response) {
+                    loadingComponent.close();
                     if (response.data === true) {
-                        _this4.showNotification('Filename successfully changed!', true);
+                        _this5.$toast.open({
+                            message: 'Filename succesfully changed!',
+                            type: 'is-success'
+                        });
 
                         var src = document.querySelector('[alt="' + file.name + '"]').getAttribute("src");
                         document.querySelector('[alt="' + file.name + '"]').setAttribute('src', src);
                     }
                 }).catch(function (error) {
-                    _this4.errors = error.response.data.errors;
-                    _this4.showNotification(error.response.data.message, false);
+                    loadingComponent.close();
+                    _this5.errors = error.response.data.errors;
+                    _this5.$toast.open({
+                        message: error.response.data.message,
+                        type: 'is-danger'
+                    });
                 });
 
                 this.fetchFile(this.activeTab, this.pagination.current_page);
             }
-        },
-        showNotification: function showNotification(text, success) {
-            if (success === true) {
-                this.clearErrors();
-            }
-
-            var application = this;
-            application.message = text;
-            application.notification = true;
-            setTimeout(function () {
-                application.notification = false;
-            }, 15000);
         },
         showModal: function showModal(file) {
             this.file = file;
@@ -55346,53 +55357,17 @@ var app = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
             this.file = {};
         },
         changePage: function changePage(page) {
-            if (page > this.pagination.last_page) {
-                page = this.pagination.last_page;
-            }
-            this.pagination.current_page = page;
             this.fetchFile(this.activeTab, page);
         },
         resetForm: function resetForm() {
             this.formData = {};
             this.fileName = '';
-            this.attachment = '';
-        },
-        anyError: function anyError() {
-            return Object.keys(this.errors).length > 0;
-        },
-        clearErrors: function clearErrors() {
-            this.errors = {};
+            this.attachment = [];
         }
     },
 
     mounted: function mounted() {
         this.fetchFile(this.activeTab, this.pagination.current_page);
-    },
-
-
-    computed: {
-        pages: function pages() {
-            var pages = [];
-
-            var from = this.pagination.current_page - Math.floor(this.offset / 2);
-
-            if (from < 1) {
-                from = 1;
-            }
-
-            var to = from + this.offset - 1;
-
-            if (to > this.pagination.last_page) {
-                to = this.pagination.last_page;
-            }
-
-            while (from <= to) {
-                pages.push(from);
-                from++;
-            }
-
-            return pages;
-        }
     }
 });
 

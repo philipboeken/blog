@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 class FileController extends Controller
 {
     private $image_ext = ['jpg', 'jpeg', 'png', 'gif'];
-    private $audio_ext = ['mp3', 'ogg', 'mpga', 'm4a'];
+    private $audio_ext = ['mp3', 'ogg', 'mpga'];
     private $video_ext = ['mp4', 'mpeg'];
     private $document_ext = ['doc', 'docx', 'pdf', 'odt'];
 
@@ -40,7 +40,8 @@ class FileController extends Controller
 
             $files = $model::where('type', $type)
                             ->where('user_id', Auth::id())
-                            ->orderBy('id', 'desc')->paginate($records_per_page);
+                            ->orderBy('id', 'desc')
+                            ->paginate($records_per_page);
 
             $response = [
                 'pagination' => [
@@ -69,7 +70,6 @@ class FileController extends Controller
         $all_ext = implode(',', $this->allExtensions());
 
         $this->validate($request, [
-            'name' => 'required|unique:files',
             'file' => 'required|file|mimes:' . $all_ext . '|max:' . $max_size
         ]);
 
@@ -78,10 +78,11 @@ class FileController extends Controller
         $file = $request->file('file');
         $ext = $file->getClientOriginalExtension();
         $type = $this->getType($ext);
+        $name = $file->getClientOriginalName();
 
-        if (Storage::putFileAs('/public/' . $this->getUserDir() . '/' . $type . '/', $file, $request['name'] . '.' . $ext)) {
+        if (Storage::putFileAs('/public/' . $this->getUserDir() . '/' . $type . '/', $file, $name)) {
             return $model::create([
-                    'name' => $request['name'],
+                    'name' => $name,
                     'type' => $type,
                     'extension' => $ext,
                     'user_id' => Auth::id()
@@ -132,8 +133,8 @@ class FileController extends Controller
     {
         $file = File::findOrFail($id);
 
-        if (Storage::disk('local')->exists('/public/' . $this->getUserDir() . '/' . $file->type . '/' . $file->name . '.' . $file->extension)) {
-            if (Storage::disk('local')->delete('/public/' . $this->getUserDir() . '/' . $file->type . '/' . $file->name . '.' . $file->extension)) {
+        if (Storage::disk('local')->exists('/public/' . $this->getUserDir() . '/' . $file->type . '/' . $file->name)) {
+            if (Storage::disk('local')->delete('/public/' . $this->getUserDir() . '/' . $file->type . '/' . $file->name)) {
                 return response()->json($file->delete());
             }
         }
@@ -149,19 +150,19 @@ class FileController extends Controller
      */
     private function getType($ext)
     {
-        if (in_array($ext, $this->image_ext)) {
+        if (in_array(strtolower($ext), $this->image_ext)) {
             return 'image';
         }
 
-        if (in_array($ext, $this->audio_ext)) {
+        if (in_array(strtolower($ext), $this->audio_ext)) {
             return 'audio';
         }
 
-        if (in_array($ext, $this->video_ext)) {
+        if (in_array(strtolower($ext), $this->video_ext)) {
             return 'video';
         }
 
-        if (in_array($ext, $this->document_ext)) {
+        if (in_array(strtolower($ext), $this->document_ext)) {
             return 'document';
         }
     }

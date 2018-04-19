@@ -63,6 +63,14 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
+        'webdav' => [
+            'driver'     => 'webdav',
+            'baseUri'    => 'https://mywebdavstorage.com',
+            'userName'   => 'pascalbaljetmedia',
+            'password'   => 'supersecretpassword',
+            'pathPrefix' => 'backups',
+        ],
+
     ],
 
 ];

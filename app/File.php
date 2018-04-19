@@ -19,4 +19,9 @@ class File extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    private function getFullnameAttribute()
+    {
+        return $this->name . '.' . $this->extension;
+    }
 }
