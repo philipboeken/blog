@@ -1,12 +1,12 @@
 @extends('layouts.center')
-
 @section('title')
-    Jan Luyken Blog startpagina
+<div class="has-text-centered">
+    Jan Luyken Blog
+</div>
 @endsection
 
 @section('content-mid')
-    <div class="section">
-        <a class="button" href="/login">Ga naar de login pagina</a>
-    </div>
-
+<div class="section has-text-centered">
+    <a class="button" href="/login">Ga naar de login pagina</a>
+</div>
 @endsection

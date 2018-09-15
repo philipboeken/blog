@@ -3,7 +3,9 @@
 namespace App\Api\V1;
 
 use Illuminate\Http\Request;
-use App\Exceptions\VraagDoesNotExistException;
+use App\Label;
+use App\Post;
+use App\User;
 
 class PostController extends Controllerr
 {
@@ -18,8 +20,10 @@ class PostController extends Controllerr
         $users = User::all();
         $labels = Label::all();
 
-        $date_min = Carbon::parse($posts->min('created_at'))->toW3cString();;
-        $date_max = Carbon::parse($posts->max('created_at'))->toW3cString();;
+        $date_min = Carbon::parse($posts->min('created_at'))->toW3cString();
+        ;
+        $date_max = Carbon::parse($posts->max('created_at'))->toW3cString();
+        ;
 
         if (request('filter_users')) {
             $filter_users = $users->whereIn('id', explode(',', request('filter_users')));
@@ -44,11 +48,11 @@ class PostController extends Controllerr
 
         if (request('filter_max_date')) {
             $filter_max_date = request('filter_max_date');
-            $posts = $posts->where('created_at', '<',  Carbon::parse($filter_max_date));
+            $posts = $posts->where('created_at', '<', Carbon::parse($filter_max_date));
         }
 
         $posts = $posts->get();
-        
+
         return view(
             'posts.index',
             compact(

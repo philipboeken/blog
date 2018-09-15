@@ -13,10 +13,6 @@
         </div>
     </section>
     <hr class="title-ruler">
-    <div class="columns">
-        <div class="column">
-            @yield('content-mid')
-        </div>
-    </div>
+        @yield('content-mid')
 </div>
 @endsection

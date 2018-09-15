@@ -100,7 +100,7 @@ export default {
         removeContact() {
             this.$dialog.confirm({
                 title: 'Verwijder contact: ' + this.contactData.first_name + ' ' + this.contactData.surname,
-                message: 'Weet u zeker dat u dit contact wilt verwijderen?',
+                message: 'Weet je zeker dat je dit contact wilt verwijderen?',
                 cancelText: 'Annuleer',
                 confirmText: 'Verwijder',
                 type: 'is-danger',

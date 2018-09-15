@@ -37,7 +37,6 @@
     },
     methods: {
       send() {
-        console.log(this.files);
         axios.post('/files', { files: this.files[0] }
         ).then((response) => {
             console.log(response);

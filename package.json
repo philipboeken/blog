@@ -35,6 +35,7 @@
         "vue-flatpickr": "^2.3.0",
         "vue-flatpickr-component": "^4.0.0",
         "vue-full-calendar": "^2.5.2",
+        "vue-markdown": "^2.2.4",
         "vue-multiselect": "^2.1.0"
     }
 }

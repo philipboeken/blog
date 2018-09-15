@@ -52,12 +52,13 @@ Vue.component('contact-button', require('./components/contacts/ContactButton.vue
 Vue.component('contact-show-modal', require('./components/contacts/ContactShowModal.vue'));
 Vue.component('contact-add-modal', require('./components/contacts/ContactAddModal.vue'));
 Vue.component('contacts-page', require('./components/contacts/ContactsPage.vue'));
+Vue.component('custom-label', require('./components/CustomLabel.vue'));
 Vue.component('datepicker', require('./components/Datepicker.vue'));
 Vue.component('drag-and-drop', require('./components/DragAndDrop.vue'));
 Vue.component('file-modal', require('./components/FileModal.vue'));
-Vue.component('custom-label', require('./components/CustomLabel.vue'));
 Vue.component('label-modal', require('./components/LabelModal.vue'));
 Vue.component('multi-select', require('./components/MultiSelect.vue'));
+Vue.component('posts-page', require('./components/posts/PostsPage.vue'));
 
 
 /**

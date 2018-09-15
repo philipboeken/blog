@@ -99,3 +99,14 @@ hr.title-ruler {
 .event-modal.modal-background {
   background-color: rgba(10, 10, 10, 0.15);
 }
+
+.filter {
+  position: sticky;
+}
+
+.container-small {
+  @extend .container;
+  @include desktop {
+    max-width: 50vw;
+  }
+}

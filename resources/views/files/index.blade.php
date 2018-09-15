@@ -72,8 +72,8 @@
                     <div class="card " :class="file.type == 'image' ? 'is-image' : ''">
                         <div class="card-image">
                             <button class="delete is-pulled-right" title="Delete" @click="prepareToDelete(file)"></button>
-                            
-                            <div v-if="file.type == 'image'"> 
+
+                            <div v-if="file.type == 'image'">
                                 <figure class="image is-4by3" @click="showModal(file)">
                                     <img  src=""  :src="'{{ asset('storage/' . Auth::user()->first_name . '_' . Auth::id()) }}' + '/' + file.type + '/' + file.name" :alt="file.name">
                                 </figure>

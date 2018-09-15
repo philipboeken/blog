@@ -64,5 +64,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/search', 'SearchController@index');
 });
 
-
 // Put, patch, delete {{ method_field('PATCH/DELETE') }}
