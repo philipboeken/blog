@@ -28,7 +28,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
     Route::get('/account/personal', 'AccountController@index');
     Route::get('/account/account', 'AccountController@index');
-    Route::get('/account/notifications', 'AccountController@index');
+    // Route::get('/account/notifications', 'AccountController@index');
 
     Route::get('/agenda', 'EventController@index');
     Route::post('/agenda/create', 'EventController@store');

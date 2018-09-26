@@ -3,7 +3,7 @@
       <ul class="menu-list">
          <li><a :class="{ 'is-active' : active === 'personal' }" href="/account/personal">Personal Information</a></li>
          <li><a :class="{ 'is-active' : active === 'account' }" href="/account/account">Account Settings</a></li>
-         <li><a :class="{ 'is-active' : active === 'notifications' }" href="/account/notifications">Notification Settings</a></li>
+         <li><a :class="{ 'is-active' : active === 'notifications' }" class="is-disabled">Notification Settings</a></li>
       </ul>
    </aside>
 </template>

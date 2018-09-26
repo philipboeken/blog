@@ -110,3 +110,9 @@ hr.title-ruler {
     max-width: 50vw;
   }
 }
+
+.is-disabled {
+  pointer-events: none;
+  opacity: .65;
+  cursor: not-allowed;
+}

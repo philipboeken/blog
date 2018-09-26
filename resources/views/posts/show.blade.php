@@ -29,7 +29,7 @@
                         <br>
                         {!! $comment->body !!}
                         <br>
-                        <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+                        <small>Geplaatst:{{ $comment->created_at }} @if($comment->created_at != $comment->updated_at)| Bewerkt: {{ $comment->updated_at }}@endif</small>
                     </p>
                 </div>
             </div>
