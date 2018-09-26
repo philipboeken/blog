@@ -19,7 +19,7 @@
             Account/Persoonlijke informatie: Geboortedag veld werkt nog niet
         </li>
         <li>
-            Posts/Index: Filter werkt niet
+            Posts/Index: Datumfilter werkt niet
         </li>
         <li>
             Post verwijderen werkt niet
