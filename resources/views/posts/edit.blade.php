@@ -5,11 +5,11 @@
 @endsection
 
 @section('form_start')
-    <form method="PUT" action="/posts/{{ $post->id }}/edit">
-    {{ csrf_field() }}
 @endsection
 
 @section('content-mid')
+<form method="POST" action="/posts/{{ $post->id }}/edit">
+{{ csrf_field() }}
     <div class="field">
         <label class="label">Title</label>
         <div class="control">
@@ -88,8 +88,8 @@
         </div>
     </div>
     <file-modal></file-modal>
+</form>
 @endsection
 
 @section('form_end')
-    </form>
 @endsection
