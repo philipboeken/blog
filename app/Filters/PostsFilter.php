@@ -2,44 +2,48 @@
 
 namespace App\Filters;
 
-use App\User;
-use App\Post;
-use App\Label;
 use Carbon\Carbon;
-use Jenssegers\Model\Model;
-use Illuminate\Support\Facades\Auth;
 
-class PostsFilter extends Model
+class PostsFilter extends Filters
 {
-    protected $appends = [
-        'users', 'labels', 'date_min', 'date_max'
-    ];
+    /**
+       * Registered filters to operate upon.
+       *
+       * @var array
+       */
+    protected $filters = ['by', 'from', 'till', 'labeled'];
 
-    public function getUsersAttribute()
+    /**
+     * Filter the query by a given username.
+     *
+     * @param  string $username
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    protected function by($users)
     {
-        return ['options' => User::all(), 'value' => []];
+        if ($users) {
+            return $this->builder->whereIn('user_id', $users);
+        }
+        return $this->builder;
     }
 
-    public function getLabelsAttribute()
+    protected function labeled($labels)
     {
-        return ['options' => Label::all(), 'value' => []];
+        if ($labels) {
+            return $this->builder->whereHas('labels', function ($label) use ($labels) {
+                $label->whereIn('label_id', $labels);
+            });
+        }
+        return $this->builder;
     }
 
-    public function getDateMinAttribute()
+    protected function from($date)
     {
-        return [
-            'lower' => Carbon::parse(Post::all()->min('created_at'))->toW3cString(),
-            'upper' => Carbon::parse(Post::all()->min('created_at'))->toW3cString(),
-            'value' => ''
-        ];
+        return $this->builder->where('created_at', '>', Carbon::parse($date));
     }
 
-    public function getDateMaxAttribute()
+    protected function till($date)
     {
-        return [
-            'lower' => Carbon::parse(Post::all()->min('created_at'))->toW3cString(),
-            'upper' => Carbon::parse(Post::all()->min('created_at'))->toW3cString(),
-            'value' => ''
-        ];
+        return $this->builder->where('created_at', '<', Carbon::parse($date));
     }
 }

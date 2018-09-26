@@ -58,7 +58,6 @@ Vue.component('drag-and-drop', require('./components/DragAndDrop.vue'));
 Vue.component('file-modal', require('./components/FileModal.vue'));
 Vue.component('label-modal', require('./components/LabelModal.vue'));
 Vue.component('multi-select', require('./components/MultiSelect.vue'));
-Vue.component('posts-page', require('./components/posts/PostsPage.vue'));
 
 
 /**

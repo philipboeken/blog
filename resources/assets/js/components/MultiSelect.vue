@@ -1,6 +1,6 @@
 <template>
     <div>
-        <multiselect v-if="type === 'labels'" 
+        <multiselect v-if="type === 'labels'"
                      v-model="selectedValues"
                      :placeholder="placeholder"
                      :options="options"
@@ -59,7 +59,7 @@ export default {
   components: { Multiselect },
   data() {
     return {
-      selectedValues: Object.keys(this.value).length > 0 ? this.ObjectToArray(this.value) : []
+      selectedValues: Object.keys(this.value).length > 0 ? this.options.filter((option) => this.value.includes(option.id)) : []
     }
   },
   props: {
@@ -109,7 +109,7 @@ export default {
   },
   computed: {
     values() {
-      return this.selectedValues.map((val) => val[this.trackBy]);
+      return JSON.stringify(this.selectedValues.map((val) => val[this.trackBy]));
     }
   }
 };

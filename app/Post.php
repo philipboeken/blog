@@ -5,6 +5,7 @@ namespace App;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use App\Filters\PostsFilter;
 
 class Post extends Model
 {
@@ -61,6 +62,18 @@ class Post extends Model
     public function isMine()
     {
         return Auth::user()->id == $this->user_id;
+    }
+
+    /**
+     * Apply all relevant thread filters.
+     *
+     * @param  Builder       $query
+     * @param  ThreadFilters $filters
+     * @return Builder
+     */
+    public function scopeFilter($query, PostsFilter $filters)
+    {
+        return $filters->apply($query);
     }
 
     public function getCreatedAtFormattedAttribute()

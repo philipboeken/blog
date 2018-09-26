@@ -5,7 +5,7 @@
 @endsection
 
 @section('form_start')
-    <form method="PUT">
+    <form method="PUT" action="/posts/{{ $post->id }}/edit">
     {{ csrf_field() }}
 @endsection
 

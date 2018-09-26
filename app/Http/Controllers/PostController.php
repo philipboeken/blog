@@ -7,9 +7,10 @@ use App\User;
 use App\Post;
 use App\Label;
 use App\Contact;
+use Carbon\Carbon;
 use App\Filters\PostsFilter;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Request;
 
 class PostController extends Controller
 {
@@ -18,13 +19,14 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request, PostsFilter $filters)
     {
-        $posts = Post::latest()->with('labels')->with('user')->get();
-
-        $filter = new PostsFilter();
-
-        return view('posts.index', compact('posts', 'filter'));
+        $posts = Post::latest()->filter($filters)->paginate(25);
+        $users = User::select('id', 'first_name')->get();
+        $labels = Label::select('id', 'title')->get();
+        $minDate = Carbon::parse(Post::latest()->min('created_at'))->toW3cString();
+        $maxDate = Carbon::parse(Post::latest()->max('created_at'))->toW3cString();
+        return view('posts.index', compact('posts', 'filters', 'users', 'labels', 'minDate', 'maxDate'));
     }
 
     /**
