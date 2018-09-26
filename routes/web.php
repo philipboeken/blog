@@ -59,7 +59,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/posts/{post}', 'PostController@show');
     Route::get('/posts/{post}/edit', 'PostController@edit');
     Route::post('/posts/{post}/edit', 'PostController@update');
-    Route::delete('/posts/{post}', 'PostController@destroy');
+    Route::post('/posts/{post}/delete', 'PostController@destroy');
 
     Route::get('/search', 'SearchController@index');
 });

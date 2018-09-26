@@ -22,12 +22,6 @@
             Posts/Index: Datumfilter werkt niet
         </li>
         <li>
-            Post verwijderen werkt niet
-        </li>
-        <li>
-            Post bewerken werkt niet
-        </li>
-        <li>
             File upload werkt niet
         </li>
         <li>
@@ -39,6 +33,9 @@
         Functionaliteit dat nog gemaakt moet worden:
     </h3>
     <ul>
+        <li>
+            Een 'weet u het zeker' popup bij verwijderen post
+        </li>
         <li>
             Posts filteren op: aanwezigheid bestand, contactpersoon
         </li>

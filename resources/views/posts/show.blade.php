@@ -76,7 +76,7 @@
             Verwijder
             <i class="fas fa-times"></i>
         </a>
-        <form id="destroy-form" action="{{ '/posts/' . $post->id }}" method="DELETE" style="display: none;">
+        <form id="destroy-form" action="/posts/{{ $post->id }}/delete" method="POST" style="display: none;">
             {{ csrf_field() }}
         </form>
         <hr>
