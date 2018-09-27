@@ -23,7 +23,7 @@
                 <datepicker name="from"
                     min-date="{{ $minDate }}"
                     max-date="{{ $maxDate }}"
-                    {{-- :value="{{ app('request')->input('from', json_encode('')) }}" --}}
+                    value="{{ app('request')->input('from') }}"
                     placeholder="Kies een datum"></datepicker>
             </div>
         </div>
@@ -33,7 +33,7 @@
                 <datepicker name="till"
                     min-date="{{ $minDate }}"
                     max-date="{{ $maxDate }}"
-                    {{-- :value="{{ app('request')->input('till', json_encode(null)) }}" --}}
+                    value="{{ app('request')->input('till') }}"
                     placeholder="Kies een datum"></datepicker>
             </div>
         </div>

@@ -7,7 +7,7 @@
                 :min-date="new Date(minDate)"
                 :max-date="new Date(maxDate)">
         </b-datepicker>
-        <input :name="name" hidden v-model="date">
+        <input :name="name" hidden :value="date">
     </div>
 </template>
 

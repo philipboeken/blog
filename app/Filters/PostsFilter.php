@@ -11,7 +11,7 @@ class PostsFilter extends Filters
        *
        * @var array
        */
-    protected $filters = ['by', 'from', 'till', 'labeled'];
+    protected $filters = ['from', 'by',  'till', 'labeled'];
 
     /**
      * Filter the query by a given username.
@@ -39,11 +39,11 @@ class PostsFilter extends Filters
 
     protected function from($date)
     {
-        return $this->builder->where('created_at', '>', Carbon::parse($date));
+        return $this->builder->where('created_at', '>=', Carbon::parse($date));
     }
 
     protected function till($date)
     {
-        return $this->builder->where('created_at', '<', Carbon::parse($date));
+        return $this->builder->where('created_at', '<=', Carbon::parse($date));
     }
 }

@@ -44,7 +44,11 @@ abstract class Filters
         $this->builder = $builder;
         foreach ($this->getFilters() as $filter => $value) {
             if (method_exists($this, $filter)) {
-                $this->$filter(json_decode($value));
+                if ($value[0] == '[' || $value[0] == '{') {
+                    $this->$filter(json_decode($value));
+                } else {
+                    $this->$filter($value);
+                }
             }
         }
         return $this->builder;

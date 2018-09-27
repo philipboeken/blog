@@ -28,8 +28,8 @@
                 </h2>
                 <div class="media-content">
                     <hr class="postcard-hr">
-                    <div class="content is-ellipsis-4">
-                        <vue-markdown>{{ $post->body }}</vue-markdown>
+                    <div class="content">
+                        <vue-markdown>{{ str_limit($post->body, $limit = 330, $end = '...') }}</vue-markdown>
                     </div>
                     <div>
                         <strong>
