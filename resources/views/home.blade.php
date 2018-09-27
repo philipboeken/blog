@@ -19,9 +19,6 @@
             Account/Persoonlijke informatie: Geboortedag veld werkt nog niet
         </li>
         <li>
-            Posts/Index: Datumfilter werkt niet
-        </li>
-        <li>
             File upload werkt niet
         </li>
         <li>
