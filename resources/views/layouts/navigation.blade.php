@@ -23,14 +23,14 @@
                 </div>
                 <a class="navbar-item" href="/posts">Posts</a>
                 <a class="navbar-item" href="/agenda">Agenda</a>
-                <a class="navbar-item" href="/contacts">Contacts</a>
-                <a class="navbar-item" href="/files">Files</a>
+                <a class="navbar-item" href="/contacts">Contacten</a>
+                <a class="navbar-item" href="/files">Bestanden</a>
             </div>
             @endauth
             <div class="navbar-end">
                 @guest
-                <a class="navbar-item" href="/login">Login</a> {{--
-    @include('components.login-dropdown') --}} @else
+                <a class="navbar-item" href="/login">Login</a>
+                 @else
                 <div class="navbar-item is-hidden-touch">
     @include('components.searchbar')
                 </div>
@@ -38,13 +38,13 @@
                     <a class="navbar-link" href="#">
                         {{ Auth::user()->first_name }}
                     </a>
-                    <div class="navbar-dropdown">
+                    <div class="navbar-dropdown is-right">
                         <a class="navbar-item" href="/account">
-                            Account
+                            Instellingen
                         </a>
                         <hr class="navbar-divider">
                         <a class="navbar-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            Logout
+                            Uitloggen
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}

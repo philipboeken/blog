@@ -15886,6 +15886,10 @@ label.panel-block:hover {
   background: rgba(191, 83, 41, 0.05);
 }
 
+body {
+  background-color: #ebebeb81;
+}
+
 @media screen and (min-width: 1024px) {
   .container,
   .container-small {
@@ -15993,5 +15997,15 @@ hr.title-ruler {
   pointer-events: none;
   opacity: .65;
   cursor: not-allowed;
+}
+
+fieldset {
+  padding: 0.75rem;
+  margin-bottom: 2.5rem;
+  border: none;
+}
+
+fieldset legend {
+  font-size: 1.5rem;
 }
 

@@ -29,7 +29,7 @@
                         <br>
                         {!! $comment->body !!}
                         <br>
-                        <small>Geplaatst:{{ $comment->created_at }} @if($comment->created_at != $comment->updated_at)| Bewerkt: {{ $comment->updated_at }}@endif</small>
+                        <small>{{ $comment->created_at }} @if($comment->created_at != $comment->updated_at)| Bewerkt: {{ $comment->updated_at }}@endif</small>
                     </p>
                 </div>
             </div>

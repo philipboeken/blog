@@ -15,7 +15,7 @@ Route::get('/', function () {
     if (Auth::user()) {
         return redirect(route('home'));
     }
-    return view('welcome');
+    return redirect(route('login'));
 });
 
 Auth::routes();
@@ -26,9 +26,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/account', function () {
         return redirect('/account/personal');
     });
-    Route::get('/account/personal', 'AccountController@index');
-    Route::get('/account/account', 'AccountController@index');
-    // Route::get('/account/notifications', 'AccountController@index');
+    Route::get('/account', 'AccountController@index');
+    Route::put('/account', 'AccountController@update')->name('account');
 
     Route::get('/agenda', 'EventController@index');
     Route::post('/agenda/create', 'EventController@store');

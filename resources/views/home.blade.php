@@ -16,9 +16,6 @@
     </h3>
     <ul>
         <li>
-            Account/Persoonlijke informatie: Geboortedag veld werkt nog niet
-        </li>
-        <li>
             File upload werkt niet
         </li>
         <li>

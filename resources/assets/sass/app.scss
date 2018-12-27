@@ -7,6 +7,10 @@
 @import '~trix/dist/trix.css';
 @import '~fullcalendar/dist/fullcalendar.css';
 
+body {
+  background-color: #ebebeb81;
+}
+
 .container {
   @include desktop {
     max-width: 70%;
@@ -115,4 +119,14 @@ hr.title-ruler {
   pointer-events: none;
   opacity: .65;
   cursor: not-allowed;
+}
+
+fieldset {
+  padding: $size-7;
+  margin-bottom: $size-2;
+  border: none;
+
+  legend {
+    font-size: $size-4;
+  }
 }

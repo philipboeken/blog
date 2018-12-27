@@ -3,7 +3,6 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
 
-
 class PostsTableSeeder extends Seeder
 {
     /**
