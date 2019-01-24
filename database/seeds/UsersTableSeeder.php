@@ -6,8 +6,6 @@ class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
@@ -45,6 +43,12 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Jeanine',
             'surname' => 'van Schaik',
             'email' => 'jcvschaik@hotelmijvanschaik.nl',
+            'password' => bcrypt('password'),
+        ]);
+        DB::table('users')->insert([
+            'first_name' => 'Oma',
+            'surname' => 'van Schaik',
+            'email' => 'cvanschaik@hetnet.nl',
             'password' => bcrypt('password'),
         ]);
     }
