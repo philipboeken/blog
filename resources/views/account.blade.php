@@ -26,7 +26,7 @@
                                 <span class="help is-danger">
                                                 {{ $errors->first('gebruikersnaam') }}
                                             </span> @endif
-                                <span class="help">Uw gebruikersnaam is hetzelfde als uw e-mailadres, dus bij wijzigen wordt het e-mailadres ook aangepast. De gebruikersnaam moet ook voldoen aan de eisen van een e-mailadres!</span>
+                                <span class="help">Je gebruikersnaam is hetzelfde als je e-mailadres, dus bij wijzigen wordt het e-mailadres ook aangepast. De gebruikersnaam moet ook voldoen aan de eisen van een e-mailadres!</span>
                             </p>
                         </div>
                     </div>
