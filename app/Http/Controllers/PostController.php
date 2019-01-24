@@ -59,9 +59,9 @@ class PostController extends Controller
             'user_id' => $user_id
         ]);
 
-        $post->labels()->sync(array_filter(explode(',', request('labelIDs'))));
-        $post->contacts()->sync(array_filter(explode(',', request('contactIDs'))));
-        $post->files()->sync(array_filter(explode(',', request('fileIDs'))));
+        // $post->labels()->sync(array_filter(explode(',', request('labelIDs'))));
+        // $post->contacts()->sync(array_filter(explode(',', request('contactIDs'))));
+        // $post->files()->sync(array_filter(explode(',', request('fileIDs'))));
 
         return redirect('/posts/' . $post->id);
     }
