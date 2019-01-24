@@ -19,6 +19,12 @@
             File upload werkt niet
         </li>
         <li>
+            Label, contact, of bestand aan een bericht koppelen
+        </li>
+        <li>
+            Wachtwoord veranderen
+        </li>
+        <li>
             Sommige icoontjes worden nog niet goed geladen
         </li>
     </ul>

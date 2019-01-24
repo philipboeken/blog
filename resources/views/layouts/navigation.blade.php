@@ -32,7 +32,7 @@
                 <a class="navbar-item" href="/login">Login</a>
                  @else
                 <div class="navbar-item is-hidden-touch">
-    @include('components.searchbar')
+                    @include('components.searchbar')
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="#">
