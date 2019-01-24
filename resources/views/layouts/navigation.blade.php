@@ -22,7 +22,7 @@
     @include('components.searchbar')
                 </div>
                 <a class="navbar-item" href="/posts">Posts</a>
-                <a class="navbar-item" href="/agenda">Agenda</a>
+                {{-- <a class="navbar-item" href="/agenda">Agenda</a> --}}
                 <a class="navbar-item" href="/contacts">Contacten</a>
                 <a class="navbar-item" href="/files">Bestanden</a>
             </div>
