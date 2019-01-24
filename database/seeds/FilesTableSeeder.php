@@ -9,13 +9,13 @@ class FilesTableSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('files')->insert([
-        //     'user_id' => '1',
-        //     'post_id' => '1',
-        //     'name' => 'afbeelding',
-        //     'extension' => 'png',
-        //     'type' => 'image',
-        //     'description' => 'Afbeelding voor bij de eerste post'
-        // ]);
+        DB::table('files')->insert([
+            'user_id' => '1',
+            'post_id' => '1',
+            'name' => 'afbeelding',
+            'extension' => 'png',
+            'type' => 'image',
+            'description' => 'Afbeelding voor bij de eerste post'
+        ]);
     }
 }

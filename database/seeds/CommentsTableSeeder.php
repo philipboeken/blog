@@ -9,10 +9,10 @@ class CommentsTableSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('comments')->insert([
-        //     'user_id' => '1',
-        //     'post_id' => '1',
-        //     'body' => 'Dit is een reactie!',
-        // ]);
+        DB::table('comments')->insert([
+            'user_id' => '1',
+            'post_id' => '1',
+            'body' => 'Dit is een reactie!',
+        ]);
     }
 }
