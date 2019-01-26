@@ -39,9 +39,7 @@ import 'vue-flatpickr/theme/airbnb.css';
 import FullCalendar from 'vue-full-calendar'
 import Vue from 'vue'
 import Buefy from 'buefy'
-import VueMarkdown from 'vue-markdown';
 
-Vue.use(VueMarkdown);
 Vue.use(VueFlatpickr);
 Vue.use(FullCalendar)
 Vue.use(Buefy, {

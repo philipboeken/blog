@@ -29,7 +29,7 @@
                 <div class="media-content">
                     <hr class="postcard-hr">
                     <div class="content">
-                        <vue-markdown>{{ str_limit($post->body, $limit = 330, $end = '...') }}</vue-markdown>
+                        @markdown(str_limit($post->body, $limit = 330, $end = '...'))
                     </div>
                     <div>
                         <strong>
