@@ -10,7 +10,7 @@ require('./bootstrap');
 require('es6-promise').polyfill();
 require('./bulma');
 require('trix');
-require('fullcalendar/dist/locale/nl.js');
+// require('fullcalendar/dist/locale/nl.js');
 
 let entries = require('object.entries');
 if (!Object.entries) {
@@ -36,18 +36,18 @@ if (token) {
 
 import VueFlatpickr from 'vue-flatpickr';
 import 'vue-flatpickr/theme/airbnb.css';
-import FullCalendar from 'vue-full-calendar'
+// import FullCalendar from 'vue-full-calendar'
 import Vue from 'vue'
 import Buefy from 'buefy'
 
 Vue.use(VueFlatpickr);
-Vue.use(FullCalendar)
+// Vue.use(FullCalendar)
 Vue.use(Buefy, {
     defaultIconPack: 'fas'
 });
 
 Vue.component('account-menu', require('./components/AccountMenu.vue'));
-Vue.component('calendar', require('./components/Calendar.vue'));
+// Vue.component('calendar', require('./components/Calendar.vue'));
 Vue.component('contact-button', require('./components/contacts/ContactButton.vue'));
 Vue.component('contact-show-modal', require('./components/contacts/ContactShowModal.vue'));
 Vue.component('contact-add-modal', require('./components/contacts/ContactAddModal.vue'));

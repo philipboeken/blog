@@ -46,9 +46,9 @@
   src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(https://fonts.gstatic.com/s/raleway/v12/xkvoNo9fC8O2RDydKj12bwzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
-fieldset[disabled] .multiselect{pointer-events:none}.multiselect__spinner{position:absolute;right:1px;top:1px;width:48px;height:35px;background:#fff;display:block}.multiselect__spinner:after,.multiselect__spinner:before{position:absolute;content:"";top:50%;left:50%;margin:-8px 0 0 -8px;width:16px;height:16px;border-radius:100%;border-color:#41b883 transparent transparent;border-style:solid;border-width:2px;-webkit-box-shadow:0 0 0 1px transparent;box-shadow:0 0 0 1px transparent}.multiselect__spinner:before{-webkit-animation:a 2.4s cubic-bezier(.41,.26,.2,.62);animation:a 2.4s cubic-bezier(.41,.26,.2,.62);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.multiselect__spinner:after{-webkit-animation:a 2.4s cubic-bezier(.51,.09,.21,.8);animation:a 2.4s cubic-bezier(.51,.09,.21,.8);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.multiselect__loading-enter-active,.multiselect__loading-leave-active{-webkit-transition:opacity .4s ease-in-out;transition:opacity .4s ease-in-out;opacity:1}.multiselect__loading-enter,.multiselect__loading-leave-active{opacity:0}.multiselect,.multiselect__input,.multiselect__single{font-family:inherit;font-size:16px;-ms-touch-action:manipulation;touch-action:manipulation}.multiselect{-webkit-box-sizing:content-box;box-sizing:content-box;display:block;position:relative;width:100%;min-height:40px;text-align:left;color:#35495e}.multiselect *{-webkit-box-sizing:border-box;box-sizing:border-box}.multiselect:focus{outline:none}.multiselect--disabled{opacity:.6}.multiselect--active{z-index:1}.multiselect--active:not(.multiselect--above) .multiselect__current,.multiselect--active:not(.multiselect--above) .multiselect__input,.multiselect--active:not(.multiselect--above) .multiselect__tags{border-bottom-left-radius:0;border-bottom-right-radius:0}.multiselect--active .multiselect__select{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.multiselect--above.multiselect--active .multiselect__current,.multiselect--above.multiselect--active .multiselect__input,.multiselect--above.multiselect--active .multiselect__tags{border-top-left-radius:0;border-top-right-radius:0}.multiselect__input,.multiselect__single{position:relative;display:inline-block;min-height:20px;line-height:20px;border:none;border-radius:5px;background:#fff;padding:0 0 0 5px;width:100%;-webkit-transition:border .1s ease;transition:border .1s ease;-webkit-box-sizing:border-box;box-sizing:border-box;margin-bottom:8px;vertical-align:top}.multiselect__input::-webkit-input-placeholder{color:#35495e}.multiselect__input:-ms-input-placeholder{color:#35495e}.multiselect__input::-ms-input-placeholder{color:#35495e}.multiselect__input::placeholder{color:#35495e}.multiselect__tag~.multiselect__input,.multiselect__tag~.multiselect__single{width:auto}.multiselect__input:hover,.multiselect__single:hover{border-color:#cfcfcf}.multiselect__input:focus,.multiselect__single:focus{border-color:#a8a8a8;outline:none}.multiselect__single{padding-left:5px;margin-bottom:8px}.multiselect__tags-wrap{display:inline}.multiselect__tags{min-height:40px;display:block;padding:8px 40px 0 8px;border-radius:5px;border:1px solid #e8e8e8;background:#fff;font-size:14px}.multiselect__tag{position:relative;display:inline-block;padding:4px 26px 4px 10px;border-radius:5px;margin-right:10px;color:#fff;line-height:1;background:#41b883;margin-bottom:5px;white-space:nowrap;overflow:hidden;max-width:100%;text-overflow:ellipsis}.multiselect__tag-icon{cursor:pointer;margin-left:7px;position:absolute;right:0;top:0;bottom:0;font-weight:700;font-style:normal;width:22px;text-align:center;line-height:22px;-webkit-transition:all .2s ease;transition:all .2s ease;border-radius:5px}.multiselect__tag-icon:after{content:"\D7";color:#266d4d;font-size:14px}.multiselect__tag-icon:focus,.multiselect__tag-icon:hover{background:#369a6e}.multiselect__tag-icon:focus:after,.multiselect__tag-icon:hover:after{color:#fff}.multiselect__current{min-height:40px;overflow:hidden;padding:8px 12px 0;padding-right:30px;white-space:nowrap;border-radius:5px;border:1px solid #e8e8e8}.multiselect__current,.multiselect__select{line-height:16px;-webkit-box-sizing:border-box;box-sizing:border-box;display:block;margin:0;text-decoration:none;cursor:pointer}.multiselect__select{position:absolute;width:40px;height:38px;right:1px;top:1px;padding:4px 8px;text-align:center;-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease, -webkit-transform .2s ease}.multiselect__select:before{position:relative;right:0;top:65%;color:#999;margin-top:4px;border-style:solid;border-width:5px 5px 0;border-color:#999 transparent transparent;content:""}.multiselect__placeholder{color:#adadad;display:inline-block;margin-bottom:10px;padding-top:2px}.multiselect--active .multiselect__placeholder{display:none}.multiselect__content-wrapper{position:absolute;display:block;background:#fff;width:100%;max-height:240px;overflow:auto;border:1px solid #e8e8e8;border-top:none;border-bottom-left-radius:5px;border-bottom-right-radius:5px;z-index:1;-webkit-overflow-scrolling:touch}.multiselect__content{list-style:none;display:inline-block;padding:0;margin:0;min-width:100%;vertical-align:top}.multiselect--above .multiselect__content-wrapper{bottom:100%;border-bottom-left-radius:0;border-bottom-right-radius:0;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom:none;border-top:1px solid #e8e8e8}.multiselect__content::webkit-scrollbar{display:none}.multiselect__element{display:block}.multiselect__option{display:block;padding:12px;min-height:40px;line-height:16px;text-decoration:none;text-transform:none;vertical-align:middle;position:relative;cursor:pointer;white-space:nowrap}.multiselect__option:after{top:0;right:0;position:absolute;line-height:40px;padding-right:12px;padding-left:20px;font-size:13px}.multiselect__option--highlight{background:#41b883;outline:none;color:#fff}.multiselect__option--highlight:after{content:attr(data-select);background:#41b883;color:#fff}.multiselect__option--selected{background:#f3f3f3;color:#35495e;font-weight:700}.multiselect__option--selected:after{content:attr(data-selected);color:silver}.multiselect__option--selected.multiselect__option--highlight{background:#ff6a6a;color:#fff}.multiselect__option--selected.multiselect__option--highlight:after{background:#ff6a6a;content:attr(data-deselect);color:#fff}.multiselect--disabled{background:#ededed;pointer-events:none}.multiselect--disabled .multiselect__current,.multiselect--disabled .multiselect__select,.multiselect__option--disabled{background:#ededed;color:#a6a6a6}.multiselect__option--disabled{cursor:text;pointer-events:none}.multiselect__option--group{background:#ededed;color:#35495e}.multiselect__option--group.multiselect__option--highlight{background:#35495e;color:#fff}.multiselect__option--group.multiselect__option--highlight:after{background:#35495e}.multiselect__option--disabled.multiselect__option--highlight{background:#dedede}.multiselect__option--group-selected.multiselect__option--highlight{background:#ff6a6a;color:#fff}.multiselect__option--group-selected.multiselect__option--highlight:after{background:#ff6a6a;content:attr(data-deselect);color:#fff}.multiselect-enter-active,.multiselect-leave-active{-webkit-transition:all .15s ease;transition:all .15s ease}.multiselect-enter,.multiselect-leave-active{opacity:0}.multiselect__strong{margin-bottom:8px;line-height:20px;display:inline-block;vertical-align:top}[dir=rtl] .multiselect{text-align:right}[dir=rtl] .multiselect__select{right:auto;left:1px}[dir=rtl] .multiselect__tags{padding:8px 8px 0 40px}[dir=rtl] .multiselect__content{text-align:right}[dir=rtl] .multiselect__option:after{right:auto;left:0}[dir=rtl] .multiselect__clear{right:auto;left:12px}[dir=rtl] .multiselect__spinner{right:auto;left:1px}@-webkit-keyframes a{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(2turn);transform:rotate(2turn)}}@keyframes a{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(2turn);transform:rotate(2turn)}}@charset "UTF-8";
+fieldset[disabled] .multiselect{pointer-events:none}.multiselect__spinner{position:absolute;right:1px;top:1px;width:48px;height:35px;background:#fff;display:block}.multiselect__spinner:after,.multiselect__spinner:before{position:absolute;content:"";top:50%;left:50%;margin:-8px 0 0 -8px;width:16px;height:16px;border-radius:100%;border-color:#41b883 transparent transparent;border-style:solid;border-width:2px;-webkit-box-shadow:0 0 0 1px transparent;box-shadow:0 0 0 1px transparent}.multiselect__spinner:before{-webkit-animation:a 2.4s cubic-bezier(.41,.26,.2,.62);animation:a 2.4s cubic-bezier(.41,.26,.2,.62);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.multiselect__spinner:after{-webkit-animation:a 2.4s cubic-bezier(.51,.09,.21,.8);animation:a 2.4s cubic-bezier(.51,.09,.21,.8);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.multiselect__loading-enter-active,.multiselect__loading-leave-active{-webkit-transition:opacity .4s ease-in-out;transition:opacity .4s ease-in-out;opacity:1}.multiselect__loading-enter,.multiselect__loading-leave-active{opacity:0}.multiselect,.multiselect__input,.multiselect__single{font-family:inherit;font-size:16px;-ms-touch-action:manipulation;touch-action:manipulation}.multiselect{-webkit-box-sizing:content-box;box-sizing:content-box;display:block;position:relative;width:100%;min-height:40px;text-align:left;color:#35495e}.multiselect *{-webkit-box-sizing:border-box;box-sizing:border-box}.multiselect:focus{outline:none}.multiselect--disabled{opacity:.6}.multiselect--active{z-index:1}.multiselect--active:not(.multiselect--above) .multiselect__current,.multiselect--active:not(.multiselect--above) .multiselect__input,.multiselect--active:not(.multiselect--above) .multiselect__tags{border-bottom-left-radius:0;border-bottom-right-radius:0}.multiselect--active .multiselect__select{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.multiselect--above.multiselect--active .multiselect__current,.multiselect--above.multiselect--active .multiselect__input,.multiselect--above.multiselect--active .multiselect__tags{border-top-left-radius:0;border-top-right-radius:0}.multiselect__input,.multiselect__single{position:relative;display:inline-block;min-height:20px;line-height:20px;border:none;border-radius:5px;background:#fff;padding:0 0 0 5px;width:100%;-webkit-transition:border .1s ease;transition:border .1s ease;-webkit-box-sizing:border-box;box-sizing:border-box;margin-bottom:8px;vertical-align:top}.multiselect__input:-ms-input-placeholder{color:#35495e}.multiselect__input::-webkit-input-placeholder{color:#35495e}.multiselect__input::-ms-input-placeholder{color:#35495e}.multiselect__input::placeholder{color:#35495e}.multiselect__tag~.multiselect__input,.multiselect__tag~.multiselect__single{width:auto}.multiselect__input:hover,.multiselect__single:hover{border-color:#cfcfcf}.multiselect__input:focus,.multiselect__single:focus{border-color:#a8a8a8;outline:none}.multiselect__single{padding-left:5px;margin-bottom:8px}.multiselect__tags-wrap{display:inline}.multiselect__tags{min-height:40px;display:block;padding:8px 40px 0 8px;border-radius:5px;border:1px solid #e8e8e8;background:#fff;font-size:14px}.multiselect__tag{position:relative;display:inline-block;padding:4px 26px 4px 10px;border-radius:5px;margin-right:10px;color:#fff;line-height:1;background:#41b883;margin-bottom:5px;white-space:nowrap;overflow:hidden;max-width:100%;text-overflow:ellipsis}.multiselect__tag-icon{cursor:pointer;margin-left:7px;position:absolute;right:0;top:0;bottom:0;font-weight:700;font-style:normal;width:22px;text-align:center;line-height:22px;-webkit-transition:all .2s ease;transition:all .2s ease;border-radius:5px}.multiselect__tag-icon:after{content:"\D7";color:#266d4d;font-size:14px}.multiselect__tag-icon:focus,.multiselect__tag-icon:hover{background:#369a6e}.multiselect__tag-icon:focus:after,.multiselect__tag-icon:hover:after{color:#fff}.multiselect__current{min-height:40px;overflow:hidden;padding:8px 12px 0;padding-right:30px;white-space:nowrap;border-radius:5px;border:1px solid #e8e8e8}.multiselect__current,.multiselect__select{line-height:16px;-webkit-box-sizing:border-box;box-sizing:border-box;display:block;margin:0;text-decoration:none;cursor:pointer}.multiselect__select{position:absolute;width:40px;height:38px;right:1px;top:1px;padding:4px 8px;text-align:center;-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease, -webkit-transform .2s ease}.multiselect__select:before{position:relative;right:0;top:65%;color:#999;margin-top:4px;border-style:solid;border-width:5px 5px 0;border-color:#999 transparent transparent;content:""}.multiselect__placeholder{color:#adadad;display:inline-block;margin-bottom:10px;padding-top:2px}.multiselect--active .multiselect__placeholder{display:none}.multiselect__content-wrapper{position:absolute;display:block;background:#fff;width:100%;max-height:240px;overflow:auto;border:1px solid #e8e8e8;border-top:none;border-bottom-left-radius:5px;border-bottom-right-radius:5px;z-index:1;-webkit-overflow-scrolling:touch}.multiselect__content{list-style:none;display:inline-block;padding:0;margin:0;min-width:100%;vertical-align:top}.multiselect--above .multiselect__content-wrapper{bottom:100%;border-bottom-left-radius:0;border-bottom-right-radius:0;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom:none;border-top:1px solid #e8e8e8}.multiselect__content::webkit-scrollbar{display:none}.multiselect__element{display:block}.multiselect__option{display:block;padding:12px;min-height:40px;line-height:16px;text-decoration:none;text-transform:none;vertical-align:middle;position:relative;cursor:pointer;white-space:nowrap}.multiselect__option:after{top:0;right:0;position:absolute;line-height:40px;padding-right:12px;padding-left:20px;font-size:13px}.multiselect__option--highlight{background:#41b883;outline:none;color:#fff}.multiselect__option--highlight:after{content:attr(data-select);background:#41b883;color:#fff}.multiselect__option--selected{background:#f3f3f3;color:#35495e;font-weight:700}.multiselect__option--selected:after{content:attr(data-selected);color:silver}.multiselect__option--selected.multiselect__option--highlight{background:#ff6a6a;color:#fff}.multiselect__option--selected.multiselect__option--highlight:after{background:#ff6a6a;content:attr(data-deselect);color:#fff}.multiselect--disabled{background:#ededed;pointer-events:none}.multiselect--disabled .multiselect__current,.multiselect--disabled .multiselect__select{background:#ededed;color:#a6a6a6}.multiselect__option--disabled{background:#ededed!important;color:#a6a6a6!important;cursor:text;pointer-events:none}.multiselect__option--group{background:#ededed;color:#35495e}.multiselect__option--group.multiselect__option--highlight{background:#35495e;color:#fff}.multiselect__option--group.multiselect__option--highlight:after{background:#35495e}.multiselect__option--disabled.multiselect__option--highlight{background:#dedede}.multiselect__option--group-selected.multiselect__option--highlight{background:#ff6a6a;color:#fff}.multiselect__option--group-selected.multiselect__option--highlight:after{background:#ff6a6a;content:attr(data-deselect);color:#fff}.multiselect-enter-active,.multiselect-leave-active{-webkit-transition:all .15s ease;transition:all .15s ease}.multiselect-enter,.multiselect-leave-active{opacity:0}.multiselect__strong{margin-bottom:8px;line-height:20px;display:inline-block;vertical-align:top}[dir=rtl] .multiselect{text-align:right}[dir=rtl] .multiselect__select{right:auto;left:1px}[dir=rtl] .multiselect__tags{padding:8px 8px 0 40px}[dir=rtl] .multiselect__content{text-align:right}[dir=rtl] .multiselect__option:after{right:auto;left:0}[dir=rtl] .multiselect__clear{right:auto;left:12px}[dir=rtl] .multiselect__spinner{right:auto;left:1px}@-webkit-keyframes a{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(2turn);transform:rotate(2turn)}}@keyframes a{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(2turn);transform:rotate(2turn)}}@charset "UTF-8";
 /*
-Trix 0.11.2
+Trix 0.11.4
 Copyright © 2018 Basecamp, LLC
 http://trix-editor.org/*/
 trix-editor {
@@ -233,8 +233,10 @@ trix-editor [data-trix-cursor-target]::-moz-selection {
 trix-editor [data-trix-mutable=true]::selection,
 trix-editor [data-trix-cursor-target]::selection {
   background: none; }
-trix-editor .attachment:hover {
-  cursor: default; }
+trix-editor .attachment {
+  position: relative; }
+  trix-editor .attachment:hover {
+    cursor: default; }
 trix-editor .attachment--preview .attachment__caption:hover {
   cursor: text; }
 trix-editor .attachment__progress {
@@ -363,1297 +365,6 @@ trix-editor .attachment__remove--icon {
     padding: 0.4em 1em;
     border: 1px solid #bbb;
     border-radius: 5px; }
-/*!
- * FullCalendar v3.9.0
- * Docs & License: https://fullcalendar.io/
- * (c) 2018 Adam Shaw
- */
-.fc {
-  direction: ltr;
-  text-align: left; }
-
-.fc-rtl {
-  text-align: right; }
-
-body .fc {
-  /* extra precedence to overcome jqui */
-  font-size: 1em; }
-
-/* Colors
---------------------------------------------------------------------------------------------------*/
-.fc-highlight {
-  /* when user is selecting cells */
-  background: #bce8f1;
-  opacity: .3; }
-
-.fc-bgevent {
-  /* default look for background events */
-  background: #8fdf82;
-  opacity: .3; }
-
-.fc-nonbusiness {
-  /* default look for non-business-hours areas */
-  /* will inherit .fc-bgevent's styles */
-  background: #d7d7d7; }
-
-/* Buttons (styled <button> tags, normalized to work cross-browser)
---------------------------------------------------------------------------------------------------*/
-.fc button {
-  /* force height to include the border and padding */
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  /* dimensions */
-  margin: 0;
-  height: 2.1em;
-  padding: 0 .6em;
-  /* text & cursor */
-  font-size: 1em;
-  /* normalize */
-  white-space: nowrap;
-  cursor: pointer; }
-
-/* Firefox has an annoying inner border */
-.fc button::-moz-focus-inner {
-  margin: 0;
-  padding: 0; }
-
-.fc-state-default {
-  /* non-theme */
-  border: 1px solid; }
-
-.fc-state-default.fc-corner-left {
-  /* non-theme */
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px; }
-
-.fc-state-default.fc-corner-right {
-  /* non-theme */
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px; }
-
-/* icons in buttons */
-.fc button .fc-icon {
-  /* non-theme */
-  position: relative;
-  top: -0.05em;
-  /* seems to be a good adjustment across browsers */
-  margin: 0 .2em;
-  vertical-align: middle; }
-
-/*
-  button states
-  borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
-*/
-.fc-state-default {
-  background-color: #f5f5f5;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6));
-  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  color: #333;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
-
-.fc-state-hover,
-.fc-state-down,
-.fc-state-active,
-.fc-state-disabled {
-  color: #333333;
-  background-color: #e6e6e6; }
-
-.fc-state-hover {
-  color: #333333;
-  text-decoration: none;
-  background-position: 0 -15px;
-  -webkit-transition: background-position 0.1s linear;
-  transition: background-position 0.1s linear; }
-
-.fc-state-down,
-.fc-state-active {
-  background-color: #cccccc;
-  background-image: none;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-
-.fc-state-disabled {
-  cursor: default;
-  background-image: none;
-  opacity: 0.65;
-  -webkit-box-shadow: none;
-          box-shadow: none; }
-
-/* Buttons Groups
---------------------------------------------------------------------------------------------------*/
-.fc-button-group {
-  display: inline-block; }
-
-/*
-every button that is not first in a button group should scootch over one pixel and cover the
-previous button's border...
-*/
-.fc .fc-button-group > * {
-  /* extra precedence b/c buttons have margin set to zero */
-  float: left;
-  margin: 0 0 0 -1px; }
-
-.fc .fc-button-group > :first-child {
-  /* same */
-  margin-left: 0; }
-
-/* Popover
---------------------------------------------------------------------------------------------------*/
-.fc-popover {
-  position: absolute;
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); }
-
-.fc-popover .fc-header {
-  /* TODO: be more consistent with fc-head/fc-body */
-  padding: 2px 4px; }
-
-.fc-popover .fc-header .fc-title {
-  margin: 0 2px; }
-
-.fc-popover .fc-header .fc-close {
-  cursor: pointer; }
-
-.fc-ltr .fc-popover .fc-header .fc-title,
-.fc-rtl .fc-popover .fc-header .fc-close {
-  float: left; }
-
-.fc-rtl .fc-popover .fc-header .fc-title,
-.fc-ltr .fc-popover .fc-header .fc-close {
-  float: right; }
-
-/* Misc Reusable Components
---------------------------------------------------------------------------------------------------*/
-.fc-divider {
-  border-style: solid;
-  border-width: 1px; }
-
-hr.fc-divider {
-  height: 0;
-  margin: 0;
-  padding: 0 0 2px;
-  /* height is unreliable across browsers, so use padding */
-  border-width: 1px 0; }
-
-.fc-clear {
-  clear: both; }
-
-.fc-bg,
-.fc-bgevent-skeleton,
-.fc-highlight-skeleton,
-.fc-helper-skeleton {
-  /* these element should always cling to top-left/right corners */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; }
-
-.fc-bg {
-  bottom: 0;
-  /* strech bg to bottom edge */ }
-
-.fc-bg table {
-  height: 100%;
-  /* strech bg to bottom edge */ }
-
-/* Tables
---------------------------------------------------------------------------------------------------*/
-.fc table {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /* fix scrollbar issue in firefox */
-  table-layout: fixed;
-  border-collapse: collapse;
-  border-spacing: 0;
-  font-size: 1em;
-  /* normalize cross-browser */ }
-
-.fc th {
-  text-align: center; }
-
-.fc th,
-.fc td {
-  border-style: solid;
-  border-width: 1px;
-  padding: 0;
-  vertical-align: top; }
-
-.fc td.fc-today {
-  border-style: double;
-  /* overcome neighboring borders */ }
-
-/* Internal Nav Links
---------------------------------------------------------------------------------------------------*/
-a[data-goto] {
-  cursor: pointer; }
-
-a[data-goto]:hover {
-  text-decoration: underline; }
-
-/* Fake Table Rows
---------------------------------------------------------------------------------------------------*/
-.fc .fc-row {
-  /* extra precedence to overcome themes w/ .ui-widget-content forcing a 1px border */
-  /* no visible border by default. but make available if need be (scrollbar width compensation) */
-  border-style: solid;
-  border-width: 0; }
-
-.fc-row table {
-  /* don't put left/right border on anything within a fake row.
-     the outer tbody will worry about this */
-  border-left: 0 hidden transparent;
-  border-right: 0 hidden transparent;
-  /* no bottom borders on rows */
-  border-bottom: 0 hidden transparent; }
-
-.fc-row:first-child table {
-  border-top: 0 hidden transparent;
-  /* no top border on first row */ }
-
-/* Day Row (used within the header and the DayGrid)
---------------------------------------------------------------------------------------------------*/
-.fc-row {
-  position: relative; }
-
-.fc-row .fc-bg {
-  z-index: 1; }
-
-/* highlighting cells & background event skeleton */
-.fc-row .fc-bgevent-skeleton,
-.fc-row .fc-highlight-skeleton {
-  bottom: 0;
-  /* stretch skeleton to bottom of row */ }
-
-.fc-row .fc-bgevent-skeleton table,
-.fc-row .fc-highlight-skeleton table {
-  height: 100%;
-  /* stretch skeleton to bottom of row */ }
-
-.fc-row .fc-highlight-skeleton td,
-.fc-row .fc-bgevent-skeleton td {
-  border-color: transparent; }
-
-.fc-row .fc-bgevent-skeleton {
-  z-index: 2; }
-
-.fc-row .fc-highlight-skeleton {
-  z-index: 3; }
-
-/*
-row content (which contains day/week numbers and events) as well as "helper" (which contains
-temporary rendered events).
-*/
-.fc-row .fc-content-skeleton {
-  position: relative;
-  z-index: 4;
-  padding-bottom: 2px;
-  /* matches the space above the events */ }
-
-.fc-row .fc-helper-skeleton {
-  z-index: 5; }
-
-.fc .fc-row .fc-content-skeleton table,
-.fc .fc-row .fc-content-skeleton td,
-.fc .fc-row .fc-helper-skeleton td {
-  /* see-through to the background below */
-  /* extra precedence to prevent theme-provided backgrounds */
-  background: none;
-  /* in case <td>s are globally styled */
-  border-color: transparent; }
-
-.fc-row .fc-content-skeleton td,
-.fc-row .fc-helper-skeleton td {
-  /* don't put a border between events and/or the day number */
-  border-bottom: 0; }
-
-.fc-row .fc-content-skeleton tbody td,
-.fc-row .fc-helper-skeleton tbody td {
-  /* don't put a border between event cells */
-  border-top: 0; }
-
-/* Scrolling Container
---------------------------------------------------------------------------------------------------*/
-.fc-scroller {
-  -webkit-overflow-scrolling: touch; }
-
-/* TODO: move to agenda/basic */
-.fc-scroller > .fc-day-grid,
-.fc-scroller > .fc-time-grid {
-  position: relative;
-  /* re-scope all positions */
-  width: 100%;
-  /* hack to force re-sizing this inner element when scrollbars appear/disappear */ }
-
-/* Global Event Styles
---------------------------------------------------------------------------------------------------*/
-.fc-event {
-  position: relative;
-  /* for resize handle and other inner positioning */
-  display: block;
-  /* make the <a> tag block */
-  font-size: .85em;
-  line-height: 1.3;
-  border-radius: 3px;
-  border: 1px solid #3a87ad;
-  /* default BORDER color */ }
-
-.fc-event,
-.fc-event-dot {
-  background-color: #3a87ad;
-  /* default BACKGROUND color */ }
-
-.fc-event,
-.fc-event:hover {
-  color: #fff;
-  /* default TEXT color */
-  text-decoration: none;
-  /* if <a> has an href */ }
-
-.fc-event[href],
-.fc-event.fc-draggable {
-  cursor: pointer;
-  /* give events with links and draggable events a hand mouse pointer */ }
-
-.fc-not-allowed,
-.fc-not-allowed .fc-event {
-  /* to override an event's custom cursor */
-  cursor: not-allowed; }
-
-.fc-event .fc-bg {
-  /* the generic .fc-bg already does position */
-  z-index: 1;
-  background: #fff;
-  opacity: .25; }
-
-.fc-event .fc-content {
-  position: relative;
-  z-index: 2; }
-
-/* resizer (cursor AND touch devices) */
-.fc-event .fc-resizer {
-  position: absolute;
-  z-index: 4; }
-
-/* resizer (touch devices) */
-.fc-event .fc-resizer {
-  display: none; }
-
-.fc-event.fc-allow-mouse-resize .fc-resizer,
-.fc-event.fc-selected .fc-resizer {
-  /* only show when hovering or selected (with touch) */
-  display: block; }
-
-/* hit area */
-.fc-event.fc-selected .fc-resizer:before {
-  /* 40x40 touch area */
-  content: "";
-  position: absolute;
-  z-index: 9999;
-  /* user of this util can scope within a lower z-index */
-  top: 50%;
-  left: 50%;
-  width: 40px;
-  height: 40px;
-  margin-left: -20px;
-  margin-top: -20px; }
-
-/* Event Selection (only for touch devices)
---------------------------------------------------------------------------------------------------*/
-.fc-event.fc-selected {
-  z-index: 9999 !important;
-  /* overcomes inline z-index */
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
-
-.fc-event.fc-selected.fc-dragging {
-  -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3); }
-
-/* Horizontal Events
---------------------------------------------------------------------------------------------------*/
-/* bigger touch area when selected */
-.fc-h-event.fc-selected:before {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  /* below resizers */
-  top: -10px;
-  bottom: -10px;
-  left: 0;
-  right: 0; }
-
-/* events that are continuing to/from another week. kill rounded corners and butt up against edge */
-.fc-ltr .fc-h-event.fc-not-start,
-.fc-rtl .fc-h-event.fc-not-end {
-  margin-left: 0;
-  border-left-width: 0;
-  padding-left: 1px;
-  /* replace the border with padding */
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
-
-.fc-ltr .fc-h-event.fc-not-end,
-.fc-rtl .fc-h-event.fc-not-start {
-  margin-right: 0;
-  border-right-width: 0;
-  padding-right: 1px;
-  /* replace the border with padding */
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0; }
-
-/* resizer (cursor AND touch devices) */
-/* left resizer  */
-.fc-ltr .fc-h-event .fc-start-resizer,
-.fc-rtl .fc-h-event .fc-end-resizer {
-  cursor: w-resize;
-  left: -1px;
-  /* overcome border */ }
-
-/* right resizer */
-.fc-ltr .fc-h-event .fc-end-resizer,
-.fc-rtl .fc-h-event .fc-start-resizer {
-  cursor: e-resize;
-  right: -1px;
-  /* overcome border */ }
-
-/* resizer (mouse devices) */
-.fc-h-event.fc-allow-mouse-resize .fc-resizer {
-  width: 7px;
-  top: -1px;
-  /* overcome top border */
-  bottom: -1px;
-  /* overcome bottom border */ }
-
-/* resizer (touch devices) */
-.fc-h-event.fc-selected .fc-resizer {
-  /* 8x8 little dot */
-  border-radius: 4px;
-  border-width: 1px;
-  width: 6px;
-  height: 6px;
-  border-style: solid;
-  border-color: inherit;
-  background: #fff;
-  /* vertically center */
-  top: 50%;
-  margin-top: -4px; }
-
-/* left resizer  */
-.fc-ltr .fc-h-event.fc-selected .fc-start-resizer,
-.fc-rtl .fc-h-event.fc-selected .fc-end-resizer {
-  margin-left: -4px;
-  /* centers the 8x8 dot on the left edge */ }
-
-/* right resizer */
-.fc-ltr .fc-h-event.fc-selected .fc-end-resizer,
-.fc-rtl .fc-h-event.fc-selected .fc-start-resizer {
-  margin-right: -4px;
-  /* centers the 8x8 dot on the right edge */ }
-
-/* DayGrid events
-----------------------------------------------------------------------------------------------------
-We use the full "fc-day-grid-event" class instead of using descendants because the event won't
-be a descendant of the grid when it is being dragged.
-*/
-.fc-day-grid-event {
-  margin: 1px 2px 0;
-  /* spacing between events and edges */
-  padding: 0 1px; }
-
-tr:first-child > td > .fc-day-grid-event {
-  margin-top: 2px;
-  /* a little bit more space before the first event */ }
-
-.fc-day-grid-event.fc-selected:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  /* same z-index as fc-bg, behind text */
-  /* overcome the borders */
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  /* darkening effect */
-  background: #000;
-  opacity: .25; }
-
-.fc-day-grid-event .fc-content {
-  /* force events to be one-line tall */
-  white-space: nowrap;
-  overflow: hidden; }
-
-.fc-day-grid-event .fc-time {
-  font-weight: bold; }
-
-/* resizer (cursor devices) */
-/* left resizer  */
-.fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer,
-.fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer {
-  margin-left: -2px;
-  /* to the day cell's edge */ }
-
-/* right resizer */
-.fc-ltr .fc-day-grid-event.fc-allow-mouse-resize .fc-end-resizer,
-.fc-rtl .fc-day-grid-event.fc-allow-mouse-resize .fc-start-resizer {
-  margin-right: -2px;
-  /* to the day cell's edge */ }
-
-/* Event Limiting
---------------------------------------------------------------------------------------------------*/
-/* "more" link that represents hidden events */
-a.fc-more {
-  margin: 1px 3px;
-  font-size: .85em;
-  cursor: pointer;
-  text-decoration: none; }
-
-a.fc-more:hover {
-  text-decoration: underline; }
-
-.fc-limited {
-  /* rows and cells that are hidden because of a "more" link */
-  display: none; }
-
-/* popover that appears when "more" link is clicked */
-.fc-day-grid .fc-row {
-  z-index: 1;
-  /* make the "more" popover one higher than this */ }
-
-.fc-more-popover {
-  z-index: 2;
-  width: 220px; }
-
-.fc-more-popover .fc-event-container {
-  padding: 10px; }
-
-/* Now Indicator
---------------------------------------------------------------------------------------------------*/
-.fc-now-indicator {
-  position: absolute;
-  border: 0 solid red; }
-
-/* Utilities
---------------------------------------------------------------------------------------------------*/
-.fc-unselectable {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: transparent; }
-
-/*
-TODO: more distinction between this file and common.css
-*/
-/* Colors
---------------------------------------------------------------------------------------------------*/
-.fc-unthemed th,
-.fc-unthemed td,
-.fc-unthemed thead,
-.fc-unthemed tbody,
-.fc-unthemed .fc-divider,
-.fc-unthemed .fc-row,
-.fc-unthemed .fc-content,
-.fc-unthemed .fc-popover,
-.fc-unthemed .fc-list-view,
-.fc-unthemed .fc-list-heading td {
-  border-color: #ddd; }
-
-.fc-unthemed .fc-popover {
-  background-color: #fff; }
-
-.fc-unthemed .fc-divider,
-.fc-unthemed .fc-popover .fc-header,
-.fc-unthemed .fc-list-heading td {
-  background: #eee; }
-
-.fc-unthemed .fc-popover .fc-header .fc-close {
-  color: #666; }
-
-.fc-unthemed td.fc-today {
-  background: #fcf8e3; }
-
-.fc-unthemed .fc-disabled-day {
-  background: #d7d7d7;
-  opacity: .3; }
-
-/* Icons (inline elements with styled text that mock arrow icons)
---------------------------------------------------------------------------------------------------*/
-.fc-icon {
-  display: inline-block;
-  height: 1em;
-  line-height: 1em;
-  font-size: 1em;
-  text-align: center;
-  overflow: hidden;
-  font-family: "Courier New", Courier, monospace;
-  /* don't allow browser text-selection */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-/*
-Acceptable font-family overrides for individual icons:
-  "Arial", sans-serif
-  "Times New Roman", serif
-
-NOTE: use percentage font sizes or else old IE chokes
-*/
-.fc-icon:after {
-  position: relative; }
-
-.fc-icon-left-single-arrow:after {
-  content: "\2039";
-  font-weight: bold;
-  font-size: 200%;
-  top: -7%; }
-
-.fc-icon-right-single-arrow:after {
-  content: "\203A";
-  font-weight: bold;
-  font-size: 200%;
-  top: -7%; }
-
-.fc-icon-left-double-arrow:after {
-  content: "\AB";
-  font-size: 160%;
-  top: -7%; }
-
-.fc-icon-right-double-arrow:after {
-  content: "\BB";
-  font-size: 160%;
-  top: -7%; }
-
-.fc-icon-left-triangle:after {
-  content: "\25C4";
-  font-size: 125%;
-  top: 3%; }
-
-.fc-icon-right-triangle:after {
-  content: "\25BA";
-  font-size: 125%;
-  top: 3%; }
-
-.fc-icon-down-triangle:after {
-  content: "\25BC";
-  font-size: 125%;
-  top: 2%; }
-
-.fc-icon-x:after {
-  content: "\D7";
-  font-size: 200%;
-  top: 6%; }
-
-/* Popover
---------------------------------------------------------------------------------------------------*/
-.fc-unthemed .fc-popover {
-  border-width: 1px;
-  border-style: solid; }
-
-.fc-unthemed .fc-popover .fc-header .fc-close {
-  font-size: .9em;
-  margin-top: 2px; }
-
-/* List View
---------------------------------------------------------------------------------------------------*/
-.fc-unthemed .fc-list-item:hover td {
-  background-color: #f5f5f5; }
-
-/* Colors
---------------------------------------------------------------------------------------------------*/
-.ui-widget .fc-disabled-day {
-  background-image: none; }
-
-/* Popover
---------------------------------------------------------------------------------------------------*/
-.fc-popover > .ui-widget-header + .ui-widget-content {
-  border-top: 0;
-  /* where they meet, let the header have the border */ }
-
-/* Global Event Styles
---------------------------------------------------------------------------------------------------*/
-.ui-widget .fc-event {
-  /* overpower jqui's styles on <a> tags. TODO: more DRY */
-  color: #fff;
-  /* default TEXT color */
-  text-decoration: none;
-  /* if <a> has an href */
-  /* undo ui-widget-header bold */
-  font-weight: normal; }
-
-/* TimeGrid axis running down the side (for both the all-day area and the slot area)
---------------------------------------------------------------------------------------------------*/
-.ui-widget td.fc-axis {
-  font-weight: normal;
-  /* overcome bold */ }
-
-/* TimeGrid Slats (lines that run horizontally)
---------------------------------------------------------------------------------------------------*/
-.fc-time-grid .fc-slats .ui-widget-content {
-  background: none;
-  /* see through to fc-bg */ }
-
-.fc.fc-bootstrap3 a {
-  text-decoration: none; }
-
-.fc.fc-bootstrap3 a[data-goto]:hover {
-  text-decoration: underline; }
-
-.fc-bootstrap3 hr.fc-divider {
-  border-color: inherit; }
-
-.fc-bootstrap3 .fc-today.alert {
-  border-radius: 0; }
-
-/* Popover
---------------------------------------------------------------------------------------------------*/
-.fc-bootstrap3 .fc-popover .panel-body {
-  padding: 0; }
-
-/* TimeGrid Slats (lines that run horizontally)
---------------------------------------------------------------------------------------------------*/
-.fc-bootstrap3 .fc-time-grid .fc-slats table {
-  /* some themes have background color. see through to slats */
-  background: none; }
-
-.fc.fc-bootstrap4 a {
-  text-decoration: none; }
-
-.fc.fc-bootstrap4 a[data-goto]:hover {
-  text-decoration: underline; }
-
-.fc-bootstrap4 hr.fc-divider {
-  border-color: inherit; }
-
-.fc-bootstrap4 .fc-today.alert {
-  border-radius: 0; }
-
-.fc-bootstrap4 a.fc-event:not([href]):not([tabindex]) {
-  color: #fff; }
-
-.fc-bootstrap4 .fc-popover.card {
-  position: absolute; }
-
-/* Popover
---------------------------------------------------------------------------------------------------*/
-.fc-bootstrap4 .fc-popover .card-body {
-  padding: 0; }
-
-/* TimeGrid Slats (lines that run horizontally)
---------------------------------------------------------------------------------------------------*/
-.fc-bootstrap4 .fc-time-grid .fc-slats table {
-  /* some themes have background color. see through to slats */
-  background: none; }
-
-/* Toolbar
---------------------------------------------------------------------------------------------------*/
-.fc-toolbar {
-  text-align: center; }
-
-.fc-toolbar.fc-header-toolbar {
-  margin-bottom: 1em; }
-
-.fc-toolbar.fc-footer-toolbar {
-  margin-top: 1em; }
-
-.fc-toolbar .fc-left {
-  float: left; }
-
-.fc-toolbar .fc-right {
-  float: right; }
-
-.fc-toolbar .fc-center {
-  display: inline-block; }
-
-/* the things within each left/right/center section */
-.fc .fc-toolbar > * > * {
-  /* extra precedence to override button border margins */
-  float: left;
-  margin-left: .75em; }
-
-/* the first thing within each left/center/right section */
-.fc .fc-toolbar > * > :first-child {
-  /* extra precedence to override button border margins */
-  margin-left: 0; }
-
-/* title text */
-.fc-toolbar h2 {
-  margin: 0; }
-
-/* button layering (for border precedence) */
-.fc-toolbar button {
-  position: relative; }
-
-.fc-toolbar .fc-state-hover,
-.fc-toolbar .ui-state-hover {
-  z-index: 2; }
-
-.fc-toolbar .fc-state-down {
-  z-index: 3; }
-
-.fc-toolbar .fc-state-active,
-.fc-toolbar .ui-state-active {
-  z-index: 4; }
-
-.fc-toolbar button:focus {
-  z-index: 5; }
-
-/* View Structure
---------------------------------------------------------------------------------------------------*/
-/* undo twitter bootstrap's box-sizing rules. normalizes positioning techniques */
-/* don't do this for the toolbar because we'll want bootstrap to style those buttons as some pt */
-.fc-view-container *,
-.fc-view-container *:before,
-.fc-view-container *:after {
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
-
-.fc-view,
-.fc-view > table {
-  /* so dragged elements can be above the view's main element */
-  position: relative;
-  z-index: 1; }
-
-/* BasicView
---------------------------------------------------------------------------------------------------*/
-/* day row structure */
-.fc-basicWeek-view .fc-content-skeleton,
-.fc-basicDay-view .fc-content-skeleton {
-  /* there may be week numbers in these views, so no padding-top */
-  padding-bottom: 1em;
-  /* ensure a space at bottom of cell for user selecting/clicking */ }
-
-.fc-basic-view .fc-body .fc-row {
-  min-height: 4em;
-  /* ensure that all rows are at least this tall */ }
-
-/* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
-.fc-row.fc-rigid {
-  overflow: hidden; }
-
-.fc-row.fc-rigid .fc-content-skeleton {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; }
-
-/* week and day number styling */
-.fc-day-top.fc-other-month {
-  opacity: 0.3; }
-
-.fc-basic-view .fc-week-number,
-.fc-basic-view .fc-day-number {
-  padding: 2px; }
-
-.fc-basic-view th.fc-week-number,
-.fc-basic-view th.fc-day-number {
-  padding: 0 2px;
-  /* column headers can't have as much v space */ }
-
-.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
-  float: right; }
-
-.fc-rtl .fc-basic-view .fc-day-top .fc-day-number {
-  float: left; }
-
-.fc-ltr .fc-basic-view .fc-day-top .fc-week-number {
-  float: left;
-  border-radius: 0 0 3px 0; }
-
-.fc-rtl .fc-basic-view .fc-day-top .fc-week-number {
-  float: right;
-  border-radius: 0 0 0 3px; }
-
-.fc-basic-view .fc-day-top .fc-week-number {
-  min-width: 1.5em;
-  text-align: center;
-  background-color: #f2f2f2;
-  color: #808080; }
-
-/* when week/day number have own column */
-.fc-basic-view td.fc-week-number {
-  text-align: center; }
-
-.fc-basic-view td.fc-week-number > * {
-  /* work around the way we do column resizing and ensure a minimum width */
-  display: inline-block;
-  min-width: 1.25em; }
-
-/* AgendaView all-day area
---------------------------------------------------------------------------------------------------*/
-.fc-agenda-view .fc-day-grid {
-  position: relative;
-  z-index: 2;
-  /* so the "more.." popover will be over the time grid */ }
-
-.fc-agenda-view .fc-day-grid .fc-row {
-  min-height: 3em;
-  /* all-day section will never get shorter than this */ }
-
-.fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton {
-  padding-bottom: 1em;
-  /* give space underneath events for clicking/selecting days */ }
-
-/* TimeGrid axis running down the side (for both the all-day area and the slot area)
---------------------------------------------------------------------------------------------------*/
-.fc .fc-axis {
-  /* .fc to overcome default cell styles */
-  vertical-align: middle;
-  padding: 0 4px;
-  white-space: nowrap; }
-
-.fc-ltr .fc-axis {
-  text-align: right; }
-
-.fc-rtl .fc-axis {
-  text-align: left; }
-
-/* TimeGrid Structure
---------------------------------------------------------------------------------------------------*/
-.fc-time-grid-container,
-.fc-time-grid {
-  /* so slats/bg/content/etc positions get scoped within here */
-  position: relative;
-  z-index: 1; }
-
-.fc-time-grid {
-  min-height: 100%;
-  /* so if height setting is 'auto', .fc-bg stretches to fill height */ }
-
-.fc-time-grid table {
-  /* don't put outer borders on slats/bg/content/etc */
-  border: 0 hidden transparent; }
-
-.fc-time-grid > .fc-bg {
-  z-index: 1; }
-
-.fc-time-grid .fc-slats,
-.fc-time-grid > hr {
-  /* the <hr> AgendaView injects when grid is shorter than scroller */
-  position: relative;
-  z-index: 2; }
-
-.fc-time-grid .fc-content-col {
-  position: relative;
-  /* because now-indicator lives directly inside */ }
-
-.fc-time-grid .fc-content-skeleton {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  right: 0; }
-
-/* divs within a cell within the fc-content-skeleton */
-.fc-time-grid .fc-business-container {
-  position: relative;
-  z-index: 1; }
-
-.fc-time-grid .fc-bgevent-container {
-  position: relative;
-  z-index: 2; }
-
-.fc-time-grid .fc-highlight-container {
-  position: relative;
-  z-index: 3; }
-
-.fc-time-grid .fc-event-container {
-  position: relative;
-  z-index: 4; }
-
-.fc-time-grid .fc-now-indicator-line {
-  z-index: 5; }
-
-.fc-time-grid .fc-helper-container {
-  /* also is fc-event-container */
-  position: relative;
-  z-index: 6; }
-
-/* TimeGrid Slats (lines that run horizontally)
---------------------------------------------------------------------------------------------------*/
-.fc-time-grid .fc-slats td {
-  height: 1.5em;
-  border-bottom: 0;
-  /* each cell is responsible for its top border */ }
-
-.fc-time-grid .fc-slats .fc-minor td {
-  border-top-style: dotted; }
-
-/* TimeGrid Highlighting Slots
---------------------------------------------------------------------------------------------------*/
-.fc-time-grid .fc-highlight-container {
-  /* a div within a cell within the fc-highlight-skeleton */
-  position: relative;
-  /* scopes the left/right of the fc-highlight to be in the column */ }
-
-.fc-time-grid .fc-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  /* top and bottom will be in by JS */ }
-
-/* TimeGrid Event Containment
---------------------------------------------------------------------------------------------------*/
-.fc-ltr .fc-time-grid .fc-event-container {
-  /* space on the sides of events for LTR (default) */
-  margin: 0 2.5% 0 2px; }
-
-.fc-rtl .fc-time-grid .fc-event-container {
-  /* space on the sides of events for RTL */
-  margin: 0 2px 0 2.5%; }
-
-.fc-time-grid .fc-event,
-.fc-time-grid .fc-bgevent {
-  position: absolute;
-  z-index: 1;
-  /* scope inner z-index's */ }
-
-.fc-time-grid .fc-bgevent {
-  /* background events always span full width */
-  left: 0;
-  right: 0; }
-
-/* Generic Vertical Event
---------------------------------------------------------------------------------------------------*/
-.fc-v-event.fc-not-start {
-  /* events that are continuing from another day */
-  /* replace space made by the top border with padding */
-  border-top-width: 0;
-  padding-top: 1px;
-  /* remove top rounded corners */
-  border-top-left-radius: 0;
-  border-top-right-radius: 0; }
-
-.fc-v-event.fc-not-end {
-  /* replace space made by the top border with padding */
-  border-bottom-width: 0;
-  padding-bottom: 1px;
-  /* remove bottom rounded corners */
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0; }
-
-/* TimeGrid Event Styling
-----------------------------------------------------------------------------------------------------
-We use the full "fc-time-grid-event" class instead of using descendants because the event won't
-be a descendant of the grid when it is being dragged.
-*/
-.fc-time-grid-event {
-  overflow: hidden;
-  /* don't let the bg flow over rounded corners */ }
-
-.fc-time-grid-event.fc-selected {
-  /* need to allow touch resizers to extend outside event's bounding box */
-  /* common fc-selected styles hide the fc-bg, so don't need this anyway */
-  overflow: visible; }
-
-.fc-time-grid-event.fc-selected .fc-bg {
-  display: none;
-  /* hide semi-white background, to appear darker */ }
-
-.fc-time-grid-event .fc-content {
-  overflow: hidden;
-  /* for when .fc-selected */ }
-
-.fc-time-grid-event .fc-time,
-.fc-time-grid-event .fc-title {
-  padding: 0 1px; }
-
-.fc-time-grid-event .fc-time {
-  font-size: .85em;
-  white-space: nowrap; }
-
-/* short mode, where time and title are on the same line */
-.fc-time-grid-event.fc-short .fc-content {
-  /* don't wrap to second line (now that contents will be inline) */
-  white-space: nowrap; }
-
-.fc-time-grid-event.fc-short .fc-time,
-.fc-time-grid-event.fc-short .fc-title {
-  /* put the time and title on the same line */
-  display: inline-block;
-  vertical-align: top; }
-
-.fc-time-grid-event.fc-short .fc-time span {
-  display: none;
-  /* don't display the full time text... */ }
-
-.fc-time-grid-event.fc-short .fc-time:before {
-  content: attr(data-start);
-  /* ...instead, display only the start time */ }
-
-.fc-time-grid-event.fc-short .fc-time:after {
-  content: "\A0-\A0";
-  /* seperate with a dash, wrapped in nbsp's */ }
-
-.fc-time-grid-event.fc-short .fc-title {
-  font-size: .85em;
-  /* make the title text the same size as the time */
-  padding: 0;
-  /* undo padding from above */ }
-
-/* resizer (cursor device) */
-.fc-time-grid-event.fc-allow-mouse-resize .fc-resizer {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 8px;
-  overflow: hidden;
-  line-height: 8px;
-  font-size: 11px;
-  font-family: monospace;
-  text-align: center;
-  cursor: s-resize; }
-
-.fc-time-grid-event.fc-allow-mouse-resize .fc-resizer:after {
-  content: "="; }
-
-/* resizer (touch device) */
-.fc-time-grid-event.fc-selected .fc-resizer {
-  /* 10x10 dot */
-  border-radius: 5px;
-  border-width: 1px;
-  width: 8px;
-  height: 8px;
-  border-style: solid;
-  border-color: inherit;
-  background: #fff;
-  /* horizontally center */
-  left: 50%;
-  margin-left: -5px;
-  /* center on the bottom edge */
-  bottom: -5px; }
-
-/* Now Indicator
---------------------------------------------------------------------------------------------------*/
-.fc-time-grid .fc-now-indicator-line {
-  border-top-width: 1px;
-  left: 0;
-  right: 0; }
-
-/* arrow on axis */
-.fc-time-grid .fc-now-indicator-arrow {
-  margin-top: -5px;
-  /* vertically center on top coordinate */ }
-
-.fc-ltr .fc-time-grid .fc-now-indicator-arrow {
-  left: 0;
-  /* triangle pointing right... */
-  border-width: 5px 0 5px 6px;
-  border-top-color: transparent;
-  border-bottom-color: transparent; }
-
-.fc-rtl .fc-time-grid .fc-now-indicator-arrow {
-  right: 0;
-  /* triangle pointing left... */
-  border-width: 5px 6px 5px 0;
-  border-top-color: transparent;
-  border-bottom-color: transparent; }
-
-/* List View
---------------------------------------------------------------------------------------------------*/
-/* possibly reusable */
-.fc-event-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px; }
-
-/* view wrapper */
-.fc-rtl .fc-list-view {
-  direction: rtl;
-  /* unlike core views, leverage browser RTL */ }
-
-.fc-list-view {
-  border-width: 1px;
-  border-style: solid; }
-
-/* table resets */
-.fc .fc-list-table {
-  table-layout: auto;
-  /* for shrinkwrapping cell content */ }
-
-.fc-list-table td {
-  border-width: 1px 0 0;
-  padding: 8px 14px; }
-
-.fc-list-table tr:first-child td {
-  border-top-width: 0; }
-
-/* day headings with the list */
-.fc-list-heading {
-  border-bottom-width: 1px; }
-
-.fc-list-heading td {
-  font-weight: bold; }
-
-.fc-ltr .fc-list-heading-main {
-  float: left; }
-
-.fc-ltr .fc-list-heading-alt {
-  float: right; }
-
-.fc-rtl .fc-list-heading-main {
-  float: right; }
-
-.fc-rtl .fc-list-heading-alt {
-  float: left; }
-
-/* event list items */
-.fc-list-item.fc-has-url {
-  cursor: pointer;
-  /* whole row will be clickable */ }
-
-.fc-list-item-marker,
-.fc-list-item-time {
-  white-space: nowrap;
-  width: 1px; }
-
-/* make the dot closer to the event title */
-.fc-ltr .fc-list-item-marker {
-  padding-right: 0; }
-
-.fc-rtl .fc-list-item-marker {
-  padding-left: 0; }
-
-.fc-list-item-title a {
-  /* every event title cell has an <a> tag */
-  text-decoration: none;
-  color: inherit; }
-
-.fc-list-item-title a[href]:hover {
-  /* hover effect only on titles with hrefs */
-  text-decoration: underline; }
-
-/* message when no events */
-.fc-list-empty-wrap2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
-
-.fc-list-empty-wrap1 {
-  width: 100%;
-  height: 100%;
-  display: table; }
-
-.fc-list-empty {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center; }
-
-.fc-unthemed .fc-list-empty {
-  /* theme will provide own background */
-  background-color: #eee; }
 /*! bulma.io v0.6.2 | MIT License | github.com/jgthms/bulma */
 
 @-webkit-keyframes spinAround {
@@ -13606,6 +12317,7 @@ label.panel-block:hover {
 .autocomplete .dropdown-menu {
   display: block;
   min-width: 100%;
+  max-width: 100%;
 }
 
 .autocomplete .dropdown-menu.is-opened-top {
@@ -13616,6 +12328,14 @@ label.panel-block:hover {
 .autocomplete .dropdown-content {
   overflow: auto;
   max-height: 200px;
+}
+
+.autocomplete .dropdown-item,
+.autocomplete .dropdown .dropdown-menu .has-link a,
+.dropdown .dropdown-menu .has-link .autocomplete a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .autocomplete .dropdown-item.is-hovered,
@@ -13665,7 +12385,11 @@ label.panel-block:hover {
 }
 
 .b-checkbox.checkbox input[type=checkbox] {
-  display: none;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  outline: none;
+  z-index: -1;
 }
 
 .b-checkbox.checkbox input[type=checkbox] + .check {
@@ -13684,6 +12408,56 @@ label.panel-block:hover {
   border-color: #313e4d;
 }
 
+.b-checkbox.checkbox input[type=checkbox]:checked + .check.is-white {
+  background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%230a0a0a' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: white;
+}
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check.is-black {
+  background: #0a0a0a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:white' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: #0a0a0a;
+}
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check.is-light {
+  background: whitesmoke url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23363636' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: whitesmoke;
+}
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check.is-dark {
+  background: #363636 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:whitesmoke' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: #363636;
+}
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check.is-primary {
+  background: #313e4d url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23fff' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: #313e4d;
+}
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check.is-link {
+  background: #3273dc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23fff' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: #3273dc;
+}
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check.is-info {
+  background: #8eb4cb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23fff' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: #8eb4cb;
+}
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check.is-success {
+  background: #2ab27b url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23fff' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: #2ab27b;
+}
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check.is-warning {
+  background: #cbb956 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:rgba(0, 0, 0, 0.7)' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: #cbb956;
+}
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check.is-danger {
+  background: #bf5329 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23fff' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: #bf5329;
+}
+
 .b-checkbox.checkbox .control-label {
   padding-left: 0.5em;
 }
@@ -13696,6 +12470,46 @@ label.panel-block:hover {
   border-color: #313e4d;
 }
 
+.b-checkbox.checkbox:hover input[type=checkbox] + .check.is-white {
+  border-color: white;
+}
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check.is-black {
+  border-color: #0a0a0a;
+}
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check.is-light {
+  border-color: whitesmoke;
+}
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check.is-dark {
+  border-color: #363636;
+}
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check.is-primary {
+  border-color: #313e4d;
+}
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check.is-link {
+  border-color: #3273dc;
+}
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check.is-info {
+  border-color: #8eb4cb;
+}
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check.is-success {
+  border-color: #2ab27b;
+}
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check.is-warning {
+  border-color: #cbb956;
+}
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check.is-danger {
+  border-color: #bf5329;
+}
+
 .b-checkbox.checkbox:focus input[type=checkbox] + .check {
   -webkit-box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.8);
           box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.8);
@@ -13704,6 +12518,56 @@ label.panel-block:hover {
 .b-checkbox.checkbox:focus input[type=checkbox]:checked + .check {
   -webkit-box-shadow: 0 0 0.5em rgba(49, 62, 77, 0.8);
           box-shadow: 0 0 0.5em rgba(49, 62, 77, 0.8);
+}
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check.is-white {
+  -webkit-box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8);
+}
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check.is-black {
+  -webkit-box-shadow: 0 0 0.5em rgba(10, 10, 10, 0.8);
+          box-shadow: 0 0 0.5em rgba(10, 10, 10, 0.8);
+}
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check.is-light {
+  -webkit-box-shadow: 0 0 0.5em rgba(245, 245, 245, 0.8);
+          box-shadow: 0 0 0.5em rgba(245, 245, 245, 0.8);
+}
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check.is-dark {
+  -webkit-box-shadow: 0 0 0.5em rgba(54, 54, 54, 0.8);
+          box-shadow: 0 0 0.5em rgba(54, 54, 54, 0.8);
+}
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check.is-primary {
+  -webkit-box-shadow: 0 0 0.5em rgba(49, 62, 77, 0.8);
+          box-shadow: 0 0 0.5em rgba(49, 62, 77, 0.8);
+}
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check.is-link {
+  -webkit-box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.8);
+          box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.8);
+}
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check.is-info {
+  -webkit-box-shadow: 0 0 0.5em rgba(142, 180, 203, 0.8);
+          box-shadow: 0 0 0.5em rgba(142, 180, 203, 0.8);
+}
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check.is-success {
+  -webkit-box-shadow: 0 0 0.5em rgba(42, 178, 123, 0.8);
+          box-shadow: 0 0 0.5em rgba(42, 178, 123, 0.8);
+}
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check.is-warning {
+  -webkit-box-shadow: 0 0 0.5em rgba(203, 185, 86, 0.8);
+          box-shadow: 0 0 0.5em rgba(203, 185, 86, 0.8);
+}
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check.is-danger {
+  -webkit-box-shadow: 0 0 0.5em rgba(191, 83, 41, 0.8);
+          box-shadow: 0 0 0.5em rgba(191, 83, 41, 0.8);
 }
 
 .b-checkbox.checkbox.is-small {
@@ -14002,7 +12866,6 @@ label.panel-block:hover {
 .dropdown .dropdown-menu .dropdown-item.is-disabled,
 .dropdown .dropdown-menu .has-link a.is-disabled {
   cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .dropdown .dropdown-menu .dropdown-item.is-disabled:hover,
@@ -14014,6 +12877,11 @@ label.panel-block:hover {
 .dropdown .dropdown-menu .has-link a {
   padding-right: 3rem;
   white-space: nowrap;
+}
+
+.dropdown:not(.is-disabled) .dropdown-menu .dropdown-item.is-disabled,
+.dropdown:not(.is-disabled) .dropdown-menu .has-link a.is-disabled {
+  opacity: 0.5;
 }
 
 .dropdown .navbar-item {
@@ -14164,7 +13032,6 @@ label.panel-block:hover {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  z-index: 999;
 }
 
 .loading-overlay.is-active {
@@ -14174,6 +13041,7 @@ label.panel-block:hover {
 }
 
 .loading-overlay.is-full-page {
+  z-index: 999;
   position: fixed;
 }
 
@@ -14522,7 +13390,11 @@ label.panel-block:hover {
 }
 
 .b-radio.radio input[type=radio] {
-  display: none;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  outline: none;
+  z-index: -1;
 }
 
 .b-radio.radio input[type=radio] + .check {
@@ -14557,8 +13429,88 @@ label.panel-block:hover {
   transition: transform 150ms ease-out, -webkit-transform 150ms ease-out;
 }
 
+.b-radio.radio input[type=radio] + .check.is-white:before {
+  background: white;
+}
+
+.b-radio.radio input[type=radio] + .check.is-black:before {
+  background: #0a0a0a;
+}
+
+.b-radio.radio input[type=radio] + .check.is-light:before {
+  background: whitesmoke;
+}
+
+.b-radio.radio input[type=radio] + .check.is-dark:before {
+  background: #363636;
+}
+
+.b-radio.radio input[type=radio] + .check.is-primary:before {
+  background: #313e4d;
+}
+
+.b-radio.radio input[type=radio] + .check.is-link:before {
+  background: #3273dc;
+}
+
+.b-radio.radio input[type=radio] + .check.is-info:before {
+  background: #8eb4cb;
+}
+
+.b-radio.radio input[type=radio] + .check.is-success:before {
+  background: #2ab27b;
+}
+
+.b-radio.radio input[type=radio] + .check.is-warning:before {
+  background: #cbb956;
+}
+
+.b-radio.radio input[type=radio] + .check.is-danger:before {
+  background: #bf5329;
+}
+
 .b-radio.radio input[type=radio]:checked + .check {
   border-color: #313e4d;
+}
+
+.b-radio.radio input[type=radio]:checked + .check.is-white {
+  border-color: white;
+}
+
+.b-radio.radio input[type=radio]:checked + .check.is-black {
+  border-color: #0a0a0a;
+}
+
+.b-radio.radio input[type=radio]:checked + .check.is-light {
+  border-color: whitesmoke;
+}
+
+.b-radio.radio input[type=radio]:checked + .check.is-dark {
+  border-color: #363636;
+}
+
+.b-radio.radio input[type=radio]:checked + .check.is-primary {
+  border-color: #313e4d;
+}
+
+.b-radio.radio input[type=radio]:checked + .check.is-link {
+  border-color: #3273dc;
+}
+
+.b-radio.radio input[type=radio]:checked + .check.is-info {
+  border-color: #8eb4cb;
+}
+
+.b-radio.radio input[type=radio]:checked + .check.is-success {
+  border-color: #2ab27b;
+}
+
+.b-radio.radio input[type=radio]:checked + .check.is-warning {
+  border-color: #cbb956;
+}
+
+.b-radio.radio input[type=radio]:checked + .check.is-danger {
+  border-color: #bf5329;
 }
 
 .b-radio.radio input[type=radio]:checked + .check:before {
@@ -14578,6 +13530,46 @@ label.panel-block:hover {
   border-color: #313e4d;
 }
 
+.b-radio.radio:hover input[type=radio] + .check.is-white {
+  border-color: white;
+}
+
+.b-radio.radio:hover input[type=radio] + .check.is-black {
+  border-color: #0a0a0a;
+}
+
+.b-radio.radio:hover input[type=radio] + .check.is-light {
+  border-color: whitesmoke;
+}
+
+.b-radio.radio:hover input[type=radio] + .check.is-dark {
+  border-color: #363636;
+}
+
+.b-radio.radio:hover input[type=radio] + .check.is-primary {
+  border-color: #313e4d;
+}
+
+.b-radio.radio:hover input[type=radio] + .check.is-link {
+  border-color: #3273dc;
+}
+
+.b-radio.radio:hover input[type=radio] + .check.is-info {
+  border-color: #8eb4cb;
+}
+
+.b-radio.radio:hover input[type=radio] + .check.is-success {
+  border-color: #2ab27b;
+}
+
+.b-radio.radio:hover input[type=radio] + .check.is-warning {
+  border-color: #cbb956;
+}
+
+.b-radio.radio:hover input[type=radio] + .check.is-danger {
+  border-color: #bf5329;
+}
+
 .b-radio.radio:focus input[type=radio] + .check {
   -webkit-box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.8);
           box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.8);
@@ -14586,6 +13578,56 @@ label.panel-block:hover {
 .b-radio.radio:focus input[type=radio]:checked + .check {
   -webkit-box-shadow: 0 0 0.5em rgba(49, 62, 77, 0.8);
           box-shadow: 0 0 0.5em rgba(49, 62, 77, 0.8);
+}
+
+.b-radio.radio:focus input[type=radio]:checked + .check.is-white {
+  -webkit-box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8);
+}
+
+.b-radio.radio:focus input[type=radio]:checked + .check.is-black {
+  -webkit-box-shadow: 0 0 0.5em rgba(10, 10, 10, 0.8);
+          box-shadow: 0 0 0.5em rgba(10, 10, 10, 0.8);
+}
+
+.b-radio.radio:focus input[type=radio]:checked + .check.is-light {
+  -webkit-box-shadow: 0 0 0.5em rgba(245, 245, 245, 0.8);
+          box-shadow: 0 0 0.5em rgba(245, 245, 245, 0.8);
+}
+
+.b-radio.radio:focus input[type=radio]:checked + .check.is-dark {
+  -webkit-box-shadow: 0 0 0.5em rgba(54, 54, 54, 0.8);
+          box-shadow: 0 0 0.5em rgba(54, 54, 54, 0.8);
+}
+
+.b-radio.radio:focus input[type=radio]:checked + .check.is-primary {
+  -webkit-box-shadow: 0 0 0.5em rgba(49, 62, 77, 0.8);
+          box-shadow: 0 0 0.5em rgba(49, 62, 77, 0.8);
+}
+
+.b-radio.radio:focus input[type=radio]:checked + .check.is-link {
+  -webkit-box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.8);
+          box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.8);
+}
+
+.b-radio.radio:focus input[type=radio]:checked + .check.is-info {
+  -webkit-box-shadow: 0 0 0.5em rgba(142, 180, 203, 0.8);
+          box-shadow: 0 0 0.5em rgba(142, 180, 203, 0.8);
+}
+
+.b-radio.radio:focus input[type=radio]:checked + .check.is-success {
+  -webkit-box-shadow: 0 0 0.5em rgba(42, 178, 123, 0.8);
+          box-shadow: 0 0 0.5em rgba(42, 178, 123, 0.8);
+}
+
+.b-radio.radio:focus input[type=radio]:checked + .check.is-warning {
+  -webkit-box-shadow: 0 0 0.5em rgba(203, 185, 86, 0.8);
+          box-shadow: 0 0 0.5em rgba(203, 185, 86, 0.8);
+}
+
+.b-radio.radio:focus input[type=radio]:checked + .check.is-danger {
+  -webkit-box-shadow: 0 0 0.5em rgba(191, 83, 41, 0.8);
+          box-shadow: 0 0 0.5em rgba(191, 83, 41, 0.8);
 }
 
 .b-radio.radio.is-small {
@@ -14656,6 +13698,8 @@ label.panel-block:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 2.75em;
   height: 1.575em;
   padding: 0.2em;
@@ -14987,6 +14031,10 @@ label.panel-block:hover {
   background-color: transparent;
 }
 
+.b-table .table .chevron-cell {
+  vertical-align: middle;
+}
+
 .b-table .table .checkbox-cell {
   width: 40px;
 }
@@ -15070,9 +14118,9 @@ label.panel-block:hover {
     display: -ms-flexbox;
     display: flex;
     width: auto;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     text-align: right;
     border-bottom: 1px solid whitesmoke;
   }
@@ -15080,7 +14128,6 @@ label.panel-block:hover {
   .b-table .table.has-mobile-cards tr:not(.detail):not(.is-empty):not(.table-footer) td:before {
     content: attr(data-label);
     font-weight: 600;
-    margin-right: auto;
     padding-right: 0.5em;
     text-align: left;
   }
@@ -15156,17 +14203,16 @@ label.panel-block:hover {
   width: 100%;
 }
 
-.tag .delete {
-  margin-left: 0.25rem !important;
-  margin-right: -0.25rem !important;
-}
-
-.tag .delete[disabled] {
-  pointer-events: none;
+.tag .has-ellipsis {
+  max-width: 10em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .taginput .taginput-container.is-focusable {
   padding-bottom: 0;
+  padding-top: calc(0.275em - 1px);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -15184,21 +14230,21 @@ label.panel-block:hover {
 
 .taginput .taginput-container > .tag,
 .taginput .taginput-container > .tags {
-  margin-bottom: calc(0.375em - 1px);
+  margin-bottom: calc(0.275em - 1px);
   font-size: 0.9em;
-  height: 2.25em;
+  height: 1.7em;
 }
 
 .taginput .taginput-container > .tag .tag,
 .taginput .taginput-container > .tags .tag {
   margin-bottom: 0;
   font-size: 0.9em;
-  height: 2.25em;
+  height: 1.7em;
 }
 
 .taginput .taginput-container > .tag:not(:last-child),
 .taginput .taginput-container > .tags:not(:last-child) {
-  margin-right: 0.375rem;
+  margin-right: 0.275rem;
 }
 
 .taginput .taginput-container .autocomplete {
@@ -15208,19 +14254,27 @@ label.panel-block:hover {
 }
 
 .taginput .taginput-container .autocomplete input {
-  height: 2em;
-  margin-bottom: calc(0.375em - 1px);
+  height: 1.7em;
+  margin-bottom: calc(0.275em - 1px);
   padding-top: 0;
   padding-bottom: 0;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  min-width: 10em;
+  min-width: 8em;
 }
 
 .taginput .taginput-container .autocomplete input:focus {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.taginput .taginput-container .autocomplete .icon {
+  height: 1.7em;
+}
+
+.taginput .taginput-container .autocomplete > .control.is-loading::after {
+  top: 0.375em;
 }
 
 .timepicker .dropdown,
@@ -15786,6 +14840,7 @@ label.panel-block:hover {
   width: 100%;
   opacity: 0;
   outline: none;
+  z-index: -1;
 }
 
 .upload .upload-draggable {
@@ -15887,6 +14942,7 @@ label.panel-block:hover {
 }
 
 body {
+  min-height: 100vh;
   background-color: #ebebeb81;
 }
 

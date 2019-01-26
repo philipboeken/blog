@@ -5,9 +5,10 @@
 @import '~buefy/src/scss/buefy';
 @import "~vue-multiselect/dist/vue-multiselect.min.css";
 @import '~trix/dist/trix.css';
-@import '~fullcalendar/dist/fullcalendar.css';
+// @import '~fullcalendar/dist/fullcalendar.css';
 
 body {
+  min-height: 100vh;
   background-color: #ebebeb81;
 }
 

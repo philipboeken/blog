@@ -32,10 +32,9 @@
         "standard": "^10.0.3",
         "trix": "^0.11.2",
         "vue-color": "^2.4.6",
-        "vue-flatpickr": "^2.3.0",
+        "vue-flatpickr": "^2.3.*",
         "vue-flatpickr-component": "^4.0.0",
-        "vue-full-calendar": "^2.5.2",
-        "vue-markdown": "^2.2.4",
+        "vue-full-calendar": "^2.7.*",
         "vue-multiselect": "^2.1.0"
     }
 }
